@@ -1,0 +1,19 @@
+#!/bin/bash
+
+STAGE=$1
+
+if [ -z "$STAGE" ];
+then
+    echo "Usage: $0 STAGE"
+    exit 1
+fi
+
+DIR=`dirname $0`
+DST="../$DIR"
+
+# Templates.
+cp $DIR/$STAGE/en*.html $DST/data/news-en
+cp $DIR/$STAGE/ru*.html $DST/data/news-ru
+
+# Scripts.
+cp $DIR/$STAGE/*.py $DST
