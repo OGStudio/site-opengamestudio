@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,7 +108,7 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-team.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-team.png" alt="Students and teachers" /><figcaption>Students and teachers</figcaption>
 </figure>
 <p>In this article, Michael shares his experience of teaching kids to program.</p>
 <p>Here’s what he covers:</p>
@@ -115,28 +132,28 @@
 <p>Let’s see what the memory game is.</p>
 <p><strong>1)</strong> In the simplest case we have 16 cards, only 8 of them are unique, the rest 8 are duplicates of the unique ones.</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-all-cards-face-up.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-all-cards-face-up.png" alt="Cards face up" /><figcaption>Cards face up</figcaption>
 </figure>
 <p>As you can see, we only have two cards with a cat, only two cards with a dog, etc..</p>
 <p><strong>2)</strong> At the start we shuffle the cards and place them with their faces down.</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-all-cards-face-down.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-all-cards-face-down.png" alt="Cards face down" /><figcaption>Cards face down</figcaption>
 </figure>
 <p><strong>3)</strong> The first game player turns a pair of cards.</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-first-pair.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-first-pair.png" alt="A pair of cards" /><figcaption>A pair of cards</figcaption>
 </figure>
 <p><strong>4)</strong> If the cards differ they are once again turned face down.</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-all-cards-face-down.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-all-cards-face-down.png" alt="Cards face down" /><figcaption>Cards face down</figcaption>
 </figure>
 <p><strong>5)</strong> The next player turns another pair of cards.</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-second-pair.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-second-pair.png" alt="Second pair of cards" /><figcaption>Second pair of cards</figcaption>
 </figure>
 <p><strong>6)</strong> If the cards are the same, they are removed from the field.</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-remove-pair.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-remove-pair.png" alt="A pair of matching cards has been removed" /><figcaption>A pair of matching cards has been removed</figcaption>
 </figure>
 <p>The goal of the game is to remove all cards from the field. There’s no competition here so the game can be played alone.</p>
 <p>From one hand, the memory game is rather simple. From the other hand, the game implementation requires essential functionality each more or less complex game has:</p>
@@ -151,7 +168,7 @@
 <p>We used Scratch as our development tool. <a href="https://scratch.mit.edu/">Scratch</a> is a great tool to teach kids to program because each action, each operation is represented graphically.</p>
 <p>For example, you can rotate a cat 360 degrees in 1 second using the following script:</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-cat-script.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-cat-script.png" alt="Script" /><figcaption>Script</figcaption>
 </figure>
 <p>Here’s how it looks like in action:</p>
 <figure>
@@ -159,7 +176,7 @@
 </figure>
 <p>I’d like to stress that Scratch is a rather successful solution to represent code graphically. For example, a paid solution by SAP uses similar concept of cubes to program logic:</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-sap-ui.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-sap-ui.png" alt="SAP UI" /><figcaption>SAP UI</figcaption>
 </figure>
 <p>Users can only input values into predefined fields. If users want more functionality they have to resort to scripts.</p>
 <p>Personally, I have never witnessed any slowdown in Scratch, and there were many in SAP’s solution.</p>
@@ -271,7 +288,7 @@
 <p>When the last lesson approached everyone was able to create the memory game from scratch more or less independently in two hours.</p>
 <p>Here’s the leaderboard of the last lesson (names are hidden):</p>
 <figure>
-<img src="../../images/2019-02-04_teaching-kids-to-program-leaderboard.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2019-02-04_teaching-kids-to-program-leaderboard.png" alt="Leaderboard" /><figcaption>Leaderboard</figcaption>
 </figure>
 <p>The leaderboard is in Russian, here are the captions translated:</p>
 <ul>

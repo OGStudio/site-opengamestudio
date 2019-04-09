@@ -4,7 +4,7 @@ Category: News
 Slug: mahjong-recreation-start
 Lang: ru
 
-![Screenshot][screenshot]
+![Сферические фишки в раскладке Маджонг][screenshot]
 
 Эта статья описывает начало воссоздания игры Маджонг.
 
@@ -63,7 +63,7 @@ Lang: ru
 [screenshot]: ../../images/2018-01-26-mahjong-recreation-start.png
 
 [mjin-resource]: https://bitbucket.org/ogstudio/mjin-resource
-[mahjong]: https://bitbucket.org/ogstudio-games/mahjong
+[mahjong]: https://bitbucket.org/ogstudio-games/ogs-mahjong
 [mahjong-data]: https://bitbucket.org/ogstudio-games/mahjong-data
 [osgcp_guide]: https://github.com/ogstudio/openscenegraph-cross-platform-guide
 [img_loading_issue]: https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues/4

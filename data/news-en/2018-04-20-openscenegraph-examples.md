@@ -4,7 +4,7 @@ Category: News
 Slug: openscenegraph-examples
 Lang: en
 
-![Screenshot][screenshot]
+![iOS Simulator renders a cube][screenshot]
 
 This article summarizes the work we did to produce the first two cross-platform OpenSceneGraph examples.
 

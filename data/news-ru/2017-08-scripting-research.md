@@ -4,7 +4,7 @@ Category: News
 Slug: scripting-research
 Lang: ru
 
-![Изучение скриптования](../../images/2017-08-scripting-research.png)
+![Тетрадка с текстом](../../images/2017-08-scripting-research.png)
 
 Эта статья описывает изучение скриптования в июле 2017.
 

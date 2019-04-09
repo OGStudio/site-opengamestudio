@@ -1,6 +1,7 @@
 # HTML templates.
 page.Base
 page.Pelican
+page.Contents
 
 page.Menu
 page.News

@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,7 +108,7 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Spherical tiles in a Mahjong layout" /><figcaption>Spherical tiles in a Mahjong layout</figcaption>
 </figure>
 <p>This article describes the start of Mahjong game recreation.</p>
 <p><strong>Plan</strong></p>
@@ -118,12 +135,12 @@
 <li>generates MJIN project that contains generated headers to be compiled into static library</li>
 <li>provides C++ interface for accessing generated resources</li>
 </ul>
-<p><a href="https://bitbucket.org/ogstudio-games/mahjong-data">mahjong-data</a> is an example of such generated MJIN project that is referenced by <a href="https://bitbucket.org/ogstudio-games/mahjong">mahjong</a> project.</p>
+<p><a href="https://bitbucket.org/ogstudio-games/mahjong-data">mahjong-data</a> is an example of such generated MJIN project that is referenced by <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">mahjong</a> project.</p>
 <p><strong>Problem №2: load PNG images across supported platforms</strong></p>
 <p>To load PNG, we use corresponding OpenSceneGraph plugin. We built it for desktop with no issues. Building for web (Emscripten) turned out to be more difficult: Emscripten provides its own version of <strong>libpng</strong>, which OpenSceneGraph build script can’t detect. We had to work around several OpenSceneGraph checks to successfully build the plugin for Emscripten.</p>
 <p>Building the plugin for Android and iOS is still waiting for us. Once we get PNG plugin working across supported platforms, we are going to publish a new tutorial for <a href="https://github.com/ogstudio/openscenegraph-cross-platform-guide">OpenSceneGraph cross-platform guide</a> to cover PNG image loading. We already got a <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues/4">request to describe image loading</a>.</p>
 <p><strong>Development</strong></p>
-<p><a href="2017-03-16_lets-go.html">As you know</a>, we published OpenSceneGraph cross-platform guide to make OpenSceneGraph community stronger. We value education, and we love to share our knowledge. That’s why we decided to develop Mahjong in small reproducible chunks uniquely identified by internal versions. These versions are available in <a href="https://bitbucket.org/ogstudio-games/mahjong">mahjong repository</a>.</p>
+<p><a href="lets-go.html">As you know</a>, we published OpenSceneGraph cross-platform guide to make OpenSceneGraph community stronger. We value education, and we love to share our knowledge. That’s why we decided to develop Mahjong in small reproducible chunks uniquely identified by internal versions. These versions are available in <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">mahjong repository</a>.</p>
 <p>We also provide <a href="http://ogstudio.github.io/game-mahjong">version history and web releases of each internal version</a> for the following reasons:</p>
 <ul>
 <li>education: show how development looks like internally</li>

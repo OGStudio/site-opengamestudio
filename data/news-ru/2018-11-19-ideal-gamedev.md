@@ -4,7 +4,7 @@ Category: News
 Slug: ideal-gamedev
 Lang: ru
 
-![Screenshot][screenshot]
+![Человек без и с инструментами][screenshot]
 
 В этой статье мы обсудим, как выглядят идеальные видеоигра и инструмент для разработки видеоигр, по нашему мнению.
 
@@ -52,7 +52,7 @@ Lang: ru
 
 [screenshot]: ../../images/2018-11-19-ideal-gamedev.png
 
-[ogs-goals]: about-ru.html
+[ogs-goals]: ../../ru/page/about.html
 [mahjong-demo2]: mahjong-demo2.html
 [osgcpg]: https://github.com/OGStudio/openscenegraph-cross-platform-guide
 [osgcpe]: https://github.com/OGStudio/openscenegraph-cross-platform-examples

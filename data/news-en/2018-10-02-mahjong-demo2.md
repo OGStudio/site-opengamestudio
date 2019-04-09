@@ -4,7 +4,7 @@ Category: News
 Slug: mahjong-demo2
 Lang: en
 
-![Screenshot][screenshot]
+![Start of a Mahjong party][screenshot]
 
 We are glad to announce the release of the second demonstration of OGS Mahjong 2.  The purposes of this release were to refine our development techniques and build a solid cross-platform foundation.
 
@@ -36,7 +36,7 @@ Our next step is to turn game logic into a resource, too.
 
 [screenshot]: ../../images/2018-10-02-mahjong-demo2.png
 
-[article-2018-june]: 2018-06-27-example-driven-development.html
+[article-2018-june]: example-driven-development.html
 [osgcpe]: https://github.com/OGStudio/openscenegraph-cross-platform-examples
 [omc]: https://github.com/OGStudio/ogs-mahjong-components
 [ogs-mahjong]: https://bitbucket.org/ogstudio-games/ogs-mahjong

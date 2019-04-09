@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,22 +108,22 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2017-05_osg-sample.png" alt="OSG sample" /><figcaption>OSG sample</figcaption>
+<img src="../../images/2017-05_osg-sample.png" alt="Ракета в дали" /><figcaption>Ракета в дали</figcaption>
 </figure>
 <p>Эта статья описывает создание самоучителей по сборке приложения OpenSceneGraph на Linux, macOS, Windows и Android в апреле 2017.</p>
 <p>Предыдущие самоучители описывали установку OpenSceneGraph на Linux, macOS, Windows и отображение модели с помощью стандартного инструмента <strong>osgviewer</strong>. На этот раз результатом нашей работы стало <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide-application">приложение OpenSceneGraph</a>, которое работает на Linux, macOS, Windows и Android.</p>
 <p>Приложение очень простое. Оно умеет следующее:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>Создание окна для отрисовки</li>
 <li>Загрузка модели</li>
 <li>Отрисовка модели с помощью простых шейдеров GLSL</li>
 <li>Перемещение модели с помощью мыши на Linux, macOS, Windows и пальца на Android</li>
 </ol>
 <p>Создать самоучители для Linux, macOS, Windows было настолько простой и понятной задачей, что мы справились с ней за пару недель. Оставшуюся половину месяца мы потратили на создание самоучителя для Android.</p>
-<p>Наша <a href="october-recap.html">первая успешная сборка под Android</a> в прошлом году требовала множество неочивидных телодвижений. В этот раз мы хотели получить более чистый, быстрый и дешёвый подход.</p>
+<p>Наша <a href="2016-october-recap.html">первая успешная сборка под Android</a> в прошлом году требовала множество неочивидных телодвижений. В этот раз мы хотели получить более чистый, быстрый и дешёвый подход.</p>
 <p>Нам это удалось. В результате всё, что нужно для работы приложения OpenSceneGraph на Android, уместилось в набор из нескольких файлов и небольших изменений для стандартного проекта Android Studio (с поддержкой C++).</p>
 <p>Краткий перечень файлов:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>Поверхность GLES2</li>
 <li>Activity для отрисовки на этой поверхности</li>
 <li>Интерфейс Java для нативной библиотеки</li>
@@ -116,12 +133,12 @@
 <li>Модель для отрисовки</li>
 </ol>
 <p>Краткий перечень изменений проекта:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>Обновление Android manifest для использования GLES2 и Activity</li>
 <li>Использование файла CMake нативной библиотеки в проектном файле CMake</li>
 </ol>
 <p>Документация OpenSceneGraph предполагает сборку OpenSceneGraph вне Android Studio с помощью CMake. Такой подход имеет следующие ограничения:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>Ручная сборка OpenSceneGraph под каждую платформу</li>
 <li>Ручное копирование собранных библиотек OpenSceneGraph в проект Android Studio</li>
 </ol>

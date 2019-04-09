@@ -4,7 +4,7 @@ Category: News
 Slug: ideal-gamedev
 Lang: en
 
-![Screenshot][screenshot]
+![A man without and with tools][screenshot]
 
 In this article, we discuss how ideal video game and video game development tool look like, in our opinion.
 
@@ -53,7 +53,7 @@ That's it for discussing how ideal video game and video game development tool lo
 
 [screenshot]: ../../images/2018-11-19-ideal-gamedev.png
 
-[ogs-goals]: about.html
+[ogs-goals]: ../../en/page/about.html
 [mahjong-demo2]: mahjong-demo2.html
 [osgcpg]: https://github.com/OGStudio/openscenegraph-cross-platform-guide
 [osgcpe]: https://github.com/OGStudio/openscenegraph-cross-platform-examples

@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,14 +108,14 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2017-06-08-ios-refactoring.png" alt="iOS tutorial" /><figcaption>iOS tutorial</figcaption>
+<img src="../../images/2017-06-08-ios-refactoring.png" alt="Earth and a rocket" /><figcaption>Earth and a rocket</figcaption>
 </figure>
 <p>This article describes problems we faced during the creation of iOS tutorial in May 2017.</p>
 <p><a href="https://twitter.com/OpenGameStudio/status/826816343433498627">This February</a> we managed to get simple model rendered under iOS in just a few days. We expected to finish iOS tutorial in no time. However, the reality reminded us: it’s easy to come up with a hackish demo that works for one person, but it’s hard to create a concise example that works for everyone.</p>
-<h3 id="native-library">Native library</h3>
+<p><strong>Native library</strong></p>
 <p>The first question we had to answer was: should the sample application be part of Xcode project or be a separately built library?</p>
 <p>We had to consider the following facts:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>Xcode project can use C++ directly (thanks to Objective-C++) without stuff like JNI
 <ul>
 <li>There’s no need for a separate library (+ application)</li>
@@ -121,12 +138,12 @@
 </ul></li>
 </ol>
 <p>After evaluating the pros and cons of each approach, we decided to turn the sample application into a library and include it in Xcode project. The downside of this approach is that simulator and real device builds need separate library builds.</p>
-<h3 id="refactoring">Refactoring</h3>
+<p><strong>Refactoring</strong></p>
 <p>The second question we had to answer was: should there be a single source code base for all platforms or several ones, one for each platform?</p>
 <p>While doing Android tutorial we used single source code base because it worked fine for desktop and Android. As we started to work through iOS tutorial, it became apparent that particular features may or may not work on some platforms. For example, one feature may work on desktop and iOS, but not Android. Another feature may work on iOS and Android, but not desktop. Since we didn’t want to pollute the code with #ifdefs, we started to put each platform combination into a separate file. The number of files grew rapidly. The files were reusable, but it became extremely hard to see the whole picture.</p>
 <p>At this point, we realized there’s the second question. We reminded ourselves that the main purpose of the sample source code is to teach how to do basic OpenSceneGraph things, not create a reusable library with API that is stable across several years.</p>
 <p>That’s when our home grown feature tool came into play. With its help, we separated the code into several parts, which in the end produce just two files for each platform:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>functions.h - contains reusable classless functions</li>
 <li>main.h - contains the rest of the sample application code</li>
 </ol>

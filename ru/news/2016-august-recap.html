@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            figure
+            {
+                margin: 0px;
+                padding: 0px;
+            }
+            img
+            {
+                width: 720px;
+            }
+            html
+            {
+                font-family: sans-serif;
+            }
+            a
+            {
+                color: #3A91CB;
+                text-decoration: none;
+            }
+            #lang
+            {
+                float: right;
+            }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="header">
+            <a href="../../ru/news/index.html">Новости</a>
+            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/page/about.html">О нас</a>
+            <div id="lang">
+                <a href="../../en/news/2016-august-recap.html">EN</a>
+                <a href="2016-august-recap.html">RU</a>
+            </div>
+        </div>
+        <h1>В новостях</h1>
+                <div class="news_item">
+                    <h2 class="news_item_title">
+                        <a href="2016-august-recap.html">Август 2016 кратко</a>
+                    </h2>
+                    <p class="news_item_date">
+                        2016-09-03 00:00
+                    </p>
+                    <div class="news_item_contents">
+        <figure>
+<img src="../../images/2016-09-03_august-recap.png" alt="Редактор со сферическим узлом сцены" /><figcaption>Редактор со сферическим узлом сцены</figcaption>
+</figure>
+<p>Эта статья описывает самые важные технические детали разработки за август: модуль UIQt, его переработку, новый подход к разработке на основе функционала и его преимущества.</p>
+<p><strong>Модуль UIQt</strong> - это коллекция компонент UI на основе Qt. Сейчас используем лишь для интерфейса редактора.</p>
+Список компонент модуля UIQt с описанием и размером кода:
+<table>
+<tr>
+<th>
+<strong>№</strong>
+</th>
+<th>
+<strong>Компонента</strong>
+</th>
+<th>
+<strong>Описание</strong>
+</th>
+<th>
+<strong>Размер (Б)</strong>
+</th>
+<th>
+<strong>Размер (%)</strong>
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+UIQtAction
+</td>
+<td>
+Действия (события) для меню
+</td>
+<td>
+11224
+</td>
+<td>
+9
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+UIQtAux
+</td>
+<td>
+Инициализирует Qt и главное окно. Предоставляет поиск виджета по имени для других компонент
+</td>
+<td>
+15518
+</td>
+<td>
+12
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+UIQtDock
+</td>
+<td>
+Виджет стыковки
+</td>
+<td>
+5273
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+UIQtFileDialog
+</td>
+<td>
+Диалог выбора файла
+</td>
+<td>
+8960
+</td>
+<td>
+7
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+UIQtMenu
+</td>
+<td>
+Меню для главного окна и на ПКМ (вроде меню по добавлению/копированию/вставке/удалению узла)
+</td>
+<td>
+4566
+</td>
+<td>
+3
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+UIQtMenuBar
+</td>
+<td>
+Панель меню для главного окна
+</td>
+<td>
+4222
+</td>
+<td>
+3
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+UIQtRunner
+</td>
+<td>
+Позволяет запустить QApplication
+</td>
+<td>
+2450
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+UIQtThumbnailDialog
+</td>
+<td>
+Диалог с изображениями
+</td>
+<td>
+18615
+</td>
+<td>
+14
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+UIQtToolBar
+</td>
+<td>
+Панель инструментов для главого окна
+</td>
+<td>
+4276
+</td>
+<td>
+3
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+UIQtTree
+</td>
+<td>
+Предоставляет сложные виджеты вроде Дерева сцены и Редактора свойств
+</td>
+<td>
+51216
+</td>
+<td>
+39
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+UIQtWidget
+</td>
+<td>
+Общие свойства виджетов вроде фокуса и видимости
+</td>
+<td>
+5465
+</td>
+<td>
+4
+</td>
+</tr>
+</table>
+<p><strong>Мы переработали модуль UIQt</strong> для замены старого State API на новый Environment API, который позволяет делать то же самое лаконичнее, т.е. упрощает и ускоряет разработку.</p>
+<p>Переработку начали в июле и должны были закончить в том же месяце. Тем не менеe, работы завершили лишь в августе. Начальный план предполагал, что 28 часов должно хватить, но мы потратили 65. Мы оценивали необходимое время на основе количества вызовов публичного API каждой компоненты. Это хорошо сработало для небольших компонент, т.к. число вызовов их публичного API было примерно равно количеству их функционала, а сам функционал был очень маленький. Однако такой подход полностью провалился для компонеты UIQtTree, составляющей 39% кода модуля UIQt, потому что не было прямой связи между публичным API и функционалом.</p>
+<p><strong>Новый подход к разработке на основе функционала</strong> родился после решения проблем с переработкой UIQtTree. Т.к. Qt использует MVC, компонента UIQtTree состоит из нескольких классов. К тому моменту, когда UIQtTree могла отображать и управлять иерархией элементов, компонента уже имела размер в 27К. Мы заметили, что UIQtTree стала потреблять непомерное количество времени разработки даже для мелкого функционала. Это было явным проявлением <a href="http://rsdn.org/article/philosophy/Complexity.xml">количественной сложности</a>.</p>
+<p>Мы решили разбить UIQtTree на базовую часть и дополнительные. База содержит лишь необходимый минимум кода. Дополнение содержит код, специфичный для данного функционала, и может быть безболезненно изменено. В случае UIQtTree, отображение и управление иерархией элементов - это минимальный функционал, а переименование элементов - это дополнение.</p>
+<p>Текущий функционал UIQtTree состоит из следующих возможностей:</p>
+<table>
+<tr>
+<th>
+<strong>№</strong>
+</th>
+<th>
+<strong>Функционал</strong>
+</th>
+<th>
+<strong>Описание</strong>
+</th>
+<th>
+<strong>Размер (Б)</strong>
+</th>
+<th>
+<strong>Размер (%)</strong>
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Base
+</td>
+<td>
+Создание, изменение, отображение иерархии элементов
+</td>
+<td>
+26966
+</td>
+<td>
+52
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Item open state
+</td>
+<td>
+Хранит состояние свойства скрыто/отображено элемента
+</td>
+<td>
+3094
+</td>
+<td>
+6
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+Item renaming
+</td>
+<td>
+Переименование элемента
+</td>
+<td>
+3471
+</td>
+<td>
+7
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+Item selection
+</td>
+<td>
+Получение/установка выбранного элемента
+</td>
+<td>
+2338
+</td>
+<td>
+5
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+Item value
+</td>
+<td>
+Предоставляет второй и последующие столбцы для элементов, используется Редактором свойств
+</td>
+<td>
+1307
+</td>
+<td>
+3
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+Item value editing
+</td>
+<td>
+Редактирование значений элемента с помощью стандартного виджета
+</td>
+<td>
+1996
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+Item value editing with combobox
+</td>
+<td>
+Редактирование значений элемента с помощью виджета combobox
+</td>
+<td>
+5819
+</td>
+<td>
+11
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+Item value editing with spinner
+</td>
+<td>
+Редактирование значений элемента с помощью виджета spinbox
+</td>
+<td>
+5290
+</td>
+<td>
+10
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+Menu
+</td>
+<td>
+Меню на ПКМ
+</td>
+<td>
+1248
+</td>
+<td>
+2
+</td>
+</tr>
+</table>
+<p>Пример файла функционала Menu для UIQtTree: <a href="https://bitbucket.org/ogstudio-history/mjin-pre-pre/src/0c4cc3c3213f4687c0f3bd6a5426a6054cadd79b/f/TREE_MENU.cpp?at=Studio+0.10&amp;fileviewer=file-view-default">TREE_MENU</a>.</p>
+<p><strong>Преимущества подхода:</strong></p>
+<ol type="1">
+<li>Более быстрое чтение/понимание благодаря небольшому размеру</li>
+<li>Более простое и безболезненное изменение благодаря изолированному коду</li>
+</ol>
+<p>Есть и недостаток: новый подход требует изучения.</p>
+<p>На этом мы заканчиваем описание самых важных технических деталей разработки за август: модуль UIQt, его переработку, новый подход к разработке на основе функционала и его преимущества.</p>
+
+                    </div>
+                </div>
+        </center>
+    </body>
+</html>

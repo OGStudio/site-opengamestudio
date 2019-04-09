@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            figure
+            {
+                margin: 0px;
+                padding: 0px;
+            }
+            img
+            {
+                width: 720px;
+            }
+            html
+            {
+                font-family: sans-serif;
+            }
+            a
+            {
+                color: #3A91CB;
+                text-decoration: none;
+            }
+            #lang
+            {
+                float: right;
+            }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="header">
+            <a href="../../ru/news/index.html">Новости</a>
+            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/page/about.html">О нас</a>
+            <div id="lang">
+                <a href="../../en/news/2016-october-recap.html">EN</a>
+                <a href="2016-october-recap.html">RU</a>
+            </div>
+        </div>
+        <h1>В новостях</h1>
+                <div class="news_item">
+                    <h2 class="news_item_title">
+                        <a href="2016-october-recap.html">Октябрь 2016 кратко</a>
+                    </h2>
+                    <p class="news_item_date">
+                        2016-11-19 00:00
+                    </p>
+                    <div class="news_item_contents">
+        <figure>
+<img src="../../images/2016-11-19_2016-october-recap.png" alt="Достижение поддержки Android было сродни покорению горы для нас" /><figcaption>Достижение поддержки Android было сродни покорению горы для нас</figcaption>
+</figure>
+<p>Эта статья описывает, как мы потратили месяц на сборку OpenSceneGraph (OSG) под Android: первая попытка собрать OSG, поиск альтернатив OSG и успех в сборке OSG.</p>
+<p><strong>Первая попытка собрать OSG.</strong></p>
+<p>Не имея опыта разработки под Android, мы взяли последнюю версию Android Studio и начали проходить самоучители для начинающих. Java далась легко. Всё работало из коробки. Затем наступил черёд C++ и проблем.</p>
+<p><strong>CMake. </strong>Android Studio для работы с C++ использует собственную версию CMake, которая конфликтует с системной. Для нас это было явным сигналом о необходимости подготовить отдельное окружение разработки специально под Android.</p>
+<p><strong>KVM. </strong>Мы установили Ubuntu на VirtualBox. Всё шло замечательно до того момента, пока мы не запустили эмулятор Android. Оказалось, что VirtualBox не может запустить эмулятор, т.к. виртуальная машина не предоставляет виртуализацию внутри уже виртуализированного окружения.</p>
+<p><strong>Chroot для Android. </strong>Вспомнив о положительном опыте работы с chroot для сборки OGS Editor, мы решили поместить окружение разработки Android в chroot. После небольших настроек мы сумели запустить эмулятор Android и собрать проект C++.</p>
+<p><strong>OSG. </strong>К этому моменту мы считали, что собрать OSG не составит труда, но не тут-то было. Всё, что мы получили, - это падение. Предположив, что мы ошиблись где-то при первой сборке, мы решили пересобрать OSG ещё раз. И снова получили ту же ошибку. Поиск решения проблемы не дал результатов. Никто не помог нам в списке рассылок OSG.</p>
+<p>Мы были в отчаянии.</p>
+<p><strong>Поиск альтернатив OSG.</strong></p>
+<p>Раз сообщество OSG нам не помогло, мы решили поискать альтернативный открытый проект, который мог решить наши задачи на Android (и, возможно, на других платформах).</p>
+<p>Такой проект мы нашли: <a href="http://babylonhx.gamestudiohx.com/">BabylonHX</a>. Домашняя страница выглядела замечательно: она отображала WebGL в фоне! Промелькнула мысль, что мы наконец нашли алмаз. К сожалению, пример на домашней странице просто не работал.</p>
+<p>Думаем, вы понимаете наши чувства на тот момент.</p>
+<p><strong>Успех в сборке OSG.</strong></p>
+<p>Мы осознали, что никто за нас не запустит OSG на Android. Нужно было сделать это самостоятельно.</p>
+<p>Потеряв доверие к очень короткой <a href="http://www.openscenegraph.org/index.php/documentation/platform-specifics/android/178-building-openscenegraph-for-android-3-4">документации OSG 3.4</a> по сборке для Android, мы решили использовать <a href="http://www.openscenegraph.org/index.php/documentation/platform-specifics/android/44-building-openscenegraph-for-android-3-0-3-0-1">первоначальную документацию OSG 3.0</a>. В ходе следования ей мы наткнулись на мёртвую ссылку, которая должна была содержать зависимости. Поиск альтернативной ссылки вывел нас на <a href="https://xinyustudio.wordpress.com/2013/09/24/install-osg-for-android-on-ubuntu-13-04-step-by-step-tutorials/">самоучитель 2013 года</a> по сборке OSG 3.0 для Android.</p>
+<p>После прохождения самоучителя мы наконец смогли запустить OSG под Android! Тем не менее, был нюанс: используемые в самоучителе версии OSG и средств разработки Android были древними. В течение нескольких дней мы постепенно довели версии OSG и средств разработки Android до последних.</p>
+<p>В ходе этого обновления мы узнали о двух вещах, помешавших нам запустить OSG с первого раза:</p>
+<ul>
+<li>Изменение заголовков Android API в NDK r12</li>
+<li>OSG работает под Android лишь в виде статической библиотеки</li>
+</ul>
+<p>На этом мы заканчиваем описание того, как мы потратили месяц на сборку OSG под Android: первая попытка собрать OSG, поиск альтернатив OSG и успех в сборке OSG.</p>
+
+                    </div>
+                </div>
+        </center>
+    </body>
+</html>

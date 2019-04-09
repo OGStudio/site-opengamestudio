@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,18 +108,18 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2017-09-mjin-world-birth.png" alt="The birth of MJIN world" /><figcaption>The birth of MJIN world</figcaption>
+<img src="../../images/2017-09-mjin-world-birth.png" alt="An explosion giving birth to something new" /><figcaption>An explosion giving birth to something new</figcaption>
 </figure>
 <p>This article describes the birth of MJIN world in August 2017.</p>
 <p><strong>mjin-player</strong></p>
-<p>As you know, <a href="%7Bfilename%7D/articles/2017-08-scripting-research.md">we spent July to research scripting</a>. We found a solution that satisfies the following criteria. Scripts should:</p>
-<ol start="0" type="1">
+<p>As you know, <a href="scripting-research.html">we spent July to research scripting</a>. We found a solution that satisfies the following criteria. Scripts should:</p>
+<ol type="1">
 <li>run unchanged on all supported platforms</li>
 <li>allow extending C++ code</li>
 </ol>
 <p>We have verified the second criterion by writing a sample application. The first criterion was taken for granted because it SHOULD be true.</p>
 <p>At the time, we saw two ways to verify the first criterion:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>create one sample application for each platform to verify scripting only</li>
 <li>create a single cross-platform application, which can run any code</li>
 </ol>

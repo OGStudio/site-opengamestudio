@@ -4,7 +4,7 @@ Category: News
 Slug: teaching-kids-to-program
 Lang: en
 
-![Screenshot][screenshot]
+![Students and teachers][screenshot]
 
 In this article, Michael shares his experience of teaching kids to program.
 
@@ -39,29 +39,29 @@ Let's see what the memory game is.
 
 **1)** In the simplest case we have 16 cards, only 8 of them are unique, the rest 8 are duplicates of the unique ones.
 
-![Screenshot][all-cards-face-up]
+![Cards face up][all-cards-face-up]
 
 As you can see, we only have two cards with a cat, only two cards with a dog, etc..
 
 **2)** At the start we shuffle the cards and place them with their faces down.
 
-![Screenshot][all-cards-face-down]
+![Cards face down][all-cards-face-down]
 
 **3)** The first game player turns a pair of cards.
 
-![Screenshot][first-pair]
+![A pair of cards][first-pair]
 
 **4)** If the cards differ they are once again turned face down.
 
-![Screenshot][all-cards-face-down]
+![Cards face down][all-cards-face-down]
 
 **5)** The next player turns another pair of cards.
 
-![Screenshot][second-pair]
+![Second pair of cards][second-pair]
 
 **6)** If the cards are the same, they are removed from the field.
 
-![Screenshot][remove-pair]
+![A pair of matching cards has been removed][remove-pair]
 
 The goal of the game is to remove all cards from the field. There's no competition here so the game can be played alone.
 
@@ -79,7 +79,7 @@ We used Scratch as our development tool. [Scratch][scratch] is a great tool to t
 
 For example, you can rotate a cat 360 degrees in 1 second using the following script:
 
-![Screenshot][cat-script]
+![Script][cat-script]
 
 Here's how it looks like in action:
 
@@ -87,7 +87,7 @@ Here's how it looks like in action:
 
 I'd like to stress that Scratch is a rather successful solution to represent code graphically. For example, a paid solution by SAP uses similar concept of cubes to program logic:
 
-![Screenshot][sap-ui]
+![SAP UI][sap-ui]
 
 Users can only input values into predefined fields. If users want more functionality they have to resort to scripts.
 
@@ -210,7 +210,7 @@ When the last lesson approached everyone was able to create the memory game from
 
 Here's the leaderboard of the last lesson (names are hidden):
 
-![Screenshot][leaderboard]
+![Leaderboard][leaderboard]
 
 The leaderboard is in Russian, here are the captions translated:
 

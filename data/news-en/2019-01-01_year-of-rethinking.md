@@ -4,7 +4,7 @@ Category: News
 Slug: 2019-year-of-rethinking
 Lang: en
 
-![Screenshot](../../images/2017-12-31-celebration.jpg)
+![Sparkler](../../images/2017-12-31-celebration.jpg)
 
 It was a year of reimagining and rethinking. As some of you may remember, we started this project to make a game development tool. During the years, the idea evolved from one form to another, sometimes the changes were significant, other times we threw away all the code and started anew.
 

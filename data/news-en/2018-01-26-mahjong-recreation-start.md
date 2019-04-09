@@ -4,7 +4,7 @@ Category: News
 Slug: mahjong-recreation-start
 Lang: en
 
-![Screenshot][screenshot]
+![Spherical tiles in a Mahjong layout][screenshot]
 
 This article describes the start of Mahjong game recreation.
 
@@ -65,11 +65,11 @@ That's it for describing the start of Mahjong game recreation.
 [screenshot]: ../../images/2018-01-26-mahjong-recreation-start.png
 
 [mjin-resource]: https://bitbucket.org/ogstudio/mjin-resource
-[mahjong]: https://bitbucket.org/ogstudio-games/mahjong
+[mahjong]: https://bitbucket.org/ogstudio-games/ogs-mahjong
 [mahjong-data]: https://bitbucket.org/ogstudio-games/mahjong-data
 [osgcp_guide]: https://github.com/ogstudio/openscenegraph-cross-platform-guide
 [img_loading_issue]: https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues/4
-[lets-go]: 2017-03-16_lets-go.html
+[lets-go]: lets-go.html
 [web-releases]: http://ogstudio.github.io/game-mahjong
 [mahjong-version-tile-selection]: https://ogstudio.github.io/game-mahjong/versions/010/mjin-player.html
 

@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,22 +108,22 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2017-05_osg-sample.png" alt="OSG sample" /><figcaption>OSG sample</figcaption>
+<img src="../../images/2017-05_osg-sample.png" alt="Rocket in the distance" /><figcaption>Rocket in the distance</figcaption>
 </figure>
 <p>This article describes creation of the tutorials for building sample OpenSceneGraph application under Linux, macOS, Windows, and Android in April 2017.</p>
 <p>Previous tutorials described how to install OpenSceneGraph under Linux, macOS, Windows and render a model using the standard <strong>osgviewer</strong> tool. This time we worked on a <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide-application">sample OpenSceneGraph application</a> that would run under Linux, macOS, Windows, and Android.</p>
 <p>The application is very basic and has the following features:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>Render window creation</li>
 <li>Model loading</li>
 <li>Model rendering with simple GLSL shaders</li>
 <li>Model motion with a mouse under Linux, macOS, Windows and a finger under Android</li>
 </ol>
 <p>Creating the tutorials for Linux, macOS, Windows was so easy and straightforward, that it only took us half a month. We spent the second half of the month creating Android tutorial.</p>
-<p>Our <a href="october-recap.html">first successful Android build</a> last year included hacks and non-obvious steps to make OpenSceneGraph run under Android. This time we wanted a cleaner, faster, and cheaper approach.</p>
+<p>Our <a href="2016-october-recap.html">first successful Android build</a> last year included hacks and non-obvious steps to make OpenSceneGraph run under Android. This time we wanted a cleaner, faster, and cheaper approach.</p>
 <p>The approach we ended up with requires just a few files and a few changes to the original Android Studio project (with C++ support) to make sample OpenSceneGraph application run under Android.</p>
 <p>Here’s a quick rundown of the files:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>GLES2 surface</li>
 <li>Render activity to render to the surface</li>
 <li>Native library Java interface</li>
@@ -116,12 +133,12 @@
 <li>Model to display</li>
 </ol>
 <p>Here’s a quick rundown of the project changes:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>Update Android manifest to use GLES2 and render activity</li>
 <li>Reference native library’s CMake file in the project’s CMake file</li>
 </ol>
 <p>OpenSceneGraph documentation suggests building OpenSceneGraph outside Android Studio with CMake. However, this approach has the following limitations:</p>
-<ol start="0" type="1">
+<ol type="1">
 <li>You have to build OpenSceneGraph for each target architecture</li>
 <li>You have to manually copy/reference built OpenSceneGraph libraries into Android Studio project</li>
 </ol>

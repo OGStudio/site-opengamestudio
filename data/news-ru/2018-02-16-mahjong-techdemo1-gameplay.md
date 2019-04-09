@@ -4,7 +4,7 @@ Category: News
 Slug: mahjong-techdemo1-gameplay
 Lang: ru
 
-![Screenshot][screenshot]
+![Конец партии Маджонг][screenshot]
 
 Мы ради сообщить о выпуске первой технической демонастрации OGS Mahjong 2. Её цель была в проверке игровой механики на всех поддерживаемых платформах.
 

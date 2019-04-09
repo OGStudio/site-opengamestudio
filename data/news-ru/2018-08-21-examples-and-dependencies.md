@@ -4,7 +4,7 @@ Category: News
 Slug: examples-and-dependencies
 Lang: ru
 
-![Screenshot][screenshot]
+![Облако][screenshot]
 
 Эта статья описывает два новых кросс-платформенных примера OpenSceneGraph и изменение в работе с зависимостями.
 

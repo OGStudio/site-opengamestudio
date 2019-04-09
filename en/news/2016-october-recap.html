@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            figure
+            {
+                margin: 0px;
+                padding: 0px;
+            }
+            img
+            {
+                width: 720px;
+            }
+            html
+            {
+                font-family: sans-serif;
+            }
+            a
+            {
+                color: #3A91CB;
+                text-decoration: none;
+            }
+            #lang
+            {
+                float: right;
+            }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="header">
+            <a href="../../en/news/index.html">News</a>
+            <a href="../../en/page/games.html">Games</a>
+            <a href="../../en/page/about.html">About</a>
+            <div id="lang">
+                <a href="2016-october-recap.html">EN</a>
+                <a href="../../ru/news/2016-october-recap.html">RU</a>
+            </div>
+        </div>
+        <h1>In the news</h1>
+                <div class="news_item">
+                    <h2 class="news_item_title">
+                        <a href="2016-october-recap.html">October 2016 recap</a>
+                    </h2>
+                    <p class="news_item_date">
+                        2016-11-19 00:00
+                    </p>
+                    <div class="news_item_contents">
+        <figure>
+<img src="../../images/2016-11-19_2016-october-recap.png" alt="Gaining Android support was like climbing a mountain for us" /><figcaption>Gaining Android support was like climbing a mountain for us</figcaption>
+</figure>
+<p>This article describes how we spent a month building OpenSceneGraph (OSG) for Android: the first attempt to build OSG, the search for OSG alternatives, and the success in building OSG.</p>
+<p><strong>First attempt to build OSG.</strong></p>
+<p>Having no prior knowledge of Android development, we grabbed the latest Android Studio and started doing beginner tutorials. We passed Java part pretty fast. Everything worked out of the box. Then came C++ part and related problems.</p>
+<p><strong>CMake. </strong>To work with C++, Android Studio uses custom CMake, which conflicts with the system one. This was a clear indication that we had to set up a separate development environment specifically for Android.</p>
+<p><strong>KVM. </strong>We got Ubuntu under VirtualBox installed. All went fine until we tried to use Android Emulator. Turned out, VirtualBox could not run Android Emulator, because a virtual machine cannot provide kernel virtualization inside already virtualized environment.</p>
+<p><strong>Chroot for Android. </strong>Since we had a successful experience with chroot to build OGS Editor before, we decided to place Android development environment into chroot. With minor tweaking, we could finally run Android Emulator and build C++ project.</p>
+<p><strong>OSG. </strong>Building OSG seemed like a piece of cake at the time. However, all we got was a crash. Thinking that we got it wrong the first time, we tried to rebuild OSG once again. And the same crash again. Searching for the problem did not reveal any hint. Nobody helped us at the OSG mailing list.</p>
+<p>We were in despair.</p>
+<p><strong>The search for OSG alternatives.</strong></p>
+<p>Since OSG community did not help us, we decided to search for an alternative open source project to fit our Android needs (and may be more).</p>
+<p>And we found it: <a href="http://babylonhx.gamestudiohx.com/">BabylonHX</a>. The home page looked awesome: it rendered WebGL in the background! We thought we finally found the gem we were looking for. However, the example on the home page simply did not work.</p>
+<p>You can probably understand our feelings at the time.</p>
+<p><strong>The success in building OSG.</strong></p>
+<p>We realized nobody would make OSG work under Android for us. We had to do it ourselves.</p>
+<p>Since <a href="http://www.openscenegraph.org/index.php/documentation/platform-specifics/android/178-building-openscenegraph-for-android-3-4">OSG 3.4 document</a> on building for Android was very short, we no longer trusted it and headed to <a href="http://www.openscenegraph.org/index.php/documentation/platform-specifics/android/44-building-openscenegraph-for-android-3-0-3-0-1">original OSG 3.0 document</a>. While following it, we faced a dead link to third party dependencies. The search for an alternative download link lead us to a <a href="https://xinyustudio.wordpress.com/2013/09/24/install-osg-for-android-on-ubuntu-13-04-step-by-step-tutorials/">2013 tutorial</a> on building OSG 3.0 for Android.</p>
+<p>After following the tutorial, we finally got OSG to run under Android! But there was a nuance: both OSG and Android tools used in the tutorial were ancient. In a few days, we gradually updated both OSG and Android tools to their latest versions.</p>
+<p>During the update process, we learned two things that prevented us from having OSG to work in the first place:</p>
+<ul>
+<li>Android API headers changed in NDK r12</li>
+<li>OSG only works as a static library under Android</li>
+</ul>
+<p>That’s it for describing how we spent the month building OSG for Android: the first attempt to build OSG, the search for OSG alternatives, and the success in building OSG.</p>
+
+                    </div>
+                </div>
+        </center>
+    </body>
+</html>

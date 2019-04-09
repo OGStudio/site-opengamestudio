@@ -4,7 +4,7 @@ Category: News
 Slug: example-driven-development
 Lang: ru
 
-![Screenshot][screenshot]
+![Брокер отладки][screenshot]
 
 Эта статья описывает то, как создание третьего кросс-платформенного примера OpenSceneGraph привело нас к разработке через создание примеров.
 
@@ -12,9 +12,10 @@ Lang: ru
 
 **Третий кросс-платформенный пример OpenSceneGraph**
 
-Третий кросс-платформенный пример OpenSceneGraph содержит реализацию [удалённой отладки, работающей на всех поддерживаемых платформах][osgcpe-03]. Этот пример относится не столько к OpenSceneGraph, сколько к поддержке различных платформ.
+Третий кросс-платформенный пример OpenSceneGraph содержит реализацию [удалённой отладки, работающей на всех поддерживаемых платформах][osgcpe-04]. Этот пример относится не столько к OpenSceneGraph, сколько к поддержке различных платформ.
 
 Удалённое взаимодействие ныне предполагает использование HTTP(s) поверх TCP/IP. Таким образом, первая идея реализации подразумевала встраивание сервера HTTP в приложение, чтобы клиенты HTTP могли взаимодействовать с этим сервером.
+
 Однако, раздача HTTP на различных платформах имеет свои сложности:
 
 * на десктопах есть межсетевые экраны (firewalls)
@@ -45,7 +46,7 @@ Lang: ru
 [screenshot]: ../../images/2018-06-27-example-driven-development.png
 [article-2018-august]: examples-and-dependencies.html
 
-[osgcpe-03]: https://github.com/OGStudio/openscenegraph-cross-platform-examples/tree/master/03.RemoteDebugging
+[osgcpe-04]: https://github.com/OGStudio/openscenegraph-cross-platform-examples/tree/master/04.RemoteDebugging
 [debug-broker]: https://github.com/OGStudio/debug-broker
 [debug-ui]: https://github.com/OGStudio/debug-ui
 

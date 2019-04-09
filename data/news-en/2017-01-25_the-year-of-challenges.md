@@ -4,14 +4,14 @@ Category: News
 Slug: the-year-of-challenges
 Lang: en
 
-![The year of challenges][screenshot]
+![Rocket launch at Baikonur][screenshot]
 
 
 This article describes our plans for 2017.
 
 Our past plans suggested we would have Android platform support by this time. However, we have a long way to go, before we can declare Android support. See for yourself:
 
-![Android rendering][android-rendering]
+![Rendering cubes on Android][android-rendering]
 
 Some people would consider this a failure. We don't. We see a chance to start low and jump high!
 

@@ -4,7 +4,7 @@ Category: News
 Slug: osg-sample
 Lang: en
 
-![OSG sample][screenshot]
+![Rocket in the distance][screenshot]
 
 
 This article describes creation of the tutorials for building sample OpenSceneGraph application under Linux, macOS, Windows, and Android in April 2017.
@@ -13,10 +13,10 @@ Previous tutorials described how to install OpenSceneGraph under Linux, macOS, W
 
 The application is very basic and has the following features:
 
-0. Render window creation
-0. Model loading
-0. Model rendering with simple GLSL shaders
-0. Model motion with a mouse under Linux, macOS, Windows and a finger under Android
+1. Render window creation
+1. Model loading
+1. Model rendering with simple GLSL shaders
+1. Model motion with a mouse under Linux, macOS, Windows and a finger under Android
 
 
 
@@ -28,27 +28,27 @@ The approach we ended up with requires just a few files and a few changes to the
 
 Here's a quick rundown of the files:
 
-0. GLES2 surface
-0. Render activity to render to the surface
-0. Native library Java interface
-0. Native library C++ implementation
-0. CMake file to build native library
-0. Render activity layout
-0. Model to display
+1. GLES2 surface
+1. Render activity to render to the surface
+1. Native library Java interface
+1. Native library C++ implementation
+1. CMake file to build native library
+1. Render activity layout
+1. Model to display
 
 
 
 Here's a quick rundown of the project changes:
 
-0. Update Android manifest to use GLES2 and render activity
-0. Reference native library's CMake file in the project's CMake file
+1. Update Android manifest to use GLES2 and render activity
+1. Reference native library's CMake file in the project's CMake file
 
 
 
 OpenSceneGraph documentation suggests building OpenSceneGraph outside Android Studio with CMake. However, this approach has the following limitations:
 
-0. You have to build OpenSceneGraph for each target architecture
-0. You have to manually copy/reference built OpenSceneGraph libraries into Android Studio project
+1. You have to build OpenSceneGraph for each target architecture
+1. You have to manually copy/reference built OpenSceneGraph libraries into Android Studio project
 
 
 
@@ -57,4 +57,4 @@ Our approach includes building OpenSceneGraph for those target architectures tha
 That's it for describing the creation of the tutorials for building sample OpenSceneGraph application under Linux, macOS, Windows, and Android in April 2017.
 
 [screenshot]: ../../images/2017-05_osg-sample.png
-[oct16_article]: october-recap.html
+[oct16_article]: 2016-october-recap.html

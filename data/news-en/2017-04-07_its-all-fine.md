@@ -4,7 +4,7 @@ Category: News
 Slug: its-all-fine
 Lang: en
 
-![ItsAllFine][screenshot]
+![Flight of a rocket][screenshot]
 
 
 This article describes creation of the first four OpenSceneGraph tutorials in March 2017.
@@ -13,16 +13,16 @@ The [first four OpenSceneGraph tutorials](https://github.com/OGStudio/opensceneg
 
 The whole process of creating a single tutorial turned out to be pretty daunting because it includes several tasks:
 
-0. Record original video depicting one or more steps
-0. Name the steps as clear as possible
-0. Select the parts of the video that display the step
-0. Remove the parts of the video that bare no value, e.g., waiting in the middle of compilation
-0. Select a single frame to best represent current step, e.g., typing a specific command
-0. Add a detailed description to article, why current step should have been taken
-0. Proof-read the article
-0. Correct typos and video timing
-0. Review the whole video
-0. Upload the video to YouTube with timestamps of steps for easier navigation
+1. Record original video depicting one or more steps
+1. Name the steps as clear as possible
+1. Select the parts of the video that display the step
+1. Remove the parts of the video that bare no value, e.g., waiting in the middle of compilation
+1. Select a single frame to best represent current step, e.g., typing a specific command
+1. Add a detailed description to article, why current step should have been taken
+1. Proof-read the article
+1. Correct typos and video timing
+1. Review the whole video
+1. Upload the video to YouTube with timestamps of steps for easier navigation
 
 
 

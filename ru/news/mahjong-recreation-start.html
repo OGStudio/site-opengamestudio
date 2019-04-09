@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,7 +108,7 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Сферические фишки в раскладке Маджонг" /><figcaption>Сферические фишки в раскладке Маджонг</figcaption>
 </figure>
 <p>Эта статья описывает начало воссоздания игры Маджонг.</p>
 <p><strong>План</strong></p>
@@ -118,11 +135,11 @@
 <li>создания проекта MJIN, состоящего из сгенерированных заголовочных файлов, который собирается в статическую библиотеку</li>
 <li>предоставления интерфейса C++ для работы с ресурсами</li>
 </ul>
-<p>Проект <a href="https://bitbucket.org/ogstudio-games/mahjong-data">mahjong-data</a> является примером подобного проекта MJIN, ресурсы из которого использует проект <a href="https://bitbucket.org/ogstudio-games/mahjong">mahjong</a>.</p>
+<p>Проект <a href="https://bitbucket.org/ogstudio-games/mahjong-data">mahjong-data</a> является примером подобного проекта MJIN, ресурсы из которого использует проект <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">mahjong</a>.</p>
 <p><strong>Проблема №2: загрузка изображений PNG на поддерживаемых платформах</strong></p>
 <p>Для загрузки PNG мы используем соответствующий плагин OpenSceneGraph. Мы собрали его без проблем для десктопа. Сборка же для веба (Emscripten) оказалась сложнее: Emscripten содержит собственную версию <strong>libpng</strong>, которую сборочный скрипт OpenSceneGraph не видит. Нам пришлось обойти несколько проверок OpenSceneGraph, чтобы успешно собрать плагин для Emscripten. Сборка плагина под мобилки ещё ждёт нас впереди. Как только мы разберёмся с плагином PNG на всех поддерживаемых платформах, мы опубликуем информацию о его сборке в новом самоучителе для <a href="https://github.com/ogstudio/openscenegraph-cross-platform-guide">кросс-платформенного руководства OpenSceneGraph</a>. Нас уже <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues/4">попросили это сделать</a>.</p>
 <p><strong>Разработка</strong></p>
-<p><a href="lets-go.html">Как вы знаете</a>, мы опубликовали кросс-платформенное руководство OpenSceneGraph для усиления сообщества OpenSceneGraph. Мы ценим обучение и любим делиться своими знаниями. Поэтому мы решили разрабатывать Маджонг небольшими воспроизводимыми частями, каждая из которых имеет уникальную внутреннюю версию. Эти версии доступны в <a href="https://bitbucket.org/ogstudio-games/mahjong">хранилище проекта mahjong</a>.</p>
+<p><a href="lets-go.html">Как вы знаете</a>, мы опубликовали кросс-платформенное руководство OpenSceneGraph для усиления сообщества OpenSceneGraph. Мы ценим обучение и любим делиться своими знаниями. Поэтому мы решили разрабатывать Маджонг небольшими воспроизводимыми частями, каждая из которых имеет уникальную внутреннюю версию. Эти версии доступны в <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">хранилище проекта mahjong</a>.</p>
 <p>Мы также предоставляем <a href="http://ogstudio.github.io/game-mahjong">историю версий, каждая из которых сопровождается сборкой под веб</a>, для следующих целей:</p>
 <ul>
 <li>обучение: показать ход разработки изнутри</li>

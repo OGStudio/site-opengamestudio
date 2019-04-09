@@ -4,7 +4,7 @@ Category: News
 Slug: example-driven-development
 Lang: en
 
-![Screenshot][screenshot]
+![Debug broker][screenshot]
 
 This article explains how the third OpenSceneGraph cross-platform example opened our eyes to example-driven development.
 
@@ -15,6 +15,7 @@ This article explains how the third OpenSceneGraph cross-platform example opened
 The third OpenSceneGraph cross-platform example explains how to implement [remote debugging across platforms][osgcpe-04]. This example is less about OpenSceneGraph and more about different platforms.
 
 Remote anything nowadays assumes the use of HTTP(s) over TCP/IP. Thus, the first idea was to embed HTTP server into an application and let HTTP clients interact with the server.
+
 However, serving HTTP across all platforms is complicated:
 
 * desktops have firewalls
@@ -42,7 +43,7 @@ From now on, all new features like input handling, Mahjong layout loading, resou
 That's it for explaining how the third OpenSceneGraph cross-platform example opened our eyes to example-driven development.
 
 [screenshot]: ../../images/2018-06-27-example-driven-development.png
-[article-2018-august]: 2018-08-21-examples-and-dependencies.html
+[article-2018-august]: examples-and-dependencies.html
 
 [osgcpe-04]: https://github.com/OGStudio/openscenegraph-cross-platform-examples/tree/master/04.RemoteDebugging
 [debug-broker]: https://github.com/OGStudio/debug-broker

@@ -4,7 +4,7 @@ Category: News
 Slug: openscenegraph-examples
 Lang: ru
 
-![Screenshot][screenshot]
+![iOS Simulator отображает куб][screenshot]
 
 Эта статья резюмирует создание первых двух кросс-платформенных примеров OpenSceneGraph.
 

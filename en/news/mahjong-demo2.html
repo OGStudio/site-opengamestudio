@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,7 +108,7 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2018-10-02-mahjong-demo2.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2018-10-02-mahjong-demo2.png" alt="Start of a Mahjong party" /><figcaption>Start of a Mahjong party</figcaption>
 </figure>
 <p>We are glad to announce the release of the second demonstration of OGS Mahjong 2. The purposes of this release were to refine our development techniques and build a solid cross-platform foundation.</p>
 <p><strong>Release</strong></p>
@@ -100,7 +117,7 @@
 <p>This allows you to play the same layout each time you launch the game.</p>
 <p>Each seed uniquely identifies the placement of tiles. Thus, different seeds give you a different experience.</p>
 <p><strong>Development techniques and foundation</strong></p>
-<p>During the second demonstration development, we switched from standard development to <a href="2018-06-27-example-driven-development.html">example-driven one</a>. This resulted in the creation of three distinct repositories to back the development of OGS Mahjong 2:</p>
+<p>During the second demonstration development, we switched from standard development to <a href="example-driven-development.html">example-driven one</a>. This resulted in the creation of three distinct repositories to back the development of OGS Mahjong 2:</p>
 <ul>
 <li><a href="https://github.com/OGStudio/openscenegraph-cross-platform-examples">OpenSceneGraph cross-platform examples</a> repository provides cross-platform foundation like resource handling, render window setup, etc.</li>
 <li><a href="https://github.com/OGStudio/ogs-mahjong-components">OGS Mahjong components</a> repository provides Mahjong specific functionality like parsing layout, matching tiles, etc.</li>

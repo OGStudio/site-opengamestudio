@@ -4,7 +4,7 @@ Category: News
 Slug: examples-and-dependencies
 Lang: en
 
-![Screenshot][screenshot]
+![Cloud][screenshot]
 
 This article describes two new OpenSceneGraph cross-platform examples and the change in handling dependencies.
 

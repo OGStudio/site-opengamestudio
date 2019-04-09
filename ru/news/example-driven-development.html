@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,13 +108,14 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2018-06-27-example-driven-development.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2018-06-27-example-driven-development.png" alt="Брокер отладки" /><figcaption>Брокер отладки</figcaption>
 </figure>
 <p>Эта статья описывает то, как создание третьего кросс-платформенного примера OpenSceneGraph привело нас к разработке через создание примеров.</p>
 <p><strong>ИЗМЕНЕНИЯ ОТ 2018-08</strong>: третий пример был переименован в четвёртый в связи с причинами, изложенными в <a href="examples-and-dependencies.html">следующей статье</a>.</p>
 <p><strong>Третий кросс-платформенный пример OpenSceneGraph</strong></p>
-<p>Третий кросс-платформенный пример OpenSceneGraph содержит реализацию <a href="https://github.com/OGStudio/openscenegraph-cross-platform-examples/tree/master/03.RemoteDebugging">удалённой отладки, работающей на всех поддерживаемых платформах</a>. Этот пример относится не столько к OpenSceneGraph, сколько к поддержке различных платформ.</p>
-<p>Удалённое взаимодействие ныне предполагает использование HTTP(s) поверх TCP/IP. Таким образом, первая идея реализации подразумевала встраивание сервера HTTP в приложение, чтобы клиенты HTTP могли взаимодействовать с этим сервером. Однако, раздача HTTP на различных платформах имеет свои сложности:</p>
+<p>Третий кросс-платформенный пример OpenSceneGraph содержит реализацию <a href="https://github.com/OGStudio/openscenegraph-cross-platform-examples/tree/master/04.RemoteDebugging">удалённой отладки, работающей на всех поддерживаемых платформах</a>. Этот пример относится не столько к OpenSceneGraph, сколько к поддержке различных платформ.</p>
+<p>Удалённое взаимодействие ныне предполагает использование HTTP(s) поверх TCP/IP. Таким образом, первая идея реализации подразумевала встраивание сервера HTTP в приложение, чтобы клиенты HTTP могли взаимодействовать с этим сервером.</p>
+<p>Однако, раздача HTTP на различных платформах имеет свои сложности:</p>
 <ul>
 <li>на десктопах есть межсетевые экраны (firewalls)</li>
 <li>на мобилках есть ограничения по работе фоновых процессов</li>

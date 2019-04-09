@@ -4,7 +4,7 @@ Category: News
 Slug: scripting-research
 Lang: en
 
-![Scripting research](../../images/2017-08-scripting-research.png)
+![Textbook with a text](../../images/2017-08-scripting-research.png)
 
 This article describes scripting research in July 2017.
 

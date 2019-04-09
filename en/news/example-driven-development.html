@@ -68,6 +68,23 @@
             {
                 float: right;
             }
+            figcaption
+            {
+                color: #aaa;
+            }
+            
+            table
+            {
+                border-collapse: collapse;
+            }
+            
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
         </style>
     </head>
     <body>
@@ -91,13 +108,14 @@
                     </p>
                     <div class="news_item_contents">
         <figure>
-<img src="../../images/2018-06-27-example-driven-development.png" alt="Screenshot" /><figcaption>Screenshot</figcaption>
+<img src="../../images/2018-06-27-example-driven-development.png" alt="Debug broker" /><figcaption>Debug broker</figcaption>
 </figure>
 <p>This article explains how the third OpenSceneGraph cross-platform example opened our eyes to example-driven development.</p>
-<p><strong>2018-08 EDIT</strong>: the third example has been renamed to the fourth one due to the reasons described in the <a href="2018-08-21-examples-and-dependencies.html">next article</a>.</p>
+<p><strong>2018-08 EDIT</strong>: the third example has been renamed to the fourth one due to the reasons described in the <a href="examples-and-dependencies.html">next article</a>.</p>
 <p><strong>The third OpenSceneGraph cross-platform example</strong></p>
 <p>The third OpenSceneGraph cross-platform example explains how to implement <a href="https://github.com/OGStudio/openscenegraph-cross-platform-examples/tree/master/04.RemoteDebugging">remote debugging across platforms</a>. This example is less about OpenSceneGraph and more about different platforms.</p>
-<p>Remote anything nowadays assumes the use of HTTP(s) over TCP/IP. Thus, the first idea was to embed HTTP server into an application and let HTTP clients interact with the server. However, serving HTTP across all platforms is complicated:</p>
+<p>Remote anything nowadays assumes the use of HTTP(s) over TCP/IP. Thus, the first idea was to embed HTTP server into an application and let HTTP clients interact with the server.</p>
+<p>However, serving HTTP across all platforms is complicated:</p>
 <ul>
 <li>desktops have firewalls</li>
 <li>mobiles have restrictions on background processes</li>

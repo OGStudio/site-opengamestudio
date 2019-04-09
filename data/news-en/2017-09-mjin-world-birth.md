@@ -4,23 +4,23 @@ Category: News
 Slug: mjin-world-birth
 Lang: en
 
-![The birth of MJIN world](../../images/2017-09-mjin-world-birth.png)
+![An explosion giving birth to something new](../../images/2017-09-mjin-world-birth.png)
 
 This article describes the birth of MJIN world in August 2017.
 
 **mjin-player**
 
-As you know, [we spent July to research scripting]({filename}/articles/2017-08-scripting-research.md). We found a solution that satisfies the following criteria. Scripts should:
+As you know, [we spent July to research scripting](scripting-research.html). We found a solution that satisfies the following criteria. Scripts should:
 
-0. run unchanged on all supported platforms
-0. allow extending C++ code
+1. run unchanged on all supported platforms
+1. allow extending C++ code
 
 We have verified the second criterion by writing a sample application. The first criterion was taken for granted because it SHOULD be true.
 
 At the time, we saw two ways to verify the first criterion:
 
-0. create one sample application for each platform to verify scripting only
-0. create a single cross-platform application, which can run any code
+1. create one sample application for each platform to verify scripting only
+1. create a single cross-platform application, which can run any code
 
 We chose the second approach because it is more beneficial in the long run. As you might have guessed, [mjin-player](https://bitbucket.org/ogstudio/mjin-player) is that application.
 

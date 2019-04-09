@@ -4,7 +4,7 @@ Category: News
 Slug: mahjong-techdemo1-gameplay
 Lang: en
 
-![Screenshot][screenshot]
+![End of a Mahjong party][screenshot]
 
 We are glad to announce the release of the first technical demonstration of OGS Mahjong 2. The purpose of this release was to verify gameplay across supported platforms.
 
