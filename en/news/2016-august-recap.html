@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,20 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
-            figure
-            {
-                margin: 0px;
-                padding: 0px;
-            }
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,237 +80,116 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../en/news/index.html">News</a>
-            <a href="../../en/page/games.html">Games</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
             <a href="../../en/page/about.html">About</a>
             <div id="lang">
-                <a href="2016-august-recap.html">EN</a>
+                <a href="../../en/news/2016-august-recap.html">EN</a>
                 <a href="../../ru/news/2016-august-recap.html">RU</a>
             </div>
         </div>
-        <h1>In the news</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="2016-august-recap.html">August 2016 recap</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2016-09-03 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <figure>
-<img src="../../images/2016-09-03_august-recap.png" alt="OGS Editor with a spherical scene node" /><figcaption>OGS Editor with a spherical scene node</figcaption>
-</figure>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="2016-august-recap.html">August 2016 recap</a>
+                </h2>
+                <p class="news_item_date">
+                    2016-09-03 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2016-09-03_august-recap.png" alt="OGS Editor with a spherical scene node" /></p>
 <p>This article explains the most important technical details about development in August: UIQt module, its refactoring, a new feature based development approach, and its benefits.</p>
 <p><strong>UIQt module</strong> is a collection of UI components backed by Qt. We only use it for Editor UI at the moment.</p>
-Here is a list of UIQt module components with their description and current code size:
-<table>
+<p>Here is a list of UIQt module components with their description and current code size:<table>
 <tr>
-<th>
-<strong>№</strong>
-</th>
-<th>
-<strong>Component</strong>
-</th>
-<th>
-<strong>Description</strong>
-</th>
-<th>
-<strong>Size (B)</strong>
-</th>
-<th>
-<strong>Size (%)</strong>
-</th>
+  <th><strong>№</strong></th>
+  <th><strong>Component</strong></th>
+  <th><strong>Description</strong></th>
+  <th><strong>Size (B)</strong></th>
+  <th><strong>Size (%)</strong></th>
 </tr>
 <tr>
-<td>
-1
-</td>
-<td>
-UIQtAction
-</td>
-<td>
-Actions (events) for menus
-</td>
-<td>
-11224
-</td>
-<td>
-9
-</td>
+  <td>1</td>
+  <td>UIQtAction</td>
+  <td>Actions (events) for menus</td>
+  <td>11224</td>
+  <td>9</td>
 </tr>
 <tr>
-<td>
-2
-</td>
-<td>
-UIQtAux
-</td>
-<td>
-Initializes Qt and main window. Provides widget resolution by name to other components
-</td>
-<td>
-15518
-</td>
-<td>
-12
-</td>
+  <td>2</td>
+  <td>UIQtAux</td>
+  <td>Initializes Qt and main window. Provides widget resolution by name to other components</td>
+  <td>15518</td>
+  <td>12</td>
 </tr>
 <tr>
-<td>
-3
-</td>
-<td>
-UIQtDock
-</td>
-<td>
-Widget docks
-</td>
-<td>
-5273
-</td>
-<td>
-4
-</td>
+  <td>3</td>
+  <td>UIQtDock</td>
+  <td>Widget docks</td>
+  <td>5273</td>
+  <td>4</td>
 </tr>
 <tr>
-<td>
-4
-</td>
-<td>
-UIQtFileDialog
-</td>
-<td>
-File selection dialogs
-</td>
-<td>
-8960
-</td>
-<td>
-7
-</td>
+  <td>4</td>
+  <td>UIQtFileDialog</td>
+  <td>File selection dialogs</td>
+  <td>8960</td>
+  <td>7</td>
 </tr>
 <tr>
-<td>
-5
-</td>
-<td>
-UIQtMenu
-</td>
-<td>
-Menus for main window and pop-ups (like node’s add/copy/paste/delete menu)
-</td>
-<td>
-4566
-</td>
-<td>
-3
-</td>
+  <td>5</td>
+  <td>UIQtMenu</td>
+  <td>Menus for main window and pop-ups (like node's add/copy/paste/delete menu)</td>
+  <td>4566</td>
+  <td>3</td>
 </tr>
 <tr>
-<td>
-6
-</td>
-<td>
-UIQtMenuBar
-</td>
-<td>
-Menu bar for main window
-</td>
-<td>
-4222
-</td>
-<td>
-3
-</td>
+  <td>6</td>
+  <td>UIQtMenuBar</td>
+  <td>Menu bar for main window</td>
+  <td>4222</td>
+  <td>3</td>
 </tr>
 <tr>
-<td>
-7
-</td>
-<td>
-UIQtRunner
-</td>
-<td>
-Allows to start QApplication
-</td>
-<td>
-2450
-</td>
-<td>
-2
-</td>
+  <td>7</td>
+  <td>UIQtRunner</td>
+  <td>Allows to start QApplication</td>
+  <td>2450</td>
+  <td>2</td>
 </tr>
 <tr>
-<td>
-8
-</td>
-<td>
-UIQtThumbnailDialog
-</td>
-<td>
-Dialog with thumbnail images
-</td>
-<td>
-18615
-</td>
-<td>
-14
-</td>
+  <td>8</td>
+  <td>UIQtThumbnailDialog</td>
+  <td>Dialog with thumbnail images</td>
+  <td>18615</td>
+  <td>14</td>
 </tr>
 <tr>
-<td>
-9
-</td>
-<td>
-UIQtToolBar
-</td>
-<td>
-Tool bar for main window
-</td>
-<td>
-4276
-</td>
-<td>
-3
-</td>
+  <td>9</td>
+  <td>UIQtToolBar</td>
+  <td>Tool bar for main window</td>
+  <td>4276</td>
+  <td>3</td>
 </tr>
 <tr>
-<td>
-10
-</td>
-<td>
-UIQtTree
-</td>
-<td>
-Provides complex widgets like Scene tree and Property browser
-</td>
-<td>
-51216
-</td>
-<td>
-39
-</td>
+  <td>10</td>
+  <td>UIQtTree</td>
+  <td>Provides complex widgets like Scene tree and Property browser</td>
+  <td>51216</td>
+  <td>39</td>
 </tr>
 <tr>
-<td>
-11
-</td>
-<td>
-UIQtWidget
-</td>
-<td>
-Common widget properties like focus and visibility
-</td>
-<td>
-5465
-</td>
-<td>
-4
-</td>
+  <td>11</td>
+  <td>UIQtWidget</td>
+  <td>Common widget properties like focus and visibility</td>
+  <td>5465</td>
+  <td>4</td>
 </tr>
-</table>
+</table></p>
 <p><strong>UIQt module refactoring</strong> purpose was to replace old State API with new Environment API, which allows to achieve the same functionality with less code, i.e., makes development easier and faster.</p>
 <p>Refactoring started in July and should have been done the same month. However, we only finished the work in August. Initial plan assumed 28 hours would be enough, but we spent 65 instead. We estimated planned time by relying on the number of public API calls of each component. That worked fine for small components, because the number of their public API calls was roughly equal to the number of their features, and features themselves were very small. However, it totally failed for UIQtTree, which contains 39% of UIQt module code, because there was no direct connection between public API and features.</p>
 <p><strong>Feature based development approach</strong> was born as a result of UIQtTree refactoring struggle. Since Qt uses MVC, UIQtTree component consists of several classes. By the time UIQtTree could display and manage a hierarchy of items, the component was already 27K in size. We noticed UIQtTree started to require abnormal amount of development time even for tiny features. This was an obvious <a href="http://kornerr.blogspot.com/2012/04/complexity-conservation-law-complexity.html">quantitative complexity</a> manifestation.</p>
@@ -326,187 +197,91 @@ Common widget properties like focus and visibility
 <p>Here is a list of current UIQtTree features:</p>
 <table>
 <tr>
-<th>
-<strong>№</strong>
-</th>
-<th>
-<strong>Feature</strong>
-</th>
-<th>
-<strong>Description</strong>
-</th>
-<th>
-<strong>Size (B)</strong>
-</th>
-<th>
-<strong>Size (%)</strong>
-</th>
+  <th>**№**</th>
+  <th>**Feature**</th>
+  <th>**Description**</th>
+  <th>**Size (B)**</th>
+  <th>**Size (%)**</th>
 </tr>
 <tr>
-<td>
-1
-</td>
-<td>
-Base
-</td>
-<td>
-Allows to construct item hierarchy, modify it, and display it
-</td>
-<td>
-26966
-</td>
-<td>
-52
-</td>
+  <td>1</td>
+  <td>Base</td>
+  <td>Allows to construct item hierarchy, modify it, and display it</td>
+  <td>26966</td>
+  <td>52</td>
 </tr>
 <tr>
-<td>
-2
-</td>
-<td>
-Item open state
-</td>
-<td>
-Keeps track of collapsed/expanded item properties
-</td>
-<td>
-3094
-</td>
-<td>
-6
-</td>
+  <td>2</td>
+  <td>Item open state</td>
+  <td>Keeps track of collapsed/expanded item properties</td>
+  <td>3094</td>
+  <td>6</td>
 </tr>
 <tr>
-<td>
-3
-</td>
-<td>
-Item renaming
-</td>
-<td>
-Allows to rename an item
-</td>
-<td>
-3471
-</td>
-<td>
-7
-</td>
+  <td>3</td>
+  <td>Item renaming</td>
+  <td>Allows to rename an item</td>
+  <td>3471</td>
+  <td>7</td>
 </tr>
 <tr>
-<td>
-4
-</td>
-<td>
-Item selection
-</td>
-<td>
-Allows to get/set selected item
-</td>
-<td>
-2338
-</td>
-<td>
-5
-</td>
+  <td>4</td>
+  <td>Item selection</td>
+  <td>Allows to get/set selected item</td>
+  <td>2338</td>
+  <td>5</td>
 </tr>
 <tr>
-<td>
-5
-</td>
-<td>
-Item value
-</td>
-<td>
-Provides 2nd and the rest columns for items, used by Property browser
-</td>
-<td>
-1307
-</td>
-<td>
-3
-</td>
+  <td>5</td>
+  <td>Item value</td>
+  <td>Provides 2nd and the rest columns for items, used by Property browser</td>
+  <td>1307</td>
+  <td>3</td>
 </tr>
 <tr>
-<td>
-6
-</td>
-<td>
-Item value editing
-</td>
-<td>
-Allows to edit item values with a default editor widget
-</td>
-<td>
-1996
-</td>
-<td>
-4
-</td>
+  <td>6</td>
+  <td>Item value editing</td>
+  <td>Allows to edit item values with a default editor widget</td>
+  <td>1996</td>
+  <td>4</td>
 </tr>
 <tr>
-<td>
-7
-</td>
-<td>
-Item value editing with combobox
-</td>
-<td>
-Provides combobox editor
-</td>
-<td>
-5819
-</td>
-<td>
-11
-</td>
+  <td>7</td>
+  <td>Item value editing with combobox</td>
+  <td>Provides combobox editor</td>
+  <td>5819</td>
+  <td>11</td>
 </tr>
 <tr>
-<td>
-8
-</td>
-<td>
-Item value editing with spinner
-</td>
-<td>
-Provides spinbox editor
-</td>
-<td>
-5290
-</td>
-<td>
-10
-</td>
+  <td>8</td>
+  <td>Item value editing with spinner</td>
+  <td>Provides spinbox editor</td>
+  <td>5290</td>
+  <td>10</td>
 </tr>
 <tr>
-<td>
-9
-</td>
-<td>
-Menu
-</td>
-<td>
-Provides pop-up menu
-</td>
-<td>
-1248
-</td>
-<td>
-2
-</td>
+  <td>9</td>
+  <td>Menu</td>
+  <td>Provides pop-up menu</td>
+  <td>1248</td>
+  <td>2</td>
 </tr>
 </table>
-<p>Here’s an example of UIQtTree Menu feature file: <a href="https://bitbucket.org/ogstudio-history/mjin-pre-pre/src/0c4cc3c3213f4687c0f3bd6a5426a6054cadd79b/f/TREE_MENU.cpp?at=Studio+0.10&amp;fileviewer=file-view-default">TREE_MENU</a>.</p>
+<p>Here's an example of UIQtTree Menu feature file: <a href="https://bitbucket.org/ogstudio-history/mjin-pre-pre/src/0c4cc3c3213f4687c0f3bd6a5426a6054cadd79b/f/TREE_MENU.cpp?at=Studio+0.10&fileviewer=file-view-default">TREE_MENU</a>.</p>
 <p><strong>Benefits of the approach</strong> include:</p>
-<ol type="1">
+<ol>
 <li>Faster code reading/understanding due to small size</li>
 <li>Easier and safer modification due to isolated code</li>
 </ol>
-<p>There’s a drawback, too: new approach requires learning.</p>
-<p>That’s it for the most important technical details about development in August: UIQt module, its refactoring, a new feature based development approach, and its benefits.</p>
-
-                    </div>
+<p>There's a drawback, too: new approach requires learning.</p>
+<p>That's it for the most important technical details about development in August: UIQt module, its refactoring, a new feature based development approach, and its benefits.</p>
                 </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

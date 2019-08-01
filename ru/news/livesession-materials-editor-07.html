@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,36 +87,45 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/livesession-materials-editor-07.html">EN</a>
-                <a href="livesession-materials-editor-07.html">RU</a>
+                <a href="../../ru/news/livesession-materials-editor-07.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="livesession-materials-editor-07.html">Видеозапись живой сессии и материалы</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2015-11-15 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <p>Если вы пропустили живую сессию, вы можете посмотреть ее здесь: <a href="https://www.livecoding.tv/video/kornerr/playlists/whac-a-mole-from-scratch/">https://www.livecoding.tv/video/kornerr/playlists/whac-a-mole-from-scratch/</a></p>
-<p>Проект, созданный в ходе сессии, можно скачать здесь: <a href="https://github.com/OGStudio/liveSessionWhacAMole/archive/master.zip">https://github.com/OGStudio/liveSessionWhacAMole/archive/master.zip</a></p>
-<p>Последняя версия редактора доступна здесь: <a href="http://sourceforge.net/projects/osrpgcreation/files/Editor/jenkins/42_2015-11-13_08-16-46_0.7.4/">http://sourceforge.net/projects/osrpgcreation/files/Editor/jenkins/42_2015-11-13_08-16-46_0.7.4/</a></p>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="livesession-materials-editor-07.html">Видеозапись живой сессии и материалы</a>
+                </h2>
+                <p class="news_item_date">
+                    2015-11-15 00:00
+                </p>
+                <div class="news_item_contents">
+<p>Если вы пропустили живую сессию, вы можете посмотреть ее здесь:
+<a href="https://www.livecoding.tv/video/kornerr/playlists/whac-a-mole-from-scratch/">https://www.livecoding.tv/video/kornerr/playlists/whac-a-mole-from-scratch/</a></p>
+<p>Проект, созданный в ходе сессии, можно скачать здесь:
+<a href="https://github.com/OGStudio/liveSessionWhacAMole/archive/master.zip">https://github.com/OGStudio/liveSessionWhacAMole/archive/master.zip</a></p>
+<p>Последняя версия редактора доступна здесь:
+<a href="http://sourceforge.net/projects/osrpgcreation/files/Editor/jenkins/42_2015-11-13_08-16-46_0.7.4/">http://sourceforge.net/projects/osrpgcreation/files/Editor/jenkins/42<em>2015-11-13</em>08-16-46_0.7.4/</a></p>
 <p>Скачайте редактор, разархивируйте, удалите папку wam.ogs из редактора, скопируйте папку wam.ogs из архива живой сессии в папку редактора.</p>
 <ul>
 <li>в Windows - запустите файл <code>run.bat</code>.</li>
 <li>в Linux и OSX - запустите файл <code>run</code>.</li>
 </ul>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

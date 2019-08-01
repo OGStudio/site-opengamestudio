@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,29 +87,35 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/may-live-session-announcement.html">EN</a>
-                <a href="may-live-session-announcement.html">RU</a>
+                <a href="../../ru/news/may-live-session-announcement.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="may-live-session-announcement.html">Прямой эфир: 28 мая 2016</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2016-05-17 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <p>Мы рады сообщить, что трансляция <a title="LiveCoding" href="https://www.livecoding.tv/kornerr">LiveCoding</a> состоится <a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=%D0%9C%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%D0%B9+%D1%8D%D1%84%D0%B8%D1%80+Open+Game+Studio&amp;iso=20160528T13&amp;p1=166&amp;ah=3">28 мая 2016 в 13:00 MSK</a>. Присоединяйтесь!</p>
-
-                    </div>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="may-live-session-announcement.html">Прямой эфир: 28 мая 2016</a>
+                </h2>
+                <p class="news_item_date">
+                    2016-05-17 00:00
+                </p>
+                <div class="news_item_contents">
+<p>Мы рады сообщить, что трансляция <a title="LiveCoding" href="https://www.livecoding.tv/kornerr">LiveCoding</a> состоится <a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=%D0%9C%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%D0%B9+%D1%8D%D1%84%D0%B8%D1%80+Open+Game+Studio&iso=20160528T13&p1=166&ah=3">28 мая 2016 в 13:00 MSK</a>. Присоединяйтесь!</p>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

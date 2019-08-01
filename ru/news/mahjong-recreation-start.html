@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,28 +87,28 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/mahjong-recreation-start.html">EN</a>
-                <a href="mahjong-recreation-start.html">RU</a>
+                <a href="../../ru/news/mahjong-recreation-start.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="mahjong-recreation-start.html">Начало воссоздания Маджонга</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2018-01-26 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <figure>
-<img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Сферические фишки в раскладке Маджонг" /><figcaption>Сферические фишки в раскладке Маджонг</figcaption>
-</figure>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="mahjong-recreation-start.html">Начало воссоздания Маджонга</a>
+                </h2>
+                <p class="news_item_date">
+                    2018-01-26 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Сферические фишки в раскладке Маджонг" /></p>
 <p>Эта статья описывает начало воссоздания игры Маджонг.</p>
 <p><strong>План</strong></p>
 <p>Мы начали воссоздание Маджонга с составления краткого плана реализации игровой механики с минимальной графикой:</p>
@@ -137,7 +136,8 @@
 </ul>
 <p>Проект <a href="https://bitbucket.org/ogstudio-games/mahjong-data">mahjong-data</a> является примером подобного проекта MJIN, ресурсы из которого использует проект <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">mahjong</a>.</p>
 <p><strong>Проблема №2: загрузка изображений PNG на поддерживаемых платформах</strong></p>
-<p>Для загрузки PNG мы используем соответствующий плагин OpenSceneGraph. Мы собрали его без проблем для десктопа. Сборка же для веба (Emscripten) оказалась сложнее: Emscripten содержит собственную версию <strong>libpng</strong>, которую сборочный скрипт OpenSceneGraph не видит. Нам пришлось обойти несколько проверок OpenSceneGraph, чтобы успешно собрать плагин для Emscripten. Сборка плагина под мобилки ещё ждёт нас впереди. Как только мы разберёмся с плагином PNG на всех поддерживаемых платформах, мы опубликуем информацию о его сборке в новом самоучителе для <a href="https://github.com/ogstudio/openscenegraph-cross-platform-guide">кросс-платформенного руководства OpenSceneGraph</a>. Нас уже <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues/4">попросили это сделать</a>.</p>
+<p>Для загрузки PNG мы используем соответствующий плагин OpenSceneGraph. Мы собрали его без проблем для десктопа. Сборка же для веба (Emscripten) оказалась сложнее: Emscripten содержит собственную версию <strong>libpng</strong>, которую сборочный скрипт OpenSceneGraph не видит. Нам пришлось обойти несколько проверок OpenSceneGraph, чтобы успешно собрать плагин для Emscripten.
+Сборка плагина под мобилки ещё ждёт нас впереди. Как только мы разберёмся с плагином PNG на всех поддерживаемых платформах, мы опубликуем информацию о его сборке в новом самоучителе для <a href="https://github.com/ogstudio/openscenegraph-cross-platform-guide">кросс-платформенного руководства OpenSceneGraph</a>. Нас уже <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues/4">попросили это сделать</a>.</p>
 <p><strong>Разработка</strong></p>
 <p><a href="lets-go.html">Как вы знаете</a>, мы опубликовали кросс-платформенное руководство OpenSceneGraph для усиления сообщества OpenSceneGraph. Мы ценим обучение и любим делиться своими знаниями. Поэтому мы решили разрабатывать Маджонг небольшими воспроизводимыми частями, каждая из которых имеет уникальную внутреннюю версию. Эти версии доступны в <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">хранилище проекта mahjong</a>.</p>
 <p>Мы также предоставляем <a href="http://ogstudio.github.io/game-mahjong">историю версий, каждая из которых сопровождается сборкой под веб</a>, для следующих целей:</p>
@@ -149,9 +149,13 @@
 <p>На момент написания этой статьи мы закончили реализацию выбора фишек. <a href="https://ogstudio.github.io/game-mahjong/versions/010/mjin-player.html">Проверьте в своём браузере!</a></p>
 <p>После реализации сравнения фишек мы опубликуем промежуточный результат для всех поддерживаемых платформ.</p>
 <p>На этом мы заканчиваем описание начала воссоздания игры Маджонг.</p>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

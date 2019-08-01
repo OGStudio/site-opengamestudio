@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+
+            #lang
+            {
+                float: right;
+            }
+
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+
+            html
+            {
+                font-family: sans-serif;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            /*
+            figure
+            {
+                margin: 0px;
+                padding: 0px;
+            }
+            */
+            img
+            {
+                width: 720px;
+            }
+            a
+            {
+                color: #3A91CB;
+                text-decoration: none;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+            }
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <strong id="title">Open Game Studio</strong>
+            <a href="../../ru/news/index.html">Новости</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
+            <a href="../../ru/page/about.html">О нас</a>
+            <div id="lang">
+                <a href="../../en/news/defending-availability.html">EN</a>
+                <a href="../../ru/news/defending-availability.html">RU</a>
+            </div>
+        </div>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="defending-availability.html">Защита доступности</a>
+                </h2>
+                <p class="news_item_date">
+                    2019-04-16 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2019-04-16_defending-availability.jpg" alt="Алтайская река Катунь" /></p>
+<p>В этой статье мы расскажем о начале усилий по защите себя от решений третьих сторон.</p>
+<p>С первого дня существования проекта Opensource Game Studio мы используем решения третьих сторон для достижения своей цели по созданию лучших средств разработки игр. Мы использовали форумы, системы отслеживания задач, списки рассылок, социальные сети, системы контроля версий кода, хостинги, компиляторы, библиотеки и т.д.. Каждое решение третьих сторон имеет свой жизненный цикл.</p>
+<p>Существуют две основные причины, по которым мы меняли решение третьих сторон:</p>
+<ul>
+<li>Изменение наших нужд</li>
+<li>Закрытие решения</li>
+</ul>
+<p>Закрытие <a href="https://code.google.com/archive/">Google Code</a> в 2016 было нашим первым опытом знакомства с мёртвой рукой бизнеса. Мы использовали SVN, Mercurial и систему отслеживания задач Google. Мы были вынуждены отказаться от них.</p>
+<p>Мы переместили наш исходный код и в <a href="https://bitbucket.org/ogstudio/">BitBucket</a>, и в <a href="https://github.com/ogstudio/">GitHub</a>, т.к. не было больше желания складывать все яйца в одну корзину. Мы стали мудрее благодаря закрытию Google Code.</p>
+<p>Систему отслеживания задач ждала иная судьба. Сначала мы использовали Bugzilla, но неудобство этой системы привело к тому, что мы заменили её на Google Sheets. На текущий момент мы используем Google Sheets для планирования и журналирования работ по проекту. Также мы используем Google Docs, чтобы писать эти самые новости и проверять их перед публикацией.</p>
+<p>Закрытие <a href="https://developers.googleblog.com/2018/03/transitioning-google-url-shortener.html">goo.gl</a> (сокращатель URL) в 2019 было нашей второй встречей с мёртвой рукой бизнеса. Мы использовали goo.gl для сокращений URL от Google Docs внутри команды. Особого урона это закрытие не принесло, однако, оно лишь подтвердило, что решения третьих сторон не наши, а их.</p>
+<p>Microsoft <a href="https://github.blog/2018-10-26-github-and-microsoft/">поглотила GitHub</a> в 2018. Пока что (апрель 2019) Microsoft сопутствует успех в усилении роли GitHub благодаря <a href="https://www.gitpod.io/blog/gitpod-launch/">выпуску GitPod</a>, который позволяет разработчикам собирать проекты GitHub в один клик. Тем не менее, Microsoft известна в том числе и закрытием <a href="https://devblogs.microsoft.com/bharry/shutting-down-codeplex/">Codeplex</a> в 2017.</p>
+<p>Это короткая история о закрытиях и поглощениях в течение последних четырёх лет высвечивает основную цель бизнеса: увеличение прибыли. Мы лично ничего не имеем против этой цели. В 21-м веке действительно сложно жить без заработка. Мы не исключение, мы тоже платим свои счета. Однако, более гуманным действием было бы отпустить исходный код закрытых решений на волю, чтобы заинтересованные разработчики продолжили развитие этих решений, если им того хотелось. Очевидно, что такое положение дел привело бы к увеличению конкуренции со сделавшей это компанией, а компании всячески стараются избегать конкуренции.</p>
+<p>Мы не бизнес, мы не получаем никакой прибыли с наших инструментов. Наши цели состоят в том, чтобы создавать инструменты и выпускать их на волю, чтобы вы могли их использовать. Сейчас мы используем GitHub для распространения некоторых <a href="https://github.com/OGStudio/openscenegraph-cross-platform-examples">самоучителей</a> и <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide">инструкций</a>. Представьте, что Microsoft решит закрыть GitHub через пару лет. Почему? Может быть, потому что <a href="https://hackernoon.com/git-wars-why-im-switching-to-gitlab-e471f5e8be2c">люди постепенно мигрируют</a> с GitHub на GitLab.</p>
+<p>Как мы можем защитить себя от мёртвой руки бизнеса? Мы консолидируем наши инструменты, самоучители и игры на этом самом сайте. Первым шагом, теперь завершённым, было создание генератора статического сайта. Наш сайт теперь сгенерирован именно этим генератором.</p>
+<p>На текущий момент сгенерированный сайт обладает следующей функциональностью:</p>
+<ul>
+<li>новости, занимающие несколько страницы</li>
+<li>отдельные страницы</li>
+<li>выбор языка для всего сайта</li>
+</ul>
+<p>В течение года мы сделаем сайт ещё более удобным. Оставайтесь на связи!</p>
+<p>На этом мы заканчиваем рассказ о начале усилий по защите себя от решений третьих сторон.</p>
+                </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
+        </center>
+    </body>
+</html>

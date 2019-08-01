@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,28 +87,28 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/ideal-gamedev.html">EN</a>
-                <a href="ideal-gamedev.html">RU</a>
+                <a href="../../ru/news/ideal-gamedev.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="ideal-gamedev.html">Идеальные игры и средства для их разработки</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2018-11-19 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <figure>
-<img src="../../images/2018-11-19-ideal-gamedev.png" alt="Человек без и с инструментами" /><figcaption>Человек без и с инструментами</figcaption>
-</figure>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="ideal-gamedev.html">Идеальные игры и средства для их разработки</a>
+                </h2>
+                <p class="news_item_date">
+                    2018-11-19 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2018-11-19-ideal-gamedev.png" alt="Человек без и с инструментами" /></p>
 <p>В этой статье мы обсудим, как выглядят идеальные видеоигра и инструмент для разработки видеоигр, по нашему мнению.</p>
 <p><strong>Вопросы</strong></p>
 <p>Как вы знаете, <a href="../../ru/page/about.html">целями Opensource Game Studio</a> являются:</p>
@@ -144,9 +143,13 @@
 <p>Написание кода и отладка, пожалуй, являются конечными формами входа и выхода любого программного обеспечения, поэтому мы их не избежим. Однако, мы можем полностью избавиться от шагов (или хотя бы значительно сократить их) <code>настройки окружения разработки</code> и <code>сборки</code>. Именно на это мы и потратим ближайшие месяцы.</p>
 <p>Наша цель на ближайшие месяцы состоит в том, чтобы создать такой инструмент разработки видеоигр, чтобы любой программист (или достаточно квалифицированный человек) мог создать <a href="https://en.wikipedia.org/wiki/Concentration_(game)">видеоигру на память</a> с нуля за час.</p>
 <p>На этом мы заканчиваем обсуждение, как выглядят идеальные видеоигра и инструмент для разработки видеоигр, по нашему мнению.</p>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

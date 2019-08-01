@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,49 +87,53 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/openscenegraph-cross-platform-guide.html">EN</a>
-                <a href="openscenegraph-cross-platform-guide.html">RU</a>
+                <a href="../../ru/news/openscenegraph-cross-platform-guide.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="openscenegraph-cross-platform-guide.html">OpenSceneGraph cross-platform guide</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2017-07-17 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <figure>
-<img src="../../images/2017-07-openscenegraph-guide.png" alt="Приложение OpenSceneGraph на десктопе и мобилке" /><figcaption>Приложение OpenSceneGraph на десктопе и мобилке</figcaption>
-</figure>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="openscenegraph-cross-platform-guide.html">OpenSceneGraph cross-platform guide</a>
+                </h2>
+                <p class="news_item_date">
+                    2017-07-17 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2017-07-openscenegraph-guide.png" alt="Приложение OpenSceneGraph на десктопе и мобилке" /></p>
 <p>Эта статья резюмирует создание кросс-платформенного руководства OpenSceneGraph.</p>
-<p>Июнь ознаменовал собой окончание работы над <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide">кросс-платформенным руководством OpenSceneGraph</a>. Мы опубликовали последний самоучитель (из изначально запланированных). Этот самоучитель описывает <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/tree/master/1.10.SampleWeb">сборку и запуск примера приложения OpenSceneGraph в вебе</a> с помощью Emscripten. Если вы упустили этот самоучитель, то вот <a href="https://ogstudio.github.io/openscenegraph-cross-platform-guide/">ссылка на приложение</a> из него. Откройте ссылку в веб-браузере.</p>
+<p>Июнь ознаменовал собой окончание работы над <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide">кросс-платформенным руководством OpenSceneGraph</a>. Мы опубликовали последний самоучитель (из изначально запланированных). Этот самоучитель описывает <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/tree/master/1.10.SampleWeb">сборку и запуск примера приложения OpenSceneGraph в вебе</a> с помощью Emscripten.
+Если вы упустили этот самоучитель, то вот <a href="https://ogstudio.github.io/openscenegraph-cross-platform-guide/">ссылка на приложение</a> из него. Откройте ссылку в веб-браузере.</p>
 <p>Мы начали составление руководства в феврале, как только нам удалось отобразить простую модель на мобилках и вебе. Мы потратили 120 часов за пять месяцев на составление десяти самоучителей этого руководства.</p>
 <p>Создание кросс-платформенного руководства OpenSceneGraph преследовало две основные цели:</p>
-<ol type="1">
+<ol>
 <li>Сохранить знания о кросс-платформенной работе с OpenSceneGraph в легкодоступной и воспроизводимой форме</li>
 <li>Поделиться этим знанием с сообществом OpenSceneGraph и тем самым усилить сообщество</li>
 </ol>
 <p>Мы уверены в том, что нам удалось достичь обе цели. И вот почему:</p>
-<ol type="1">
+<ol>
 <li>Хранилище руководства получило больше <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/stargazers">звёзд</a> (лайков), чем любое другое наше хранилище</li>
-<li>Robert Osfield, лидер проекта OpenSceneGraph, оценил руководство как <a href="http://www.mail-archive.com/osg-users@lists.openscenegraph.org/msg74815.html">“отличную работу”</a>; это значит для нас многое
-</li></li>
+<li>Robert Osfield, лидер проекта OpenSceneGraph, оценил руководство как <a href="http://www.mail-archive.com/osg-users@lists.openscenegraph.org/msg74815.html">"отличную работу"</a>; это значит для нас многое</li></li>
 <li>У руководства уже есть <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues">два тикета</a></li>
 </ol>
 <p>В конце концов, мы просто рады тому факту, что изучили кросс-платформенную разработку с OpenSceneGraph и поделились этим знанием с сообществом.</p>
 <p>Тем не менее, наше путешествие на этом не окончено. Используя знания руководства, мы продолжаем работу над тем, чтобы добавить в свои инструменты поддержку мобилок и веба, как мы <a href="the-year-of-challenges.html">обещали в январе</a>.</p>
 <p>На этом мы заканчиваем резюме о создании кросс-платформенного руководства OpenSceneGraph.</p>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

@@ -1,4 +1,5 @@
-# Ignore temporary Mac files.
+# Temporary Mac files.
 .DS_Store
-# Ignore VIM temporary files.
+
+# VIM temporary files.
 *.swp

@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,20 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
-            figure
-            {
-                margin: 0px;
-                padding: 0px;
-            }
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,28 +80,28 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../en/news/index.html">News</a>
-            <a href="../../en/page/games.html">Games</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
             <a href="../../en/page/about.html">About</a>
             <div id="lang">
-                <a href="mahjong-recreation-start.html">EN</a>
+                <a href="../../en/news/mahjong-recreation-start.html">EN</a>
                 <a href="../../ru/news/mahjong-recreation-start.html">RU</a>
             </div>
         </div>
-        <h1>In the news</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="mahjong-recreation-start.html">Mahjong recreation start</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2018-01-26 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <figure>
-<img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Spherical tiles in a Mahjong layout" /><figcaption>Spherical tiles in a Mahjong layout</figcaption>
-</figure>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="mahjong-recreation-start.html">Mahjong recreation start</a>
+                </h2>
+                <p class="news_item_date">
+                    2018-01-26 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2018-01-26-mahjong-recreation-start.png" alt="Spherical tiles in a Mahjong layout" /></p>
 <p>This article describes the start of Mahjong game recreation.</p>
 <p><strong>Plan</strong></p>
 <p>We started Mahjong recreation endeavour by composing a brief plan to get gameplay with minimal graphics:</p>
@@ -137,10 +129,10 @@
 </ul>
 <p><a href="https://bitbucket.org/ogstudio-games/mahjong-data">mahjong-data</a> is an example of such generated MJIN project that is referenced by <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">mahjong</a> project.</p>
 <p><strong>Problem №2: load PNG images across supported platforms</strong></p>
-<p>To load PNG, we use corresponding OpenSceneGraph plugin. We built it for desktop with no issues. Building for web (Emscripten) turned out to be more difficult: Emscripten provides its own version of <strong>libpng</strong>, which OpenSceneGraph build script can’t detect. We had to work around several OpenSceneGraph checks to successfully build the plugin for Emscripten.</p>
+<p>To load PNG, we use corresponding OpenSceneGraph plugin. We built it for desktop with no issues. Building for web (Emscripten) turned out to be more difficult: Emscripten provides its own version of <strong>libpng</strong>, which OpenSceneGraph build script can't detect. We had to work around several OpenSceneGraph checks to successfully build the plugin for Emscripten.</p>
 <p>Building the plugin for Android and iOS is still waiting for us. Once we get PNG plugin working across supported platforms, we are going to publish a new tutorial for <a href="https://github.com/ogstudio/openscenegraph-cross-platform-guide">OpenSceneGraph cross-platform guide</a> to cover PNG image loading. We already got a <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/issues/4">request to describe image loading</a>.</p>
 <p><strong>Development</strong></p>
-<p><a href="lets-go.html">As you know</a>, we published OpenSceneGraph cross-platform guide to make OpenSceneGraph community stronger. We value education, and we love to share our knowledge. That’s why we decided to develop Mahjong in small reproducible chunks uniquely identified by internal versions. These versions are available in <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">mahjong repository</a>.</p>
+<p><a href="lets-go.html">As you know</a>, we published OpenSceneGraph cross-platform guide to make OpenSceneGraph community stronger. We value education, and we love to share our knowledge. That's why we decided to develop Mahjong in small reproducible chunks uniquely identified by internal versions. These versions are available in <a href="https://bitbucket.org/ogstudio-games/ogs-mahjong">mahjong repository</a>.</p>
 <p>We also provide <a href="http://ogstudio.github.io/game-mahjong">version history and web releases of each internal version</a> for the following reasons:</p>
 <ul>
 <li>education: show how development looks like internally</li>
@@ -149,10 +141,14 @@
 <p><strong>Current Mahjong game status</strong></p>
 <p>As of the time of this writing, we have implemented tile selection. <a href="https://ogstudio.github.io/game-mahjong/versions/010/mjin-player.html">Try it in your browser!</a></p>
 <p>Once we finish tile matching implementation, we are going to publish the intermediate result for all supported platforms.</p>
-<p>That’s it for describing the start of Mahjong game recreation.</p>
-
-                    </div>
+<p>That's it for describing the start of Mahjong game recreation.</p>
                 </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

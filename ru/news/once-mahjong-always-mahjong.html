@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,33 +87,39 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/once-mahjong-always-mahjong.html">EN</a>
-                <a href="once-mahjong-always-mahjong.html">RU</a>
+                <a href="../../ru/news/once-mahjong-always-mahjong.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="once-mahjong-always-mahjong.html">Раз Маджонг – всегда Маджонг</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2016-08-10 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <p>Мы начали проект Opensource Game Studio очень давно. Мы хотели дать сообществу свободного программного обеспечения средства для создания игр. Правда, тогда не было ясно, что они из себя должны представлять. Поэтому решили начать с малого: создать игру.</p>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="once-mahjong-always-mahjong.html">Раз Маджонг – всегда Маджонг</a>
+                </h2>
+                <p class="news_item_date">
+                    2016-08-10 00:00
+                </p>
+                <div class="news_item_contents">
+<p>Мы начали проект Opensource Game Studio очень давно. Мы хотели дать сообществу свободного программного обеспечения средства для создания игр. Правда, тогда не было ясно, что они из себя должны представлять. Поэтому решили начать с малого: создать игру.</p>
 <p>Мы потратили 3 года для достижения этой цели: выпуск OGS Mahjong 1.0 состоялся в 2012 году. Даже для хобби-проекта (мы тратим в среднем около 40 часов в месяц) это очень долго.</p>
 <p>После выпуска игры до нас дошло: <strong>Средства для создания игр должны экономить время разработки</strong>.</p>
-<p>Мы потратили ещё 4 года на их разработку. Пришло время доказать, что они стоят каждого затраченного дня. Как? Мы <strong>воссоздадим режим “пасьянс Маджонг”</strong> за считанные часы!</p>
+<p>Мы потратили ещё 4 года на их разработку. Пришло время доказать, что они стоят каждого затраченного дня. Как? Мы <strong>воссоздадим режим "пасьянс Маджонг"</strong> за считанные часы!</p>
 <p>Присоединяйтесь к нашему следующему прямому эфиру в сентябре.</p>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

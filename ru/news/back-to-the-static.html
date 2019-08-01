@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,34 +87,38 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/back-to-the-static.html">EN</a>
-                <a href="back-to-the-static.html">RU</a>
+                <a href="../../ru/news/back-to-the-static.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="back-to-the-static.html">Назад в Статику</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2017-10-16 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <figure>
-<img src="../../images/2017-10-16-back-to-the-static.png" alt="Объединение статики и динамики" /><figcaption>Объединение статики и динамики</figcaption>
-</figure>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="back-to-the-static.html">Назад в Статику</a>
+                </h2>
+                <p class="news_item_date">
+                    2017-10-16 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2017-10-16-back-to-the-static.png" alt="Объединение статики и динамики" /></p>
 <p>Мы используем Wordpress в качестве движка нашего сайта уже более семи лет. И теперь пришло время двигаться вперед. Или назад. Некоторое время мы следили за разработкой нового поколения движков - генераторов статических сайтов. Похоже, что это технология, способная превратить прошлое в будущее.</p>
 <p>Статический веб-сайт проще, быстрее и безопаснее. И с помощью генераторов им настолько же легко управлять, как и динамическим веб-сайтом. Так что мы начинаем наш сайт заново с помощью <a href="https://blog.getpelican.com/">Pelican</a>.</p>
 <p>Сейчас здесь нет всего контента с нашего старого сайта, но мы добавим его в ближайшее время.</p>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

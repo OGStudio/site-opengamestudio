@@ -1,0 +1,11 @@
+#!/bin/bash
+# This script generates template files using AMLEO: http://opengamestudio.org/amleo
+
+DIR=`dirname $0`
+GEN=amleo.py
+
+#SITE_GEN_STG=$DIR/../../site-generator/stages
+# 01.News
+#$GEN $DIR/01*/{cfg,t} $SITE_GEN_STG/0{1,2}*/v $DIR/01*/v
+# 02.Page.
+#$GEN $DIR/02*/{cfg,t} $SITE_GEN_STG/0{1,2}*/v $DIR/0{1,2}*/v
