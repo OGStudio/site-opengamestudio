@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,20 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
-            figure
-            {
-                margin: 0px;
-                padding: 0px;
-            }
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,190 +80,176 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/index3.html">EN</a>
-                <a href="index3.html">RU</a>
+                <a href="../../ru/news/index3.html">RU</a>
             </div>
         </div>
-        <h1>Новости</h1>
+        <center>
+            <h1>Новости</h1>
 
-                <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="lets-go.html">Поехали</a>
-            </h2>
-            <p class="news_item_date">
-                2017-03-16 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2017-03_lets-go.png" alt="Слова Гагарина" /><figcaption>Слова Гагарина</figcaption>
-</figure>
-<p>В этой статье мы расскажем о результатах нашей работы в январе и феврале 2017: отображении куба на iOS/Веб и нашем инструменте для создания самоучителей. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="lets-go.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="the-year-of-challenges.html">Год испытаний</a>
-            </h2>
-            <p class="news_item_date">
-                2017-01-25 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2017-01_the-year-of-challenges.png" alt="Запуск ракеты на Байконуре" /><figcaption>Запуск ракеты на Байконуре</figcaption>
-</figure>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="osg-sample.html">Приложение OpenSceneGraph</a>
+    </h2>
+    <p class="news_item_date">
+        2017-05-12 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-05_osg-sample.png" alt="Ракета в дали" /></p>
+<p>Эта статья описывает создание самоучителей по сборке приложения OpenSceneGraph на Linux, macOS, Windows и Android в апреле 2017.</p>
+<p>Предыдущие самоучители описывали установку OpenSceneGraph на Linux, macOS, Windows и отображение модели с помощью стандартного инструмента <strong>osgviewer</strong>. На этот раз результатом нашей работы стало <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide-application">приложение OpenSceneGraph</a>, которое работает на Linux, macOS, Windows и Android.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="osg-sample.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="its-all-fine.html">Всё проходит хорошо</a>
+    </h2>
+    <p class="news_item_date">
+        2017-04-07 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-04_its-all-fine.png" alt="Полёт ракеты" /></p>
+<p>Эта статья рассказывает о создании первых четырёх самоучителей OpenSceneGraph в марте 2017.</p>
+<p><a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/">Первые четыре самоучителя OpenSceneGraph</a> объясняют, как создать модель куба в Blender и затем отобразить её на Linux, macOS или Windows с помощью osgviewer, стандартного инструмента OpenSceneGraph.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="its-all-fine.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="lets-go.html">Поехали</a>
+    </h2>
+    <p class="news_item_date">
+        2017-03-16 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-03_lets-go.png" alt="Слова Гагарина" /></p>
+<p>В этой статье мы расскажем о результатах нашей работы в январе и феврале 2017: отображении куба на iOS/Веб и нашем инструменте для создания самоучителей.</p>
+<p><strong>Отображение куба на iOS/Web</strong>. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="lets-go.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="the-year-of-challenges.html">Год испытаний</a>
+    </h2>
+    <p class="news_item_date">
+        2017-01-25 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-01_the-year-of-challenges.png" alt="Запуск ракеты на Байконуре" /></p>
 <p>Эта статья содержит наши планы на 2017 год.</p>
-<p>Наши предыдущие планы предполагали, что сейчас у нас уже будет поддержка платформы Android. Тем не менее, у нас впереди ещё очень много работы, прежде чем мы сможем объявить о поддержке Android. Судите сами: …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="the-year-of-challenges.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2017-happy-new-year.html">Счастливого 2017-го</a>
-            </h2>
-            <p class="news_item_date">
-                2016-12-31 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-12-31_happy-new-year.png" alt="Новогодняя ёлка" /><figcaption>Новогодняя ёлка</figcaption>
-</figure>
-<p>Ну вот. Это был тяжелый год для всех в команде. И он почти закончен. Хвала окончанию старого! Хвала наступлению нового! …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2017-happy-new-year.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-november-recap.html">Ноябрь 2016 кратко</a>
-            </h2>
-            <p class="news_item_date">
-                2016-12-15 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-12-15_2016-november-recap.png" alt="Постройка здания" /><figcaption>Постройка здания</figcaption>
-</figure>
+<p>Наши предыдущие планы предполагали, что сейчас у нас уже будет поддержка платформы Android. Тем не менее, у нас впереди ещё очень много работы, прежде чем мы сможем объявить о поддержке Android. Судите сами:. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="the-year-of-challenges.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2017-happy-new-year.html">Счастливого 2017-го</a>
+    </h2>
+    <p class="news_item_date">
+        2016-12-31 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-12-31_happy-new-year.png" alt="Новогодняя ёлка" /></p>
+<p>Ну вот. Это был тяжелый год для всех в команде. И он почти закончен. Хвала окончанию старого! Хвала наступлению нового!</p>
+<p>Может показаться, что наш прогресс застопорился. Три года назад мы объявили о начале нового проекта (двух, если быть точным), но до сих пор мы работаем над движком и редактором, даже не начали делать ни Shuan, ни Mahjong 2.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2017-happy-new-year.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-november-recap.html">Ноябрь 2016 кратко</a>
+    </h2>
+    <p class="news_item_date">
+        2016-12-15 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-12-15_2016-november-recap.png" alt="Постройка здания" /></p>
 <p>Эта статья описывает начало разделения библиотеки MJIN на модули.</p>
-<p>Как только мы собрали OpenSceneGraph для Android, стало очевидно, что часть функционала MJIN не нужна на Android. Например, UIQt - это основа интерфейса Редактора. Раз Редактор - это приложение для ПК, то UIQt не нужен на Android. …</p>
+<p>Как только мы собрали OpenSceneGraph для Android, стало очевидно, что часть функционала MJIN не нужна на Android. Например, UIQt - это основа интерфейса Редактора. Раз Редактор - это приложение для ПК, то UIQt не нужен на Android.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-november-recap.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-october-recap.html">Октябрь 2016 кратко</a>
+    </h2>
+    <p class="news_item_date">
+        2016-11-19 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-11-19_2016-october-recap.png" alt="Достижение поддержки Android было сродни покорению горы для нас" /></p>
+<p>Эта статья описывает, как мы потратили месяц на сборку OpenSceneGraph (OSG) под Android: первая попытка собрать OSG, поиск альтернатив OSG и успех в сборке OSG.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-october-recap.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-tech-showcases.html">Демонстрации технологий</a>
+    </h2>
+    <p class="news_item_date">
+        2016-10-31 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-10-31_tech-showcases.png" alt="Файл с функциональностью на фоне" /></p>
+<p>Сегодня мы ещё раз взглянем на формат демонстраций в 2015-2016 годах, а также сообщим о новом формате 2017-го.</p>
+<p><strong>2015 и 2016: демонстрации в прямом эфире.</strong>. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-tech-showcases.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-september-recap.html">Сентябрь 2016 кратко</a>
+    </h2>
+    <p class="news_item_date">
+        2016-10-11 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-10-11_september-recap.png" alt="Маджонг, созданный в прямом эфире" /></p>
+<p>Эта статья описывает стадии по подготовке и проведению прямого эфира сентября 2016: черновик, репетиция, прямой эфир и публикация.</p>
+<p>Несмотря на то, что сам прямой эфир длится лишь несколько часов, мы готовимся к нему целый месяц. Рассмотрим каждую стадию прямого эфира подробнее.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-september-recap.html">Читать далее</a>
+    </div>
+</div>
 
-            </div>
-            <div class="news_item_more">
-                <a href="2016-november-recap.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-october-recap.html">Октябрь 2016 кратко</a>
-            </h2>
-            <p class="news_item_date">
-                2016-11-19 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-11-19_2016-october-recap.png" alt="Достижение поддержки Android было сродни покорению горы для нас" /><figcaption>Достижение поддержки Android было сродни покорению горы для нас</figcaption>
-</figure>
-<p>Эта статья описывает, как мы потратили месяц на сборку OpenSceneGraph (OSG) под Android: первая попытка собрать OSG, поиск альтернатив OSG и успех в сборке OSG. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2016-october-recap.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-tech-showcases.html">Демонстрации технологий</a>
-            </h2>
-            <p class="news_item_date">
-                2016-10-31 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-10-31_tech-showcases.png" alt="Файл с функциональностью на фоне" /><figcaption>Файл с функциональностью на фоне</figcaption>
-</figure>
-<p>Сегодня мы ещё раз взглянем на формат демонстраций в 2015-2016 годах, а также сообщим о новом формате 2017-го. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2016-tech-showcases.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-september-recap.html">Сентябрь 2016 кратко</a>
-            </h2>
-            <p class="news_item_date">
-                2016-10-11 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-10-11_september-recap.png" alt="Маджонг, созданный в прямом эфире" /><figcaption>Маджонг, созданный в прямом эфире</figcaption>
-</figure>
-<p>Эта статья описывает стадии по подготовке и проведению прямого эфира сентября 2016: черновик, репетиция, прямой эфир и публикация. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2016-september-recap.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="ogs-editor-0.10.html">OGS Editor 0.10 и материалы прямого эфира</a>
-            </h2>
-            <p class="news_item_date">
-                2016-10-03 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-10-03_ogs-editor-0.10.png" alt="Редактор с игрой Маджонг" /><figcaption>Редактор с игрой Маджонг</figcaption>
-</figure>
-<p>Внимание: мы не выпустим версию 0.10 для macOS из-за технических проблем с системой сборки. Поддержку macOS вернём к 0.11. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="ogs-editor-0.10.html">Читать дальше</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="yesterdays-live-session-short-overview.html">Пара слов о вчерашнем прямом эфире</a>
-            </h2>
-            <p class="news_item_date">
-                2016-09-26 00:00
-            </p>
-            <div class="news_item_contents">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_t8TGhSgJG4" frameborder="0" allowfullscreen>
-</iframe>
-<p>Создание пасьянса Маджонг прошло успешно, и заняло менее 4 часов.</p>
-<p>Мы опубликуем материалы прямого эфира чуть позже на этой неделе. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="yesterdays-live-session-short-overview.html">Читать дальше</a>
-            </div>
-        </div>
-
-        <p class="pagination_title">Страница 3 из 6</p>
+<p class="pagination_title">Страница 3 из 6</p>
 <p>
     <a href="index2.html">« Новее</a>
     <a href="index4.html">Старее »</a>
 </p>
 
 
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

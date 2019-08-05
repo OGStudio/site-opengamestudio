@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,20 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
-            figure
-            {
-                margin: 0px;
-                padding: 0px;
-            }
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,43 +80,47 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../en/news/index.html">News</a>
-            <a href="../../en/page/games.html">Games</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
             <a href="../../en/page/about.html">About</a>
             <div id="lang">
-                <a href="rolling-ball.html">EN</a>
+                <a href="../../en/news/rolling-ball.html">EN</a>
                 <a href="../../ru/news/rolling-ball.html">RU</a>
             </div>
         </div>
-        <h1>In the news</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="rolling-ball.html">"Rolling ball" live session videos and downloads</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2016-02-10 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <p>Since we held 2 live sessions to create “Rolling ball” game, here are 2 YouTube videos of the process:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/70Jny1xJxK8" frameborder="0" allowfullscreen>
-</iframe>
-<iframe width="560" height="315" src="http://www.youtube.com/embed/851IlFT7y18" frameborder="0" allowfullscreen>
-</iframe>
-<p>“Rolling ball” game for Linux (Debian based), OS X (10.9+), Windows <a title="SourceForge" href="http://sourceforge.net/projects/osrpgcreation/files/Games/RollingBall/">is available at SourceForge</a>.</p>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="rolling-ball.html">"Rolling ball" live session videos and downloads</a>
+                </h2>
+                <p class="news_item_date">
+                    2016-02-10 00:00
+                </p>
+                <div class="news_item_contents">
+<p>Since we held 2 live sessions to create "Rolling ball" game, here are 2 YouTube videos of the process:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/70Jny1xJxK8" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/851IlFT7y18" frameborder="0" allowfullscreen></iframe>
+<p>"Rolling ball" game for Linux (Debian based), OS X (10.9+), Windows <a title="SourceForge" href="http://sourceforge.net/projects/osrpgcreation/files/Games/RollingBall/">is available at SourceForge</a>.</p>
 <p>Simply unpack it and launch the run script.</p>
 <p>Editor 0.8 <a title="SourceForge" href="http://sourceforge.net/projects/osrpgcreation/files/Editor/jenkins/46_2016-01-30_22-20-41_0.8.0/">is available at SourceForge</a>, too.</p>
-<p>“Rolling ball” project for the Editor <a title="GitHub" href="https://github.com/OGStudio/rollingBall.ogs/archive/master.zip">is available at GitHub</a>.</p>
+<p>"Rolling ball" project for the Editor <a title="GitHub" href="https://github.com/OGStudio/rollingBall.ogs/archive/master.zip">is available at GitHub</a>.</p>
 <p>To open it in the Editor:</p>
 <ul>
 <li>replace slideDown.ogs with rollingBall.ogs you downloaded</li>
 <li>rename rollingBall.ogs to slideDown.ogs</li>
 </ul>
 <p>Since live session took us so long, we decided to concentrate on polishing. Editor already has a lot of features, but their use is inconvenient. We will fix major obstacles for the next Editor release.</p>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

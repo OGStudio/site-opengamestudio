@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,20 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
-            figure
-            {
-                margin: 0px;
-                padding: 0px;
-            }
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,33 +80,35 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../en/news/index.html">News</a>
-            <a href="../../en/page/games.html">Games</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
             <a href="../../en/page/about.html">About</a>
             <div id="lang">
-                <a href="2016-november-recap.html">EN</a>
+                <a href="../../en/news/2016-november-recap.html">EN</a>
                 <a href="../../ru/news/2016-november-recap.html">RU</a>
             </div>
         </div>
-        <h1>In the news</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="2016-november-recap.html">November 2016 recap</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2016-12-15 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <figure>
-<img src="../../images/2016-12-15_2016-november-recap.png" alt="Construction of a building" /><figcaption>Construction of a building</figcaption>
-</figure>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="2016-november-recap.html">November 2016 recap</a>
+                </h2>
+                <p class="news_item_date">
+                    2016-12-15 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2016-12-15_2016-november-recap.png" alt="Construction of a building" /></p>
 <p>This article describes the start of MJIN library separation into modules.</p>
-<p>Once we built OpenSceneGraph for Android, it became obvious that some MJIN functionality is not suitable for Android. For example, UIQt provides a basis for OGS Editor UI. Since OGS Editor is a desktop application, we don’t need UIQt for Android.</p>
-<p>We decided to have a look at two approaches to separate MJIN into modules: build-time separation and run-time one. <strong>Build-time</strong> separation means MJIN becomes highly configurable and each platform gets specifically tailored MJIN build. <strong>Run-time</strong> separation means MJIN is divided into smaller libraries that are connected at run-time, which makes it easy to change functionality without rebuilding.</p>
+<p>Once we built OpenSceneGraph for Android, it became obvious that some MJIN functionality is not suitable for Android. For example, UIQt provides a basis for OGS Editor UI. Since OGS Editor is a desktop application, we don't need UIQt for Android.</p>
+<p>We decided to have a look at two approaches to separate MJIN into modules: build-time separation and run-time one. 
+<strong>Build-time</strong> separation means MJIN becomes highly configurable and each platform gets specifically tailored MJIN build.
+<strong>Run-time</strong> separation means MJIN is divided into smaller libraries that are connected at run-time, which makes it easy to change functionality without rebuilding.</p>
 <p><strong>Run-time separation research.</strong></p>
-<p>Since run-time separation has more benefits, we started researching it first. The easiest way to achieve it was to use C API, because C ABI rules are much simpler than C++ one’s.</p>
+<p>Since run-time separation has more benefits, we started researching it first. The easiest way to achieve it was to use C API, because C ABI rules are much simpler than C++ one's.</p>
 <p>We created a sample project consisting of the application, library, and plugin:</p>
 <ul>
 <li><strong>The application</strong> has been linked to the library and used it to load the plugin.</li>
@@ -130,11 +124,15 @@
 <li>UIQt: provides access to Qt UI</li>
 </ul>
 <p>Sound and UIQt modules are currently statically linked into MJIN library, while Android module is already a separate library due to JNI requirements.</p>
-<p>In the coming year, we’re going to significantly restructure MJIN so that it suits as many platforms as possible.</p>
-<p>That’s it for describing the start of MJIN library separation into modules.</p>
-
-                    </div>
+<p>In the coming year, we're going to significantly restructure MJIN so that it suits as many platforms as possible.</p>
+<p>That's it for describing the start of MJIN library separation into modules.</p>
                 </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

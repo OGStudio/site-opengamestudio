@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,20 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
-            figure
-            {
-                margin: 0px;
-                padding: 0px;
-            }
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,199 +80,177 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../en/news/index.html">News</a>
-            <a href="../../en/page/games.html">Games</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
             <a href="../../en/page/about.html">About</a>
             <div id="lang">
-                <a href="index3.html">EN</a>
+                <a href="../../en/news/index3.html">EN</a>
                 <a href="../../ru/news/index3.html">RU</a>
             </div>
         </div>
-        <h1>News</h1>
+        <center>
+            <h1>News</h1>
 
-                <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="lets-go.html">Let's go</a>
-            </h2>
-            <p class="news_item_date">
-                2017-03-16 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2017-03_lets-go.png" alt="Gagarin’s words" /><figcaption>Gagarin’s words</figcaption>
-</figure>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="osg-sample.html">OpenSceneGraph sample</a>
+    </h2>
+    <p class="news_item_date">
+        2017-05-12 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-05_osg-sample.png" alt="Rocket in the distance" /></p>
+<p>This article describes creation of the tutorials for building sample OpenSceneGraph application under Linux, macOS, Windows, and Android in April 2017.</p>
+<p>Previous tutorials described how to install OpenSceneGraph under Linux, macOS, Windows and render a model using the standard <strong>osgviewer</strong> tool. This time we worked on a <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide-application">sample OpenSceneGraph application</a> that would run under Linux, macOS, Windows, and Android.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="osg-sample.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="its-all-fine.html">It's all fine</a>
+    </h2>
+    <p class="news_item_date">
+        2017-04-07 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-04_its-all-fine.png" alt="Flight of a rocket" /></p>
+<p>This article describes creation of the first four OpenSceneGraph tutorials in March 2017.</p>
+<p>The <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide/">first four OpenSceneGraph tutorials</a> explain how to create a cube model with Blender and display the model under Linux, macOS, or Windows using OpenSceneGraph tool called osgviewer.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="its-all-fine.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="lets-go.html">Let's go</a>
+    </h2>
+    <p class="news_item_date">
+        2017-03-16 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-03_lets-go.png" alt="Gagarin's words" /></p>
 <p>In this article we describe our progress in January and February of 2017: rendering under iOS/Web and a new tutorial tool.</p>
 <p><strong>Rendering under iOS/Web</strong></p>
-<p>To our surprise, we got a simple red cube rendered under <a href="https://twitter.com/OpenGameStudio/status/826816343433498627">iOS</a> and <a href="https://twitter.com/OpenGameStudio/status/829731986264698881">Web</a> pretty fast: in early February. However, this is only the beginning of this year’s challenge to support Android, iOS, and Web platforms. There’s a long and bumpy road ahead of us as we need a lot more on each platform before we can claim a success: visual effects, Python scripting, data archives. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="lets-go.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="the-year-of-challenges.html">The year of challenges</a>
-            </h2>
-            <p class="news_item_date">
-                2017-01-25 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2017-01_the-year-of-challenges.png" alt="Rocket launch at Baikonur" /><figcaption>Rocket launch at Baikonur</figcaption>
-</figure>
+<p>To our surprise, we got a simple red cube rendered under <a href="https://twitter.com/OpenGameStudio/status/826816343433498627">iOS</a> and <a href="https://twitter.com/OpenGameStudio/status/829731986264698881">Web</a> pretty fast: in early February. However, this is only the beginning of this year's challenge to support Android, iOS, and Web platforms. There's a long and bumpy road ahead of us as we need a lot more on each platform before we can claim a success: visual effects, Python scripting, data archives.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="lets-go.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="the-year-of-challenges.html">The year of challenges</a>
+    </h2>
+    <p class="news_item_date">
+        2017-01-25 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2017-01_the-year-of-challenges.png" alt="Rocket launch at Baikonur" /></p>
 <p>This article describes our plans for 2017.</p>
-<p>Our past plans suggested we would have Android platform support by this time. However, we have a long way to go, before we can declare Android support. See for yourself: …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="the-year-of-challenges.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2017-happy-new-year.html">Happy 2017</a>
-            </h2>
-            <p class="news_item_date">
-                2016-12-31 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-12-31_happy-new-year.png" alt="Christmas tree" /><figcaption>Christmas tree</figcaption>
-</figure>
-<p>Okay. It’s been a hard year for everyone in the team. And it’s almost over. Praise it ends! Praise the new one!</p>
-<p>It may seem, that our progress stalled. Three years ago we announced the beginning of a new project (two to be precise), and now we still working on the engine and editor, haven’t even started creating the actual game. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2017-happy-new-year.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-november-recap.html">November 2016 recap</a>
-            </h2>
-            <p class="news_item_date">
-                2016-12-15 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-12-15_2016-november-recap.png" alt="Construction of a building" /><figcaption>Construction of a building</figcaption>
-</figure>
+<p>Our past plans suggested we would have Android platform support by this time. However, we have a long way to go, before we can declare Android support. See for yourself:. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="the-year-of-challenges.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2017-happy-new-year.html">Happy 2017</a>
+    </h2>
+    <p class="news_item_date">
+        2016-12-31 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-12-31_happy-new-year.png" alt="Christmas tree" /></p>
+<p>Okay. It's been a hard year for everyone in the team. And it's almost over. Praise it ends! Praise the new one!</p>
+<p>It may seem, that our progress stalled. Three years ago we announced the beginning of a new project (two to be precise), and now we still working on the engine and editor, haven't even started creating the actual game.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2017-happy-new-year.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-november-recap.html">November 2016 recap</a>
+    </h2>
+    <p class="news_item_date">
+        2016-12-15 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-12-15_2016-november-recap.png" alt="Construction of a building" /></p>
 <p>This article describes the start of MJIN library separation into modules.</p>
-<p>Once we built OpenSceneGraph for Android, it became obvious that some MJIN functionality is not suitable for Android. For example, UIQt provides a basis for OGS Editor UI. Since OGS Editor is a desktop application, we don’t need UIQt for Android. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2016-november-recap.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-october-recap.html">October 2016 recap</a>
-            </h2>
-            <p class="news_item_date">
-                2016-11-19 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-11-19_2016-october-recap.png" alt="Gaining Android support was like climbing a mountain for us" /><figcaption>Gaining Android support was like climbing a mountain for us</figcaption>
-</figure>
-<p>This article describes how we spent a month building OpenSceneGraph (OSG) for Android: the first attempt to build OSG, the search for OSG alternatives, and the success in building OSG. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2016-october-recap.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-tech-showcases.html">Technology showcases</a>
-            </h2>
-            <p class="news_item_date">
-                2016-10-31 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-10-31_tech-showcases.png" alt="Feature file in the background" /><figcaption>Feature file in the background</figcaption>
-</figure>
-<p>In this article, we take another look at 2015-2016 live sessions’ format and introduce a new showcase format for 2017.</p>
-<p><strong>2015 and 2016: live sessions.</strong></p>
-<p>As you know, we use live sessions to show the state of our technology and create a small functional game from scratch. We have conducted four live sessions in the past year, which gave birth to the following small games: …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="2016-tech-showcases.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="2016-september-recap.html">September 2016 recap</a>
-            </h2>
-            <p class="news_item_date">
-                2016-10-11 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-10-11_september-recap.png" alt="Mahjong created during live session" /><figcaption>Mahjong created during live session</figcaption>
-</figure>
+<p>Once we built OpenSceneGraph for Android, it became obvious that some MJIN functionality is not suitable for Android. For example, UIQt provides a basis for OGS Editor UI. Since OGS Editor is a desktop application, we don't need UIQt for Android.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-november-recap.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-october-recap.html">October 2016 recap</a>
+    </h2>
+    <p class="news_item_date">
+        2016-11-19 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-11-19_2016-october-recap.png" alt="Gaining Android support was like climbing a mountain for us" /></p>
+<p>This article describes how we spent a month building OpenSceneGraph (OSG) for Android: the first attempt to build OSG, the search for OSG alternatives, and the success in building OSG.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-october-recap.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-tech-showcases.html">Technology showcases</a>
+    </h2>
+    <p class="news_item_date">
+        2016-10-31 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-10-31_tech-showcases.png" alt="Feature file in the background" /></p>
+<p>In this article, we take another look at 2015-2016 live sessions' format and introduce a new showcase format for 2017.</p>
+<p><strong>2015 and 2016: live sessions.</strong>. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-tech-showcases.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="2016-september-recap.html">September 2016 recap</a>
+    </h2>
+    <p class="news_item_date">
+        2016-10-11 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2016-10-11_september-recap.png" alt="Mahjong created during live session" /></p>
 <p>This article explains September 2016 live session stages: draft, rehearsal, live session itself, and publishing.</p>
-<p>Even though live session takes only a few hours, we devote a whole month to prepare for it. Let’s have a look at live session stages in detail. …</p>
+<p>Even though live session takes only a few hours, we devote a whole month to prepare for it. Let's have a look at live session stages in detail.. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="2016-september-recap.html">Continue reading</a>
+    </div>
+</div>
 
-            </div>
-            <div class="news_item_more">
-                <a href="2016-september-recap.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="ogs-editor-0.10.html">OGS Editor 0.10 and live session materials</a>
-            </h2>
-            <p class="news_item_date">
-                2016-10-03 00:00
-            </p>
-            <div class="news_item_contents">
-<figure>
-<img src="../../images/2016-10-03_ogs-editor-0.10.png" alt="OGS Editor with Mahjong game" /><figcaption>OGS Editor with Mahjong game</figcaption>
-</figure>
-<p>Note: we won’t release 0.10 for macOS due to technical difficulties with the build system. macOS support will be back for 0.11.</p>
-<ul>
-<li><strong>OGS Editor 0.10</strong> <a href="https://sourceforge.net/projects/osrpgcreation/files/Editor/jenkins/51_2016-10-01_06-39-48_0.10.0/">is available at SourceForge</a>. Simply unpack the archive and launch the run script. …</li>
-</ul>
-
-            </div>
-            <div class="news_item_more">
-                <a href="ogs-editor-0.10.html">Continue reading</a>
-            </div>
-        </div>
-        <div class="news_item">
-            <h2 class="news_item_title">
-                <a href="yesterdays-live-session-short-overview.html">A few words about live session yesterday</a>
-            </h2>
-            <p class="news_item_date">
-                2016-09-26 00:00
-            </p>
-            <div class="news_item_contents">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_t8TGhSgJG4" frameborder="0" allowfullscreen>
-</iframe>
-<p>Mahjong Solitaire was successfully created, and it took less than 4 hours.</p>
-<p>We will publish live session materials later this week. …</p>
-
-            </div>
-            <div class="news_item_more">
-                <a href="yesterdays-live-session-short-overview.html">Continue reading</a>
-            </div>
-        </div>
-
-        <p class="pagination_title">Page 3 of 6</p>
+<p class="pagination_title">Page 3 of 6</p>
 <p>
     <a href="index2.html">« Newer</a>
     <a href="index4.html">Older »</a>
 </p>
 
 
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>

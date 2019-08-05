@@ -1,0 +1,14 @@
+<div class="news_item">
+    <h2 class="news_item_title">
+        <a href="PSKOV_ITEM_URL">PSKOV_ITEM_TITLE</a>
+    </h2>
+    <p class="news_item_date">
+        PSKOV_ITEM_DATE
+    </p>
+    <div class="news_item_contents">
+PSKOV_PREVIEW
+    </div>
+    <div class="news_item_more">
+        <a href="PSKOV_ITEM_URL">Continue reading</a>
+    </div>
+</div>

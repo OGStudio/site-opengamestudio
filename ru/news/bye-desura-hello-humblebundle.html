@@ -9,13 +9,18 @@
                 padding: 0.7em;
                 text-align: left;
             }
-            
             #header a
             {
                 color: white;
                 text-decoration: none;
                 padding: 0.5em 1em 0.5em 1em;
             }
+
+            #lang
+            {
+                float: right;
+            }
+
             .news_item
             {
                 background: #FFFFFF;
@@ -36,6 +41,11 @@
                 margin-bottom: 2em;
                 color: #aaa;
             }
+
+            html
+            {
+                font-family: sans-serif;
+            }
             body
             {
                 background: #FAFAFA;
@@ -46,38 +56,27 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
+            /*
             figure
             {
                 margin: 0px;
                 padding: 0px;
             }
+            */
             img
             {
                 width: 720px;
-            }
-            html
-            {
-                font-family: sans-serif;
             }
             a
             {
                 color: #3A91CB;
                 text-decoration: none;
             }
-            #lang
-            {
-                float: right;
-            }
-            figcaption
-            {
-                color: #aaa;
-            }
-            
+
             table
             {
                 border-collapse: collapse;
             }
-            
             table, th, td
             {
                 border: 1px solid #aaa;
@@ -88,33 +87,39 @@
         </style>
     </head>
     <body>
-        <center>
         <div id="header">
+            <strong id="title">Open Game Studio</strong>
             <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/page/games.html">Игры</a>
+            <a href="../../ru/game/index.html">Игры</a>
+            <a href="../../ru/tool/index.html">Инструменты</a>
             <a href="../../ru/page/about.html">О нас</a>
             <div id="lang">
                 <a href="../../en/news/bye-desura-hello-humblebundle.html">EN</a>
-                <a href="bye-desura-hello-humblebundle.html">RU</a>
+                <a href="../../ru/news/bye-desura-hello-humblebundle.html">RU</a>
             </div>
         </div>
-        <h1>В новостях</h1>
-                <div class="news_item">
-                    <h2 class="news_item_title">
-                        <a href="bye-desura-hello-humblebundle.html">Прощай, Desura. Здравствуй, Humble Bundle Widget</a>
-                    </h2>
-                    <p class="news_item_date">
-                        2015-07-23 00:00
-                    </p>
-                    <div class="news_item_contents">
-        <p>После недавнего банкротства родительской компании сервиса Desura мы пришли к выводу, что нам необходима новая площадка для распространения Deluxe-версии игры. Более современная, удобная, надежная. Наш выбор пал на Humble Widget, благодаря которому вы можете приобрести Deluxe-версию игры прямо у нас на сайте.</p>
+        <center>
+            <h1>В новостях...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="bye-desura-hello-humblebundle.html">Прощай, Desura. Здравствуй, Humble Bundle Widget</a>
+                </h2>
+                <p class="news_item_date">
+                    2015-07-23 00:00
+                </p>
+                <div class="news_item_contents">
+<p>После недавнего банкротства родительской компании сервиса Desura мы пришли к выводу, что нам необходима новая площадка для распространения Deluxe-версии игры. Более современная, удобная, надежная.
+Наш выбор пал на Humble Widget, благодаря которому вы можете приобрести Deluxe-версию игры прямо у нас на сайте.</p>
 <p>Вот он:</p>
-<iframe src="https://www.humblebundle.com/widget/v2/product/ogsmahjong/ySGF3h34?theme=transparent-light" width="526" height="325" style="border: none;" scrolling="no" frameborder="0">
-</iframe>
+<iframe src="https://www.humblebundle.com/widget/v2/product/ogsmahjong/ySGF3h34?theme=transparent-light" width="526" height="325" style="border: none;" scrolling="no" frameborder="0"></iframe>
 <p>К сожалению, мы не получили от Desura ни копейки (из-за минимального порога вывода средств, которого мы не достигли), однако, если вы приобретали Deluxe-версию OGS Mahjong на Desura и испытываете проблемы с ее скачиванием (в настоящее время проблем не обнаружено), напишите нам, указав свое имя на Desura, и мы что-нибудь придумаем.</p>
-
-                    </div>
                 </div>
+            </div>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+                Сайт размещён на <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
         </center>
     </body>
 </html>
