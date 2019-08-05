@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+
+            #lang
+            {
+                float: right;
+            }
+
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+
+            html
+            {
+                font-family: sans-serif;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            img
+            {
+                width: 720px;
+            }
+            a
+            {
+                color: #3A91CB;
+                text-decoration: none;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+            }
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <strong id="title">Open Game Studio</strong>
+            <a href="../../en/news/index.html">News</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
+            <a href="../../en/page/about.html">About</a>
+            <div id="lang">
+                <a href="../../en/news/on-the-way-to-durable-applications.html">EN</a>
+                <a href="../../ru/news/on-the-way-to-durable-applications.html">RU</a>
+            </div>
+        </div>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="on-the-way-to-durable-applications.html">On the way to durable applications</a>
+                </h2>
+                <p class="news_item_date">
+                    2019-08-05 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2019-08-05_on-the-way-to-durable-applications.jpg" alt="Pskov's veche" /></p>
+<p>This article describes our first durable application for desktop PCs: PSKOV static site generator.</p>
+<p><strong>Durability</strong></p>
+<p>A durable application is an application that functions without a single change on operating systems released in years 2010-2030. In other words, a durable application has backward compatibility of 10 years and has the stability to run for 10 years. Actually, <a href="http://opengamestudio.org/pskov">PSKOV</a> runs even under Windows 2000, so PSKOV has backward compatibility of 19 years.</p>
+<p>From technical side, PSKOV is a single HTML file with layout (HTML), styles (CSS), and code (JavaScript) packed inside. PSKOV runs strictly inside a web browser without connecting to any server.</p>
+<p>Such an implementation gives PSKOV the following features:</p>
+<ul>
+<li>it can be copied without restrictions</li>
+<li>it can be hosted anywhere</li>
+<li>it can run locally</li>
+<li>it can operate without Internet</li>
+</ul>
+<p>We can't guarantee stability for 10 years because we can't control the future. However, the history of HTML, CSS, and JavaScript evolution tells us these technologies are developed with maximum backward compatibility. First, new JavaScript features leave older ones still working. Second, web browser developers are interested in making their web browsers work with as many web sites as possible. For example, <a href="https://www.w3schools.com/tags/tag_center.asp">&lt;center&gt; tag</a>, being declared deprecated in 2014, still works as expected 5 years since, in 2019.</p>
+<p>At the same time, each web browser application has a serious restriction called sandbox, a deceptive name for a cage. The cage prevents access to both local file system of users and almost any Internet resource without its owner's explicit permission (CORS). As a result, the application can only communicate with users either through the distinct server, or by offering files to download manually. Downloading files one by one or as an archive is inconvenient, that's why nowadays server oriented approach reigns the world. We'll touch problems of that approach in a moment.</p>
+<p>To free PSKOV from the cage, <a href="http://opengamestudio.org/lfsa">LFSA</a> was created, a tiny Python script that needs to be run manually while PSKOV is running. LFSA allows PSKOV to access the user’s local file system. Python was selected because Linux and macOS have Python installed by default, and users can easily install Python on Windows (even Windows 2000).</p>
+<p><strong>Track record</strong></p>
+<p>PSKOV has been successfully used to create the following small sites:</p>
+<ul>
+<li><a href="http://opengamestudio.org">open game studio project site</a></li>
+<li><a href="http://opengamestudio.org/pskov">PSKOV itself</a></li>
+<li><a href="http://opengamestudio.org/lfsa">LFSA</a></li>
+<li><a href="http://opengamestudio.org/pskov/sample/03.Blog/en/blog/index.html">example of a simple blog</a></li>
+</ul>
+<p>Now let's see why PSKOV was created as a durable application for web browsers.</p>
+<p><strong>Reason №1: collect and keep knowledge in an accessible form</strong></p>
+<p>We have been creating convenient game development tools for several years now. So far the collected knowledge was represented by <a href="../game/ogs-mahjong-1.html">native applications</a> for desktop PCs, <a href="https://github.com/OGStudio/openscenegraph-cross-platform-guide">education articles</a> for related technologies, and <a href="https://youtu.be/_t8TGhSgJG4">showcase videos</a>. Such forms of the collected knowledge are basically dead:</p>
+<ul>
+<li>few would download an unknown application</li>
+<li>few would watch some videos</li>
+<li>even fewer would read some articles</li>
+</ul>
+<p>In many ways, this death is due to inaccessibility: one has to make an unknown amount of effort to achieve an unknown result. Hardly anyone would have interest in this. A web browser application, potentially accessible anywhere, is a totally different deal: you only need to make a known effort, click a link, to achieve an unknown result. The history of conducting <a href="https://en.wikipedia.org/wiki/Twitter_Revolution">twitter revolutions</a> proves that almost anyone can open a link and "like" the change of a "bloody regime".</p>
+<p><strong>Reason №2: rule by people</strong></p>
+<p>Nowadays any Internet activity is performed by the means of services that almost always belong to some company: <a href="http://twitter.com">messages</a>, <a href="http://2gis.ru">maps</a>, <a href="http://google.com">search</a>, <a href="http://music.yandex.ru">music</a>, <a href="http://github.com">source code</a>, etc. Such power usurpation leads to <a href="https://techcrunch.com/2015/03/13/google-kills-off-google-code/">shutdowns</a> of <a href="https://www.reddit.com/r/sysadmin/comments/62orq9/codeplex_shutting_down_and_fosshub_is_sad/">services</a> that their owning companies deem unprofitable. They usually do it without any consent with those users who brought life to these services in the first place.</p>
+<p>Other times companies simply block competing browsers from accessing their service, as it was recently the <a href="https://www.reddit.com/r/firefox/comments/aw1umv/skype_web_is_now_blocked_in_firefox/">case with the web version of Skype</a>. Luckily there are people who don’t agree with such politics. Thanks to them, <a href="https://addons.mozilla.org/ru/firefox/addon/firefox-web-skype/">unlocking tools</a> appear.</p>
+<p>As for me, I deem such a way of handling things as inappropriate. However, savage business is not the only one to blame here; average users, every one of us is guilty, too. You may argue that users have no choice, that someone else (government, aliens, underline what you like) made this world unfair. Some people even blame government/aliens directly and believe that without them, life would be amazing. However, human history <a href="https://translate.google.com/translate?sl=ru&amp;tl=en&amp;u=https%3A%2F%2Fria.ru%2F20190723%2F1556775012.html">tells us a different story</a>: "<strong>the state</strong> is not some enemy horde that occupied the society, but that which <strong>grows out of society and mirrors it</strong>".</p>
+<p>Being part of the people, we decided to start with ourselves and use our power for the best: create applications that we need in such a way to make them usable and accessible to everyone everywhere. PSKOV is the first attempt, which already exceeded our expectations. Sure, PSKOV has limitations like LFSA and unencrypted HTTP; there's a lot to do to increase the accessibility of PSKOV, however, we're ready to dare anyone: current PSKOV version will keep functioning for 10 years to come without any maintenance.</p>
+<p>That's it for describing our first durable application for desktop PCs: PSKOV static site generator.</p>
+                </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
+        </center>
+    </body>
+</html>
