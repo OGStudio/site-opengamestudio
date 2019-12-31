@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+
+            #lang
+            {
+                float: right;
+            }
+
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+
+            html
+            {
+                font-family: sans-serif;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            img
+            {
+                width: 720px;
+            }
+            a
+            {
+                color: #3A91CB;
+                text-decoration: none;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+            }
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <strong id="title">Open Game Studio</strong>
+            <a href="../../en/news/index.html">News</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
+            <a href="../../en/page/about.html">About</a>
+            <div id="lang">
+                <a href="../../en/news/the-pros-and-cons-of-restarting-from-scratch.html">EN</a>
+                <a href="../../ru/news/the-pros-and-cons-of-restarting-from-scratch.html">RU</a>
+            </div>
+        </div>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="the-pros-and-cons-of-restarting-from-scratch.html">The pros and cons of restarting from scratch</a>
+                </h2>
+                <p class="news_item_date">
+                    2020-01-01 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2020-01-01-ny.jpg" alt="Happy 2020" /></p>
+<p>Anyone, who watches our progress long enough, can say that we restarted the development from scratch plenty of times.</p>
+<p>Even before releasing <a href="../game/ogs-mahjong-1.html">"OGS Mahjong"</a>, we changed the underlying technology more than once. After that, we did it again several times, throwing away already completed features.
+It seems that right now we have less completed features than before the release of <a href="../game/ogs-mahjong-1.html">"OGS Mahjong"</a>. It's true, but not entirely.</p>
+<p>When <a href="../game/ogs-mahjong-1.html">"OGS Mahjong"</a> was released, we had a descent looking (for that moment) open-source game, that worked under Windows and Linux. With some luck and effort it still works today, but not out of the box.
+Some parts of the underlying technology did not age very well. And fixing these problems today will require us to invest a lot of time into it.
+Even setting the building environment for the game is time-consuming, because the game had some very particular dependencies.</p>
+<p>So, as Michael stated before, we are trying to find the set of technologies, that will resolve two problems at the same time:</p>
+<ul>
+<li>greatly decrease the amount of effort needed to setup a building environment;</li>
+<li>age better.</li>
+</ul>
+<p>During this year, Michel, who has some experience with teaching kids to code, added one more goal - making the simple game should be easy enough for the kid to understand.</p>
+<p>So, we divided everything we wanted in two parts.</p>
+<p>The first part is making an easy to use instrument that a child can use to create a simple game, and a professional or hobbyist can use to test new ideas quickly. This instrument should require zero time to setup the working environment, but should still be highly customizable. After many hours of arguing, we decided that this instrument should be web-based (self-hosted, preferably working locally). This instrument is <a href="http://opengamestudio.org/murom">MUROM</a> (named after one famous Russian city), and right now it highly customizable and works in the browser with zero setup time. <a href="http://opengamestudio.org/murom">MUROM</a> can be used to create simple games, but it's far from ready. And the third goal is also ahead.</p>
+<p>We will start to work on the second part after completing the first part. It will include the native part of the engine. We'll try to let the web-based engine and the native engine use the same code for game logic, but we haven't decided on how exactly will we achieve this feature. Probably, we will have to use meta-language that can be translated into both JavaScript and C++. Also, creating separate plugins for something that is impossible in the web version (for example, using specific hardware or accessing a local file system) will still be required.</p>
+<p>Will we ever start to work on the second part? We hope so. We're planning to use <a href="http://opengamestudio.org/murom">MUROM</a> to remake <a href="../game/ogs-mahjong-1.html">"OGS Mahjong"</a>, so some things will be done just in order to make it possible.
+And even if we will complete only the first part and <a href="http://opengamestudio.org/murom">MUROM</a> will just be a quick&amp;dirty prototyping tool, it will be a tool we use, and we'll try to make it useful.</p>
+<p>When you throw away all the code, one thing remains. That's experience. Every restart will make you slightly better at understanding what you are actually doing. But it's important to complete something from time to time. Otherwise, you can find yourself stuck in the endless loop of new beginnings.</p>
+<p>And our own main goal for 2020 will be to break out of this loop and complete something. </p>
+<p>Happy new year, everyone! Stay tuned!</p>
+                </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
+        </center>
+    </body>
+</html>
