@@ -242,7 +242,7 @@ The same table in English would look like this:
 | 8 | Interesting / Difficult | Too early |
 | 9 | Sequence | Half of the course |
 
-Surprisingly enough, the folks didn't like to write on the board even though it greatly increased the efficiency of teaching. On one hand, the "learning program was too big", on the other hand, we were "doing the same thing each time", i.e. repeating what we have learned before.
+Surprisingly enough, the folks didn't like to write on the board even though it greatly increased the efficiency of teaching. On the one hand, the "learning program was too big", on the other hand, we were "doing the same thing each time", i.e. repeating what we have learned before.
 
 We were saving the game to GitHub from time to time. This was difficult, too: we were spending half an hour while students were authenticating. As always, nobody remembered their passwords (each time), others had to verify it's really them accessing GitHub account on a new device, which required access to e-mail, which sometimes belonged to parents (the folks had to call their parents).
 
