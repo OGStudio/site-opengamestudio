@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+
+            #lang
+            {
+                float: right;
+            }
+
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+
+            html
+            {
+                font-family: sans-serif;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            img
+            {
+                width: 720px;
+            }
+            a
+            {
+                color: #3A91CB;
+                text-decoration: none;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+            }
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <strong id="title">Open Game Studio</strong>
+            <a href="../../en/news/index.html">News</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
+            <a href="../../en/page/about.html">About</a>
+            <div id="lang">
+                <a href="../../en/news/teaching-to-program-2019.html">EN</a>
+                <a href="../../ru/news/teaching-to-program-2019.html">RU</a>
+            </div>
+        </div>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="teaching-to-program-2019.html">Teaching folks to program 2019, a.k.a. in the search of an ideal program: Sequence</a>
+                </h2>
+                <p class="news_item_date">
+                    2020-02-11 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_screenshot.png" alt="MUROM" /></p>
+<p>In this article Michael shares his thoughts on teaching folks to program in 2019.</p>
+<p><strong>Preface</strong></p>
+<p>Autumn 2019 was the third time I participated as one of the teachers in the course to teach 10-15-year-old folks to program. The course took place from mid. September to mid. December. Each Saturday, we were studying from 10 AM to 12 PM. More details about the structure of each class and the game itself can be found in <a href="teaching-kids-to-program.html">the 2018 article</a>.</p>
+<p>I have the following goals for conducting such courses:</p>
+<ul>
+<li>create a convenient tool to allow the creation of simple games, the tool interested folks of 10 years old or older can master;</li>
+<li>create a program to teach programming, the program interested folks of 10 years old or older can use themselves to create simple games.</li>
+</ul>
+<p><strong>Game</strong></p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_game.png" alt="Game" /></p>
+<p>Memory is a simple game we create during the course. The goal of Memory is to find matching items on a playing field. More details, including game mechanics, can be found in <a href="teaching-kids-to-program.html">the 2018 article</a>. You can play the created game in a web browser by clicking <a href="http://kornerr.ru/ekids2019">this link</a>.</p>
+<p><strong>Tool</strong></p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_ide.png" alt="IDE" /></p>
+<p>When I was creating the tool, my guiding principle was <strong>unpretentiousness</strong> that manifests itself in the following:</p>
+<ol>
+<li>work under any operating system<ul>
+<li>development can be conducted under Linux, macOS, or Windows</li>
+<li>one can play the game on a PC, a tablet, or a smartphone</li></ul></li>
+<li>no need to configure anything: just open the link in a web browser and start working</li>
+<li>no need for the Internet: work locally if you want, there's no back-end</li>
+<li>the game is available to everyone<ul>
+<li>if you place a file on GitHub Pages, just share the link</li>
+<li>if you send the file over Skype, just open the file locally</li></ul></li>
+</ol>
+<p>The tool is an integrated development environment (IDE) that is technically a single HTML file. This single file contains both IDE and a project under development (Memory game in our case). The tool looks pretty standard:</p>
+<ol>
+<li>left area depicts the code of a selected module;</li>
+<li>middle area contains buttons to restart, save the project and manage modules;</li>
+<li>top right area contains result;</li>
+<li>bottom right area lists modules belonging to both IDE and the project.</li>
+</ol>
+<p>Since we only have a single HTML file, we should be able to run it in two modes:</p>
+<ol>
+<li>replay<ul>
+<li>default mode;</li>
+<li>just open the file;</li></ul></li>
+<li>editing<ul>
+<li>append <code>?0</code> symbols in the address bar.</li></ul></li>
+</ol>
+<p>Web browser cache (IndexedDB) is used to keep changes temporarily. To save changes permanently, one has to download the file with the changes by clicking the corresponding button in the middle area.</p>
+<p><strong>The first classes</strong></p>
+<p>I prepared <a href="http://kornerr.ru/ekids19?техника">80 lines of JavaScript code</a> for the first class and printed the code on paper. Each student received the paper and had to type the code into the tool. The typing exercise had the following goals:</p>
+<ol>
+<li>find out the typing speed of students;</li>
+<li>demonstrate API of the tool.</li>
+</ol>
+<p>The typing speed turned out to be extremely low: ranging from 14 symbols per minute (a student managed to type only half of the code) to 39 symbols per minute. Since I used to type the code with the speed of 213 symbols per minute, I was shocked by the results and started to doubt we would be able to write the game in an hour by the end of the course.</p>
+<p>We spent the second class to find typos in the code. I met typos that I have never seen in my life. I was shocked again: students had a hard time finding the typos even with the correct code on the paper in front of them. It's hard to imagine what would happen to the students' psyche if we were to pass a <a href="https://cantunsee.space/">brutal UX/UI test</a> with questions like this:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_cant-unsee.jpg" alt="Can't unsee" /></p>
+<p>Later I tried to decrease the code down to 10 lines, offered partially completed code so that students could find and fix errors. Nothing helped: students just couldn't comprehend anything as if they saw hieroglyphs instead of familiar letters.</p>
+<p><strong>Successful seventh class</strong></p>
+<p>The half of the course was over, and I haven't moved an inch. In another attempt to find a way to explain the code I rewrote the game one more time. Now with a module of an intriguing title <code>последовательность</code> (<code>sequence</code> in Russian).
+To my surprise, the class had a stunning success: we got everything done before "the bell rang", and the students were burning with enthusiasm. The burning was so strong that we finished the class with a spontaneous brainstorm session where we came up with functionality to make the newly appeared game even better:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_brainstorm.jpg" alt="Brainstorm" /></p>
+<p>The lines in Russian read:</p>
+<ul>
+<li>timer;</li>
+<li>tutorial;</li>
+<li>sounds;</li>
+<li>the camera should be farther;</li>
+<li>randomize;</li>
+<li>hearts (meaning lives);</li>
+<li>randomize after a failed matching attempt;</li>
+<li>exploding spheres;</li>
+<li>levels with different number of spheres;</li>
+<li>background.</li>
+</ul>
+<p>Let's look closer into the class.</p>
+<p><strong>Board</strong></p>
+<p>Previous classes were using "teachers work with each student individually" approach. After six classes we (two teachers) realized that diving into each student's specific typos/errors takes more time than teaching anything new.</p>
+<p>Starting with the seventh class, we decided to hook everyone to the board, i.e., the board became a central place where all of us were working, a place for everyone to stand up, approach the board and write there. PCs became secondary, a place for students to copy the board contents to. This practice clearly indicated school boards exist for many reasons:</p>
+<ul>
+<li>every student is accustomed to receiving information from the board; students know what to observe;</li>
+<li>teacher's environment is at the board; it's now possible to explain single new item to everyone without diving into individual errors;</li>
+<li>fixing individual errors becomes faster because most of them stem from negligence, i.e., typos made while copying the board contents.</li>
+</ul>
+<p>I'd like to highlight the fact that teachers work at the board together with students: a teacher sets direction; however, students stand up and come to the board themselves, write answers to the teacher's questions themselves. The benefits of such an approach are the following:</p>
+<ul>
+<li>students write with their own hands, i.e., they come up with a solution and implement it themselves, a teacher does not write for them;</li>
+<li>students stand up and come to the board, i.e., they move, which is good for health and drains unbridled energy that usually hampers discipline;</li>
+<li>students have to remember the code to copy it to the board;</li>
+<li>teachers have an opportunity to evaluate students' observation skills by seeing how easy (or hard) it is for them to remember and write the code on the board.</li>
+</ul>
+<p><strong>Sequence</strong></p>
+<p><code>последовательность</code> module of the game looks like this:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_sequence.png" alt="Sequence" /></p>
+<p>The sequence allows to write an algorithm in the form of events and reactions:</p>
+<ul>
+<li>events (<code>начало</code> (<code>start</code>), <code>выбор</code> (<code>selection</code>), etc.) are lines without indentation;</li>
+<li>reactions (<code>настроить ThreeJS</code> (<code>configure ThreeJS</code>), <code>показать заставку</code> (<code>show splash screen</code>), etc.) are lines with indentation to signify their relation to events.</li>
+</ul>
+<p>Thus, when starting the game (<code>начало</code> event) we configure ThreeJS (<code>настроить ThreeJS</code> reaction), show splash screen (<code>показать заставку</code> reaction), and so on.
+The class had almost an empty <code>последовательность</code> module in the beginning; only events were present:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_events.png" alt="Events" /></p>
+<p>I have duplicated these same events onto the board, leaving free space to add reactions later during the class (I used GIMP to depict free space in the following image):</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_board-events.jpg" alt="Board events" /></p>
+<p>We were searching for reactions in <code>память.реакции</code> module (<code>memory.reactions</code>):</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_reactions.png" alt="Reactions" /></p>
+<p>Each reaction of <code>последовательность</code> module is represented in <code>память.реакции</code> module by <a href="https://javascript.info/constructor-new">constructor functions</a>. For example, <code>проверить окончание</code> reaction (<code>check for ending</code>) has a uniquely corresponding <code>ПроверитьОкончание</code> function (<code>CheckForEnding</code>):</p>
+<pre><code class="javascript language-javascript">function ПроверитьОкончание(мир) // 1.
+{
+    мир.состояние["скрыто сфер"] = 0; // 2.
+    this.исполнить = function() // 3.
+    {
+        мир.состояние["скрыто сфер"] += 2; // 4.
+        var скрыто = мир.состояние["скрыто сфер"]; // 5.
+        var сфер = мир.состояние["сферы"].length; // 6.
+        if (сфер == скрыто) // 7.
+        {
+            мир.события["конец"].уведомить(); // 8.
+        }
+    };
+}
+</code></pre>
+<p>The same code in English would look like this:</p>
+<pre><code class="js language-js">function CheckForEnding(world) // 1.
+{
+    world.state["spheres hidden"] = 0; // 2.
+    this.run = function() // 3.
+    {
+        world.state["spheres hidden"] += 2; // 4.
+        var hidden = world.state["spheres hidden"]; // 5.
+        var spheres = world.state["spheres"].length; // 6.
+        if (spheres == hidden) // 7.
+        {
+            world.events["ending"].report(); // 8.
+        }
+    };
+}
+</code></pre>
+<p>Let's look closer:</p>
+<ol>
+<li>The function accepts <code>world</code> (dictionary) that is used by functions to communicate with each other. <code>world</code> consists of three regions (dictionary keys):<ul>
+<li><code>state</code> contains variable data used for communication;</li>
+<li><code>settings</code> contain constants to configure functions;</li>
+<li><code>events</code> contain publishers to be able to subscribe functions to events.</li></ul></li>
+<li>An instance of this constructor function is created with <code>new</code> operator while parsing <code>последовательность</code> module. Practically, everything outside of <code>run</code> method is considered to be part of the constructor body. In our case, we create <code>spheres hidden</code> variable to count hidden spheres.</li>
+<li><code>run</code> method is executed each time an event is reported.</li>
+<li>Since <code>check for ending</code> reaction is executed each time a user hides a pair of spheres, we increase <code>spheres hidden</code> counter by <code>2</code>.</li>
+<li>Just a shorter alias for <code>spheres hidden</code> counter.</li>
+<li>Count the number of spheres at the playing field.</li>
+<li>Compare the number of spheres at the playing field with the number of hidden spheres.</li>
+<li>Report <code>ending</code> event if they are equal, i.e., if all spheres were hidden.</li>
+</ol>
+<p>Students took turns searching for functions in <code>память.реакции</code> module:</p>
+<ul>
+<li>a student looks for a function in the module (to simplify the process, I've split the functions with <code>// // // //</code> symbols);</li>
+<li>once a function is located, the student speaks the name of the function out loud and comes to the board;</li>
+<li>the student writes the name down on the board to the list of found functions (students may use any means to remember the names except teacher's hints).</li>
+</ul>
+<p>Such an exercise also highlights who's actively tracking the functions and who's unable to find the next function when it's their turn.</p>
+<p>Once the names of all functions have been written on the board, we were mapping reactions (functions) to events in a similar fashion:</p>
+<ul>
+<li>a teacher asks, for example, which of the listed functions is suitable for event <code>начало</code></li>
+<li>if a student answers correctly, the student<ul>
+<li>comes to the board</li>
+<li>writes the reaction under the related event</li>
+<li>crosses corresponding function out of the listed functions</li></ul></li>
+</ul>
+<p>Once we have a more-or-less working set of reactions for an event it's time to transfer them from the board to student PCs. That way we managed to fill the board with reactions both on the board:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_board-sequence.jpg" alt="Board sequence" />
+<img src="../../images/2020-02-11_teaching-to-program-2019_board-functions.jpg" alt="Board functions" /></p>
+<p>and in the tool:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_sequence.png" alt="Sequence" /></p>
+<p><strong>The following classes</strong></p>
+<p>During the following classes, we were trying to create a new reaction and a corresponding constructor function. First, I tried to put a solution into heads quickly (providing complete lines of code); however, that didn't work. That's why we ended up with learning the following code, which took us several classes:</p>
+<pre><code class="js language-js">var кот = "9";
+console.log(кот);
+</code></pre>
+<p>Unfortunately, these two lines of code were hard to explain: students were confused with the concept of variables and their values. This wasn't the only problem: the new function required the use of an array, which I failed to explain at all. There's a long road ahead of me before I'm able to explain variables and arrays to students.</p>
+<p>Of course, by the end of the course we managed to complete the new function, however, I haven't seen understanding and subsequent faith in themselves, which usually manifests itself with a burning enthusiasm we saw in the seventh class.</p>
+<p><strong>The last class</strong></p>
+<p>The last class was not using the famous greeting circle at the beginning. Instead, I asked everyone (including myself) to tell what was good (+) and what was bad (-) during the course. Here's the table I got:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_retro.jpg" alt="Retro" /></p>
+<p>The same table in English would look like this:</p>
+<table>
+<thead>
+<tr>
+<th>№</th>
+<th>+</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Personalized ending screen</td>
+<td>Touchpad?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Working on PC</td>
+<td>Writing on the board</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Explanation</td>
+<td>Discipline</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Flexible learning program</td>
+<td>Sometimes unclear and uninteresting</td>
+</tr>
+<tr>
+<td>5</td>
+<td>There's a finished game</td>
+<td>Learning program is too big</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A detailed explanation of algorithms</td>
+<td>Doing the same thing each time</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Teamwork</td>
+<td>Students of disparate skill level</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Interesting / Difficult</td>
+<td>Too early</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sequence</td>
+<td>Half of the course</td>
+</tr>
+</tbody>
+</table>
+<p>Surprisingly enough, the folks didn't like to write on the board even though it greatly increased the efficiency of teaching. On one hand, the "learning program was too big", on the other hand, we were "doing the same thing each time", i.e. repeating what we have learned before.</p>
+<p>We were saving the game to GitHub from time to time. This was difficult, too: we were spending half an hour while students were authenticating. As always, nobody remembered their passwords (each time), others had to verify it's really them accessing GitHub account on a new device, which required access to e-mail, which sometimes belonged to parents (the folks had to call their parents).</p>
+<p>Nonetheless, each student had its own version of the game by the end of the course with personalized beginning and ending screens:</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_addr.jpg" alt="Addr" /></p>
+<p><strong>Conclusion</strong></p>
+<p>On the one hand, we had significant success:</p>
+<ul>
+<li>the tool worked as unpretentiously as expected;</li>
+<li>the concept of sequences was easily understood.</li>
+</ul>
+<p>On the other hand, we had an evident failure:</p>
+<ul>
+<li>the tool wasn't friendly to students without JavaScript knowledge, i.e., everyone;</li>
+<li>the teaching program has been stuck most of the time.</li>
+</ul>
+<p>That's why I'll try to answer the following questions when teaching in 2020:</p>
+<ol>
+<li>Will another language (Python, Lua) be simpler to explain and work with?</li>
+<li>Is it possible to hide Git inside the tool so that one could save the game to <a href="https://isomorphic-git.org/">Git without leaving the tool</a>?</li>
+<li>Is it possible to create API as declarative as <a href="https://www.hackingwithswift.com/quick-start/swiftui/what-is-swiftui">SwiftUI</a>?</li>
+<li>How to explain variables and arrays?</li>
+</ol>
+<p>I'll share answers to these and other questions next year ;)</p>
+<p><img src="../../images/2020-02-11_teaching-to-program-2019_group.jpg" alt="Group" /></p>
+                </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
+        </center>
+    </body>
+</html>
