@@ -1,5 +1,5 @@
 Title: Teaching folks to program 2019, a.k.a. in the search of an ideal program: Sequence
-Date: 2020-02-11 00:00
+Date: 2020-02-12 00:00
 Category: News
 Slug: teaching-to-program-2019
 Lang: en
