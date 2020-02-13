@@ -176,7 +176,7 @@ Let's look closer:
 1. The function accepts `world` (dictionary) that is used by functions to communicate with each other. `world` consists of three regions (dictionary keys):
     * `state` contains variable data used for communication;
     * `settings` contain constants to configure functions;
-    * `events` contain publishers to be able to subscribe functions to events.
+    * `events` contain [publishers][pub-sub] to be able to subscribe functions to events.
 1. An instance of this constructor function is created with `new` operator while parsing `последовательность` module. Practically, everything outside of `run` method is considered to be part of the constructor body. In our case, we create `spheres hidden` variable to count hidden spheres.
 1. `run` method is executed each time an event is reported.
 1. Since `check for ending` reaction is executed each time a user hides a pair of spheres, we increase `spheres hidden` counter by `2`.
@@ -295,3 +295,4 @@ I'll share answers to these and other questions next year ;)
 [screenshot-group]: ../../images/2020-02-11_teaching-to-program-2019_group.jpg
 [isomorphic-git]: https://isomorphic-git.org/
 [swiftui]: https://www.hackingwithswift.com/quick-start/swiftui/what-is-swiftui
+[pub-sub]: https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern

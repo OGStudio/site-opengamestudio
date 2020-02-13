@@ -237,7 +237,7 @@ The class had almost an empty <code>последовательность</code> 
 <li>The function accepts <code>world</code> (dictionary) that is used by functions to communicate with each other. <code>world</code> consists of three regions (dictionary keys):<ul>
 <li><code>state</code> contains variable data used for communication;</li>
 <li><code>settings</code> contain constants to configure functions;</li>
-<li><code>events</code> contain publishers to be able to subscribe functions to events.</li></ul></li>
+<li><code>events</code> contain <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">publishers</a> to be able to subscribe functions to events.</li></ul></li>
 <li>An instance of this constructor function is created with <code>new</code> operator while parsing <code>последовательность</code> module. Practically, everything outside of <code>run</code> method is considered to be part of the constructor body. In our case, we create <code>spheres hidden</code> variable to count hidden spheres.</li>
 <li><code>run</code> method is executed each time an event is reported.</li>
 <li>Since <code>check for ending</code> reaction is executed each time a user hides a pair of spheres, we increase <code>spheres hidden</code> counter by <code>2</code>.</li>
