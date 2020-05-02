@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+
+            #lang
+            {
+                float: right;
+            }
+
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+
+            html
+            {
+                font-family: sans-serif;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            img
+            {
+                width: 720px;
+            }
+            .mobile
+            {
+                width: 320px;
+            }
+            a
+            {
+                color: #3A91CB;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+            }
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <strong id="title">Open Game Studio</strong>
+            <a href="../../en/news/index.html">News</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
+            <a href="../../en/page/about.html">About</a>
+            <div id="lang">
+                <a href="../../en/news/git-budget.html">EN</a>
+                <a href="../../ru/news/git-budget.html">RU</a>
+            </div>
+        </div>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="git-budget.html">Why I keep track of spendings in a personal app made with Git+JS</a>
+                </h2>
+                <p class="news_item_date">
+                    2020-05-06 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2020-05-06_гит-бюджет_снимок.png" alt="GitBudget" /></p>
+<p>In this article Michael shares his experience of using Git+JS.</p>
+<p>Hi, folks, let me share my experience of creating an application to keep track of my spendings. Specifically, let me do it by answering the following questions:</p>
+<ol>
+<li>Why keep track of spendings in an application?</li>
+<li>Why did I create the application as a personal project?</li>
+<li>Why does the project use Git+JS?</li>
+</ol>
+<p><strong>1. Why keep track of spendings in an application?</strong></p>
+<p>I, like many people out there, wanted to become rich and <a href="https://youtu.be/7RchntYFtSE">successful</a>. To become rich, one is often advised to run a personal budget, that's what I started to do several years ago. I'd like to point out that running my personal budget hasn't made me rich and successful, and I increased income simply by moving to the capital of my home country.</p>
+<p>I think I started to run the budget somewhere around 2012. By that time I already had a professional programmer deformation, which can be described as "made by someone else = bad" formula and is usually manifested by a strong desire to rewrite everything from scratch. However, I had no experience with budgeting back then, so I decided to try a "professional" solution and purchased <a href="https://www.youneedabudget.com">YNAB</a> (You Need A Budget) to use the application on both PC and mobile.</p>
+<p>I tried to do my best to set out budget plans and fulfill them in the course of three years. However, somewhere around 2015 the authors released a new application version and <strong>demanded money for the upgrade</strong>, the old version was no longer functioning. I had to choose one of the options:</p>
+<ol>
+<li>Pay for the upgraded version and use a completely new "shiny" user interface.</li>
+<li>Stop their ripoff, keep my money and lose the history of spendings.</li>
+</ol>
+<p>I concluded that:</p>
+<ol>
+<li>I already paid for the application;</li>
+<li>the old version was suitable for me;</li>
+<li>I did not ask for an upgrade;</li>
+<li>if I would know I have to pay for each upgrade, I would have never purchased their application in the first place;</li>
+<li>I didn't want to sponsor this boorishness;</li>
+</ol>
+<p>so I stopped the ripoff and <strong>lost my history of spendings</strong>.</p>
+<p>This was a very disappointing situation for me, so I stopped tracking my spendings for about a year. However, I was once experiencing a "painful synchronization" (also known as "figuring things out" with a wife). I failed to defend myself against a financial vocal attack like "you're a waster, you always waste money on junk". Then I realized I really need to keep track of my spendings. </p>
+<p>This time I decided not to repeat my mistake of giving all my data to someone with the risk of losing it, so I started to track my spendings with simple phone notes. The format was simple and looked like this:</p>
+<p><img alt="Notes" src="../../images/2020-05-06_гит-бюджет_заметки.jpg" class="mobile"></p>
+<p>I used the notes solely on the phone until mid-2018. Then, a new need arose: I wanted to be able to <strong>work on my spendings from a PC</strong> to analyze them. I took the time to see through the solutions that would allow me to work with my spendings on both PC and mobile <strong>free of charge</strong>. A calendar turned out to be such a solution:</p>
+<p><img alt="Calendar" src="../../images/2020-05-06_гит-бюджет_календарь-день.jpg" class="mobile"></p>
+<p><img alt="New record" src="../../images/2020-05-06_гит-бюджет_календарь-запись.jpg" class="mobile"></p>
+<p>I used a Google account to access <a href="https://developers.google.com/apps-script?hl=ru">Apps Script</a> (a clone of JavaScript) to analyze the spendings. Working with spendings in Apps Script turned out to be quite daunting because calendar records are not designed to host spendings. Data ownership question was still unresolved: my data was still dusting on an unknown server I don't control, and I could only access my data through an API, <strong>which might change in the future by someone else's decision</strong>.</p>
+<p>While I was using a calendar, I've had the following ideas frequently visiting me:</p>
+<ol>
+<li>it would be nice to keep all my data in Git to be able to easily analyze the spendings;</li>
+<li>it would be nice to have a convenient user interface without all the noise that prevents me from quickly adding a record.</li>
+</ol>
+<p>Autumn 2019 I discovered <a href="https://isomorphic-git.org/">Isomorphic-Git</a>, which allows JavaScript to work with Git, quickly verified the ability to work with Git, and realized I found my Holy Grail. Recently I've finished creating the first version of GitBudget application, you can see its functionality here:</p>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/ii_cLXAy3S0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>That's how the spendings look like on my phone now:</p>
+<p><img alt="GitBudget" src="../../images/2020-05-06_гит-бюджет.jpg" class="mobile"></p>
+<p>Git data looks like this: <a href="https://gitlab.com/kornerr/git-budget-sample-data/-/blob/me/gb.log">https://gitlab.com/kornerr/git-budget-sample-data/-/blob/me/gb.log</a></p>
+<p>Let me highlight a few important issues:</p>
+<ul>
+<li>Git repository above reflects actions performed in the video above;</li>
+<li>I keep my spendings in a private repository, you should do the same;</li>
+<li>the application runs completely on the device and has no back-end: GitHub Pages hosting is used;</li>
+<li>the application talks to the outside world only during synchronization with Git;</li>
+<li>password is kept by a browser, the application only uses it for synchronization with Git;</li>
+<li>the application should be loaded over HTTP because the currently used Isomorphic-Git version (0.70.0) makes some requests (metadata) to Git over HTTP, and browsers prohibit HTTP requests from HTTPS nowadays.</li>
+</ul>
+<p><strong>2. Why did I create the application as a personal project?</strong></p>
+<p>I spent 40 hours of my life during the first quarter of 2020, i.e., on average, I worked for about half an hour each day.</p>
+<p>Personal projects have the following benefits over those done at work:</p>
+<ol>
+<li>You can do whatever you want and learn from your mistakes.</li>
+<li>Nobody's breathing down your neck and restricting your fantasy.</li>
+<li>The above two points keep you calm and give you the strength to perform any stupid activity that might be required at work.</li>
+<li>Mistakes you own drastically widen your horizons.</li>
+</ol>
+<p>Personal projects have drawbacks, too:</p>
+<ol>
+<li>Nobody in the world cares about your project but you.</li>
+<li>Nobody would pay you for your project.</li>
+<li>You have to find time to do the project every day.</li>
+<li>Your wife won't thank you for the project, even if she would use it herself.</li>
+</ol>
+<p>It's easy to note that all drawbacks of the personal project are balanced with the benefits of the work project. And all drawbacks of the work project are balanced with the benefits of the personal project. Yin and Yang.</p>
+<p><strong>3. Why does the project use Git+JS?</strong></p>
+<p>Keeping data in Git instead of an unknown back-end/API has the following benefits:</p>
+<ol>
+<li>Git is the most widespread solution for decentralized source version control among developers, i.e., almost every developer has experience with Git.</li>
+<li>You don't need a new API to work with Git: you just work with files.</li>
+<li>There are numerous services offering Git free of charge if you're not too crazy about security and don't want to pay for the service.</li>
+<li>Of course, a Git service provider might be <a href="https://github.blog/2018-06-04-github-microsoft/">acquired by a large corporation</a> one day, however, it's easy to move your Git data wherever you want.</li>
+<li>For maximum security you can always host your own Git server.</li>
+</ol>
+<p>Usage of JS with HTML/CSS over Swift/Kotlin/C#/Python has the following benefits:</p>
+<ol>
+<li>Your application runs everywhere: PC, tablet, mobile phone.</li>
+<li>You don't need to pass AppStore reviews to get to every device.</li>
+<li>HTML/CSS/JS standards are international, so <a href="https://arstechnica.com/features/2018/09/macos-10-14-mojave-the-ars-technica-review/12/">no single company may stop supporting it</a> or <a href="https://medium.com/@DoorDash/tips-and-tricks-for-migrating-from-swift-2-to-swift-3-c67a8520dbac">change its API</a>; this may result in backward compatibility of <a href="on-the-way-to-durable-applications.html">20 years</a> or more.</li>
+<li>Since there's no back-end, all logic resides in JS executed on the client, so you can save the version of the application that best suits you and forget about recurrent updates that <a href="https://hardforum.com/threads/anyway-to-turn-off-the-damn-automatic-driver-updates-in-windows-10.1948410/">usually only hamper usability</a>.</li>
+</ol>
+<p>GitBudget is the first attempt to see what Git+JS can do. I can only imagine the possibilities lying ahead.</p>
+                </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
+        </center>
+    </body>
+</html>
