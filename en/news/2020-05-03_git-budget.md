@@ -1,5 +1,5 @@
 Title: Why I keep track of spendings in a personal app made with Git+JS
-Date: 2020-05-06 00:00
+Date: 2020-05-03 00:00
 Category: News
 Slug: git-budget
 Lang: en
