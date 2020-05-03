@@ -117,7 +117,7 @@ GitBudget is the first attempt to see what Git+JS can do. I can only imagine the
 
 [успех]: https://youtu.be/7RchntYFtSE
 [ynab]: https://www.youneedabudget.com
-[apps-script]: https://developers.google.com/apps-script?hl=ru
+[apps-script]: https://developers.google.com/apps-script
 [isomorphic-git]: https://isomorphic-git.org/
 [поглощение]: https://github.blog/2018-06-04-github-microsoft/
 [opengl]: https://arstechnica.com/features/2018/09/macos-10-14-mojave-the-ars-technica-review/12/
