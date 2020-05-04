@@ -39,13 +39,13 @@ This was a very disappointing situation for me, so I stopped tracking my spendin
 
 This time I decided not to repeat my mistake of giving all my data to someone with the risk of losing it, so I started to track my spendings with simple phone notes. The format was simple and looked like this:
 
-<img alt="Notes" src="../../images/2020-05-06_гит-бюджет_заметки.jpg" class="mobile">
+![Notes][снимок-заметки]
 
 I used the notes solely on the phone until mid-2018. Then, a new need arose: I wanted to be able to **work on my spendings from a PC** to analyze them. I took the time to see through the solutions that would allow me to work with my spendings on both PC and mobile **free of charge**. A calendar turned out to be such a solution:
 
-<img alt="Calendar" src="../../images/2020-05-06_гит-бюджет_календарь-день.jpg" class="mobile">
+![Calendar][снимок-календарь-день]
 
-<img alt="New record" src="../../images/2020-05-06_гит-бюджет_календарь-запись.jpg" class="mobile">
+![New record][снимок-календарь-запись]
 
 I used a Google account to access [Apps Script][apps-script] (a clone of JavaScript) to analyze the spendings. Working with spendings in Apps Script turned out to be quite daunting because calendar records are not designed to host spendings. Data ownership question was still unresolved: my data was still dusting on an unknown server I don't control, and I could only access my data through an API, **which might change in the future by someone else's decision**.
 
@@ -60,7 +60,7 @@ Autumn 2019 I discovered [Isomorphic-Git][isomorphic-git], which allows JavaScri
 
 That's how the spendings look like on my phone now:
 
-<img alt="GitBudget" src="../../images/2020-05-06_гит-бюджет.jpg" class="mobile">
+![GitBudget][снимок-гит-бюджет]
 
 Git data looks like this: [https://gitlab.com/kornerr/git-budget-sample-data/-/blob/me/gb.log](https://gitlab.com/kornerr/git-budget-sample-data/-/blob/me/gb.log)
 
@@ -114,6 +114,11 @@ GitBudget is the first attempt to see what Git+JS can do. I can only imagine the
 
 
 [снимок]: ../../images/2020-05-06_гит-бюджет_снимок.png
+
+[снимок-заметки]: ../../images/2020-05-06_гит-бюджет_заметки.png
+[снимок-календарь-день]: ../../images/2020-05-06_гит-бюджет_календарь-день.png
+[снимок-календарь-запись]: ../../images/2020-05-06_гит-бюджет_календарь-запись.png
+[снимок-гит-бюджет]: ../../images/2020-05-06_гит-бюджет.png
 
 [успех]: https://youtu.be/7RchntYFtSE
 [ynab]: https://www.youneedabudget.com

@@ -60,10 +60,6 @@
             {
                 width: 720px;
             }
-            .mobile
-            {
-                width: 320px;
-            }
             a
             {
                 color: #3A91CB;
@@ -131,10 +127,10 @@
 <p>so I stopped the ripoff and <strong>lost my history of spendings</strong>.</p>
 <p>This was a very disappointing situation for me, so I stopped tracking my spendings for about a year. However, I was once experiencing a "painful synchronization" (also known as "figuring things out" with a wife). I failed to defend myself against a financial vocal attack like "you're a waster, you always waste money on junk". Then I realized I really need to keep track of my spendings. </p>
 <p>This time I decided not to repeat my mistake of giving all my data to someone with the risk of losing it, so I started to track my spendings with simple phone notes. The format was simple and looked like this:</p>
-<p><img alt="Notes" src="../../images/2020-05-06_гит-бюджет_заметки.jpg" class="mobile"></p>
+<p><img src="../../images/2020-05-06_гит-бюджет_заметки.png" alt="Notes" /></p>
 <p>I used the notes solely on the phone until mid-2018. Then, a new need arose: I wanted to be able to <strong>work on my spendings from a PC</strong> to analyze them. I took the time to see through the solutions that would allow me to work with my spendings on both PC and mobile <strong>free of charge</strong>. A calendar turned out to be such a solution:</p>
-<p><img alt="Calendar" src="../../images/2020-05-06_гит-бюджет_календарь-день.jpg" class="mobile"></p>
-<p><img alt="New record" src="../../images/2020-05-06_гит-бюджет_календарь-запись.jpg" class="mobile"></p>
+<p><img src="../../images/2020-05-06_гит-бюджет_календарь-день.png" alt="Calendar" /></p>
+<p><img src="../../images/2020-05-06_гит-бюджет_календарь-запись.png" alt="New record" /></p>
 <p>I used a Google account to access <a href="https://developers.google.com/apps-script">Apps Script</a> (a clone of JavaScript) to analyze the spendings. Working with spendings in Apps Script turned out to be quite daunting because calendar records are not designed to host spendings. Data ownership question was still unresolved: my data was still dusting on an unknown server I don't control, and I could only access my data through an API, <strong>which might change in the future by someone else's decision</strong>.</p>
 <p>While I was using a calendar, I've had the following ideas frequently visiting me:</p>
 <ol>
@@ -144,7 +140,7 @@
 <p>Autumn 2019 I discovered <a href="https://isomorphic-git.org/">Isomorphic-Git</a>, which allows JavaScript to work with Git, quickly verified the ability to work with Git, and realized I found my Holy Grail. Recently I've finished creating the first version of GitBudget application, you can see its functionality here:</p>
 <iframe width="720" height="405" src="https://www.youtube.com/embed/ii_cLXAy3S0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>That's how the spendings look like on my phone now:</p>
-<p><img alt="GitBudget" src="../../images/2020-05-06_гит-бюджет.jpg" class="mobile"></p>
+<p><img src="../../images/2020-05-06_гит-бюджет.png" alt="GitBudget" /></p>
 <p>Git data looks like this: <a href="https://gitlab.com/kornerr/git-budget-sample-data/-/blob/me/gb.log">https://gitlab.com/kornerr/git-budget-sample-data/-/blob/me/gb.log</a></p>
 <p>Let me highlight a few important issues:</p>
 <ul>
