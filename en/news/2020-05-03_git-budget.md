@@ -16,7 +16,7 @@ Hi, folks, let me share my experience of creating an application to keep track o
 
 **1. Why keep track of spendings in an application?**
 
-I, like many people out there, wanted to become rich and [successful][успех]. To become rich, one is often advised to run a personal budget, that's what I started to do several years ago. I'd like to point out that running my personal budget hasn't made me rich and successful, and I increased income simply by moving to the capital of my home country.
+I, like many people out there, wanted to become rich and [successful][успех]. To become rich, one is often advised to run a personal budget, that's what I started to do several years ago. I'd like to point out that running my personal budget hasn't made me rich and successful, and I increased income simply by moving to Moscow.
 
 I think I started to run the budget somewhere around 2012. By that time I already had a professional programmer deformation, which can be described as "made by someone else = bad" formula and is usually manifested by a strong desire to rewrite everything from scratch. However, I had no experience with budgeting back then, so I decided to try a "professional" solution and purchased [YNAB][ynab] (You Need A Budget) to use the application on both PC and mobile.
 
