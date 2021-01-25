@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <style>
+            #header
+            {
+                background: #2BA6E3;
+                padding: 0.7em;
+                text-align: left;
+            }
+            #header a
+            {
+                color: white;
+                text-decoration: none;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+
+            #lang
+            {
+                float: right;
+            }
+
+            .news_item
+            {
+                background: #FFFFFF;
+                width: 720px;
+                padding: 1em;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                border: 1px solid #E0E0E0;
+                text-align: left;
+            }
+            .news_item_contents
+            {
+                color: #444;
+                line-height: 1.5em;
+            }
+            .news_item_date
+            {
+                margin-bottom: 2em;
+                color: #aaa;
+            }
+
+            html
+            {
+                font-family: sans-serif;
+            }
+            body
+            {
+                background: #FAFAFA;
+            }
+            code, pre
+            {
+                font-family: monospace, serif;
+                font-size: 1em;
+                color: #7f0a0c;
+            }
+            img
+            {
+                width: 720px;
+            }
+            a
+            {
+                color: #3A91CB;
+            }
+
+            table
+            {
+                border-collapse: collapse;
+            }
+            table, th, td
+            {
+                border: 1px solid #aaa;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <strong id="title">Open Game Studio</strong>
+            <a href="../../en/news/index.html">News</a>
+            <a href="../../en/game/index.html">Games</a>
+            <a href="../../en/tool/index.html">Tools</a>
+            <a href="../../en/page/about.html">About</a>
+            <div id="lang">
+                <a href="../../en/news/gitjs-intro.html">EN</a>
+                <a href="../../ru/news/gitjs-intro.html">RU</a>
+            </div>
+        </div>
+        <center>
+            <h1>In the news...</h1>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="gitjs-intro.html">How I create browser applications in browsers</a>
+                </h2>
+                <p class="news_item_date">
+                    2021-01-30 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2021_gitjs-intro_снимок.jpg" alt="GitJS" /></p>
+<p>In this article Michael shares his experience of creating durable applications.</p>
+<p>In 2013 Canonical <a href="https://habr.com/ru/post/187480">tried to crowdfund Ubuntu Edge smartphone</a>.
+Its main feature would be the ability to use the smartphone as a full-fledged
+PС. Unfortunatly, the crowdfunding campaign did not accumulate enough money,
+so a dream of having a universal device remained to be the dream.</p>
+<p>I've been searching for universality, too, however on the software side,
+not hardware one. Today I can confidently say I found the necessary
+combination: Git and JavaScript.</p>
+<p>As you know, I have already described the benefits of browser applications
+(<a href="http://opengamestudio.org/ru/news/on-the-way-to-durable-applications.html">nCKOB</a> static site generator) and the benefits of using Git
+instead of yet another back-end with API (<a href="http://opengamestudio.org/ru/news/git-budget.html">GitBudget</a> to track
+personal spendings). Once GitBudget was out, I spent the remaining 2020
+to build a system allowing one to create browser applications right in
+browsers. GitJS is the name of that system.</p>
+<p><cut/></p>
+<h1 id="gitjs">GitJS</h1>
+<p>The system uses Git for:</p>
+<ul>
+<li>long-term data storage <strong>outside</strong> of device;</li>
+<li>talking to the outside world;</li>
+<li>delivering the application to a device over HTTP.</li>
+</ul>
+<p>Thus, Git is currently not used for version control, Git is merely a
+widespread technology to keep data with read (HTTP) and write permissions. This
+might be somewhat counterintuitive, however, this allows everyone to decide
+where and how to keep data: paid/free, locally/remotely.</p>
+<p>You might argue that FTP/rsync could be used instead of Git if we only
+need to keep data. However, there are no widespread services like
+SourceForge/GitHub/BitBucket/GitLab for FTP/rsync. Also, there are no
+implementations of FTP/rsync that work inside browsers, and Git has
+<a href="https://isomorphic-git.org">Isomorphic-Git</a>.</p>
+<p>JS (alongside HTML/CSS) is used for:</p>
+<ul>
+<li>user interface;</li>
+<li>logic;</li>
+<li>long-turm data storage <strong>on</strong> device.</li>
+</ul>
+<p>GitJS consists of the following three mandatory parts (in the order of execution):</p>
+<ol>
+<li><a href="https://gitlab.com/gitjs/gitjs.gitlab.io/-/blob/master/index.html">HTML page</a><ul>
+<li>introduces GitJS rules</li>
+<li>has a tiny size to work for slow connections</li>
+<li>is requested/delivered each time the page is completely refreshed</li>
+<li>may be hosted locally to work without Internet</li></ul></li>
+<li><a href="https://bitbucket.org/gitjs/0000/src/master/0000.js">GitJS rules</a><ul>
+<li>are essentially a chunk of JS code</li>
+<li>introduce the concept of modules and their loading, saving, execution</li>
+<li>introduce the concept of sequences: a way to structure source code in a reactive-event-based manner</li>
+<li>are requested/delivered by HTML page only if they are absent or need an update</li>
+<li>are saved by HTML page into LocalStorage to start faster next time</li></ul></li>
+<li><a href="https://git.opengamestudio.org/kornerr/nPOBEPuTb-JSZip">Startup module</a><ul>
+<li>is located in the address string after <code>?</code> symbol</li>
+<li>is executed after the loading of GitJS rules</li>
+<li>does whatever is necessary, e.g., introduces dependent modules to be loaded before the main application should start</li>
+<li>the linked example depicts JSZip library test</li></ul></li>
+</ol>
+<p>Startup module may introduce absolutely any additional rules to GitJS ones or
+even replace them, so your fantasy here is only limited by what browsers
+permit: e.g., you can't erase all hard drive files of a user.</p>
+<p>I'd like to stress that having local HTML page and Git web-service makes GitJS
+independable of Internet.</p>
+<h1 id="gitjsapplication1editorofgitjsmodules">GitJS application №1: editor of GitJS modules</h1>
+<p>Currently the editor has very basic functionality:</p>
+<p><strong>1.1. Editing of module's text files</strong></p>
+<p><img src="../../images/2021_gitjs-intro_правка-текстовых-файлов.png" alt="" /></p>
+<p><strong>1.2. Publishing changes to Git</strong></p>
+<p><img src="../../images/2021_gitjs-intro_публикация-изменений.png" alt="" /></p>
+<p><strong>Note</strong>: browsers keep passwords.</p>
+<p><strong>1.3. Editing the structure of a module</strong></p>
+<p><img src="../../images/2021_gitjs-intro_правка-структуры.png" alt="" /></p>
+<p><strong>1.4. Opening previously loaded modules from LocalStorage/IndexedDB</strong></p>
+<p><img src="../../images/2021_gitjs-intro_открытие-модуля.png" alt="" /></p>
+<p><strong>1.5. Saving changes locally into LocalStorage/IndexedDB</strong></p>
+<p>Here's the editor's last version: <a href="http://gitjs.org/📦">http://gitjs.org/📦</a>.
+The first run takes some time, be patient.</p>
+<h1 id="gitjsapplication2mahjongsolitaire">GitJS application №2: Mahjong solitaire</h1>
+<p>Currently the game has the following functionality:</p>
+<p><strong>2.1. Selection and removal of tiles off the field according to Mahjong solitaire rules</strong></p>
+<p><img src="../../images/2021_gitjs-intro_механика.png" alt="" /></p>
+<p><strong>2.2. Tile theme selection</strong></p>
+<p><img src="../../images/2021_gitjs-intro_темы.png" alt="" /></p>
+<p><strong>2.3. Field layout selection</strong></p>
+<p><img src="../../images/2021_gitjs-intro_раскладки.png" alt="" /></p>
+<p><strong>2.4. Victory/loss detection</strong></p>
+<p>Here's the game's last version: <a href="http://gitjs.org/🀄/1.0.14">http://gitjs.org/🀄/1.0.14</a>.</p>
+<p>In the end, functionality of this game will match the functionality of the original
+<a href="http://opengamestudio.org/ru/game/ogs-mahjong-1.html">Mahjong</a> released several years ago.</p>
+<h1 id="limitations">Limitations</h1>
+<p>GitJS limitations stem from browser ones.</p>
+<p><strong>1. CORS</strong></p>
+<p>To be able to publish changes to Git, we have to meet CORS restrictions.
+Currently major services <a href="https://github.com/isomorphic-git/isomorphic-git#cors-support">do not allow to publish Git changes easily</a>,
+so one would have to use either a proxy, or a personal Git service.</p>
+<p><strong>2. Full screen surfing on mobile</strong></p>
+<p>Nowadays browsers collaps navigation and other controls when you scroll a
+page that doesn't fit into available space. This leaves the space at the top
+and the bottom of the screen free of controls, but still unusable for touches,
+because these touches bring those controls back. Such a behaviour is very
+inconvenient for games.</p>
+<p>Mahjong solitaire works around that problem by supporting portrait mode: one
+can shift the field left/right. However, such a solution has its own drawbacks:
+one cannot see the field at a single glance, that makes the game harder to play.</p>
+<h1 id="plans">Plans</h1>
+<p><a href="http://opengamestudio.org/ru/news/on-the-way-to-durable-applications.html">nCKOB</a> mentioned earlier will become a GitJS application. This would
+allow anyone to create statically generated sites without leaving a browser.
+We'll see how this goes.</p>
+<p>PS: The first image is "Bayan" picture created by Viktor Vasnetsov in 1910.</p>
+                </div>
+            </div>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+                The site is hosted by <a href="https://pages.github.com">GitHub Pages</a>.
+            </div>
+        </center>
+    </body>
+</html>
