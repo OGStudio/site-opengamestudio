@@ -1,4 +1,4 @@
-Title: How I create browser applications in browsers
+Title: How I create browser applications inside browsers
 Date: 2021-01-30 00:00
 Category: News
 Slug: gitjs-intro
@@ -9,11 +9,11 @@ Lang: en
 In this article Michael shares his experience of creating durable applications.
 
 In 2013 Canonical [tried to crowdfund Ubuntu Edge smartphone][сбор-средств].
-Its main feature would be the ability to use the smartphone as a full-fledged
+Its main feature could be the ability to use the smartphone as a full-fledged
 PС. Unfortunatly, the crowdfunding campaign did not accumulate enough money,
 so a dream of having a universal device remained to be the dream.
 
-I've been searching for universality, too, however on the software side,
+I've been searching for universality, too, on the software side though,
 not hardware one. Today I can confidently say I found the necessary
 combination: Git and JavaScript.
 
@@ -21,7 +21,7 @@ As you know, I have already described the benefits of browser applications
 ([nCKOB][псков] static site generator) and the benefits of using Git
 instead of yet another back-end with API ([GitBudget][гит-бюджет] to track
 personal spendings). Once GitBudget was out, I spent the remaining 2020
-to build a system allowing one to create browser applications right in
+to build a system allowing one to create browser applications right inside
 browsers. GitJS is the name of that system.
 
 <cut/>
@@ -139,7 +139,7 @@ so one would have to use either a proxy, or a personal Git service.
 
 **2. Full screen surfing on mobile**
 
-Nowadays browsers collaps navigation and other controls when you scroll a
+Nowadays browsers collapse navigation and other controls when you scroll a
 page that doesn't fit into available space. This leaves the space at the top
 and the bottom of the screen free of controls, but still unusable for touches,
 because these touches bring those controls back. Such a behaviour is very
@@ -158,13 +158,13 @@ We'll see how this goes.
 PS: The first image is "Bayan" picture created by Viktor Vasnetsov in 1910.
 
 [isomorphic-git]: https://isomorphic-git.org
-[сбор-средств]: https://habr.com/ru/post/187480
-[псков]: http://opengamestudio.org/ru/news/on-the-way-to-durable-applications.html
-[гит-бюджет]: http://opengamestudio.org/ru/news/git-budget.html
+[сбор-средств]: https://techcrunch.com/2013/08/22/edge-crowdfunding-fail
+[псков]: http://opengamestudio.org/en/news/on-the-way-to-durable-applications.html
+[гит-бюджет]: http://opengamestudio.org/en/news/git-budget.html
 [страница-html]: https://gitlab.com/gitjs/gitjs.gitlab.io/-/blob/master/index.html
 [правила-гитжс]: https://bitbucket.org/gitjs/0000/src/master/0000.js
 [пусковой-модуль]: https://git.opengamestudio.org/kornerr/nPOBEPuTb-JSZip
-[маджонг1]: http://opengamestudio.org/ru/game/ogs-mahjong-1.html
+[маджонг1]: http://opengamestudio.org/en/game/ogs-mahjong-1.html
 [правка-текстовых-файлов]: ../../images/2021_gitjs-intro_правка-текстовых-файлов.png
 [публикация-изменений]: ../../images/2021_gitjs-intro_публикация-изменений.png
 [правка-структуры]: ../../images/2021_gitjs-intro_правка-структуры.png
