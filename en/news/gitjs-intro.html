@@ -124,8 +124,8 @@
 Its main feature could be the ability to use the smartphone as a full-fledged
 PС. Unfortunatly, the crowdfunding campaign did not accumulate enough money,
 so a dream of having a universal device remained to be the dream.</p>
-<p>I've been searching for universality, too, on the software side though,
-not hardware one. Today I can confidently say I found the necessary
+<p>I've been searching for universality, too, on the software side,
+not the hardware one. Today I can confidently say I found the necessary
 combination: Git and JavaScript.</p>
 <p>As you know, I have already described the benefits of browser applications
 (<a href="http://opengamestudio.org/en/news/on-the-way-to-durable-applications.html">nCKOB</a> static site generator) and the benefits of using Git
@@ -141,9 +141,9 @@ browsers. GitJS is the name of that system.</p>
 <li>talking to the outside world;</li>
 <li>delivering the application to a device over HTTP.</li>
 </ul>
-<p>Thus, Git is currently not used for version control, Git is merely a
+<p>Thus, Git is not used for version control, Git is merely a
 widespread technology to keep data with read (HTTP) and write permissions. This
-might be somewhat counterintuitive, however, this allows everyone to decide
+might be somewhat counterintuitive. However, this allows everyone to decide
 where and how to keep data: paid/free, locally/remotely.</p>
 <p>You might argue that FTP/rsync could be used instead of Git if we only
 need to keep data. However, there are no widespread services like
@@ -154,7 +154,7 @@ implementations of FTP/rsync that work inside browsers, and Git has
 <ul>
 <li>user interface;</li>
 <li>logic;</li>
-<li>long-turm data storage <strong>on</strong> device.</li>
+<li>long-term data storage <strong>on</strong> device.</li>
 </ul>
 <p>GitJS consists of the following three mandatory parts (in the order of execution):</p>
 <ol>
@@ -162,7 +162,7 @@ implementations of FTP/rsync that work inside browsers, and Git has
 <li>introduces GitJS rules</li>
 <li>has a tiny size to work for slow connections</li>
 <li>is requested/delivered each time the page is completely refreshed</li>
-<li>may be hosted locally to work without Internet</li></ul></li>
+<li>may be hosted locally to work without the Internet</li></ul></li>
 <li><a href="https://bitbucket.org/gitjs/0000/src/master/0000.js">GitJS rules</a><ul>
 <li>are essentially a chunk of JS code</li>
 <li>introduce the concept of modules and their loading, saving, execution</li>
@@ -178,10 +178,10 @@ implementations of FTP/rsync that work inside browsers, and Git has
 <p>Startup module may introduce absolutely any additional rules to GitJS ones or
 even replace them, so your fantasy here is only limited by what browsers
 permit: e.g., you can't erase all hard drive files of a user.</p>
-<p>I'd like to stress that having local HTML page and Git web-service makes GitJS
-independable of Internet.</p>
+<p>I'd like to stress that having an HTML page and Git web service locally
+lets you use GitJS without the Internet.</p>
 <h1 id="gitjsapplication1editorofgitjsmodules">GitJS application №1: editor of GitJS modules</h1>
-<p>Currently the editor has very basic functionality:</p>
+<p>Currently, the editor has very basic functionality:</p>
 <p><strong>1.1. Editing of module's text files</strong></p>
 <p><img src="../../images/2021_gitjs-intro_правка-текстовых-файлов.png" alt="" /></p>
 <p><strong>1.2. Publishing changes to Git</strong></p>
@@ -195,7 +195,7 @@ independable of Internet.</p>
 <p>Here's the editor's last version: <a href="http://gitjs.org/📦">http://gitjs.org/📦</a>.
 The first run takes some time, be patient.</p>
 <h1 id="gitjsapplication2mahjongsolitaire">GitJS application №2: Mahjong solitaire</h1>
-<p>Currently the game has the following functionality:</p>
+<p>Currently, the game has the following functionality:</p>
 <p><strong>2.1. Selection and removal of tiles off the field according to Mahjong solitaire rules</strong></p>
 <p><img src="../../images/2021_gitjs-intro_механика.png" alt="" /></p>
 <p><strong>2.2. Tile theme selection</strong></p>
@@ -204,27 +204,27 @@ The first run takes some time, be patient.</p>
 <p><img src="../../images/2021_gitjs-intro_раскладки.png" alt="" /></p>
 <p><strong>2.4. Victory/loss detection</strong></p>
 <p>Here's the game's last version: <a href="http://gitjs.org/🀄/1.0.14">http://gitjs.org/🀄/1.0.14</a>.</p>
-<p>In the end, functionality of this game will match the functionality of the original
-<a href="http://opengamestudio.org/en/game/ogs-mahjong-1.html">Mahjong</a> released several years ago.</p>
+<p>In the end, this game will match the original <a href="http://opengamestudio.org/en/game/ogs-mahjong-1.html">Mahjong</a> (released several
+years ago) in terms of features.</p>
 <h1 id="limitations">Limitations</h1>
 <p>GitJS limitations stem from browser ones.</p>
 <p><strong>1. CORS</strong></p>
 <p>To be able to publish changes to Git, we have to meet CORS restrictions.
-Currently major services <a href="https://github.com/isomorphic-git/isomorphic-git#cors-support">do not allow to publish Git changes easily</a>,
+Currently, major services <a href="https://github.com/isomorphic-git/isomorphic-git#cors-support">do not allow to publish Git changes easily</a>,
 so one would have to use either a proxy, or a personal Git service.</p>
-<p><strong>2. Full screen surfing on mobile</strong></p>
-<p>Nowadays browsers collapse navigation and other controls when you scroll a
+<p><strong>2. Full-screen surfing on mobile</strong></p>
+<p>Nowadays, browsers collapse navigation and other controls when you scroll a
 page that doesn't fit into available space. This leaves the space at the top
-and the bottom of the screen free of controls, but still unusable for touches,
-because these touches bring those controls back. Such a behaviour is very
+and the bottom of the screen free of controls but still unusable for touches
+because these touches bring those controls back. Such behaviour is very
 inconvenient for games.</p>
-<p>Mahjong solitaire works around that problem by supporting portrait mode: one
+<p>Mahjong solitaire works around that problem by supporting portrait mode: you
 can shift the field left/right. However, such a solution has its own drawbacks:
-one cannot see the field at a single glance, that makes the game harder to play.</p>
+one cannot see the field at a single glance, which makes the game harder to play.</p>
 <h1 id="plans">Plans</h1>
-<p><a href="http://opengamestudio.org/en/news/on-the-way-to-durable-applications.html">nCKOB</a> mentioned earlier will become a GitJS application. This would
-allow anyone to create statically generated sites without leaving a browser.
-We'll see how this goes.</p>
+<p><a href="http://opengamestudio.org/en/news/on-the-way-to-durable-applications.html">nCKOB</a> mentioned earlier will be rewritten as GitJS application. This
+would allow anyone to create statically generated sites without leaving a
+browser. We'll see how this goes.</p>
 <p>PS: The first image is "Bayan" picture created by Viktor Vasnetsov in 1910.</p>
                 </div>
             </div>

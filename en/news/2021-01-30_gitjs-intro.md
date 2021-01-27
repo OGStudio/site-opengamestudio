@@ -13,8 +13,8 @@ Its main feature could be the ability to use the smartphone as a full-fledged
 PС. Unfortunatly, the crowdfunding campaign did not accumulate enough money,
 so a dream of having a universal device remained to be the dream.
 
-I've been searching for universality, too, on the software side though,
-not hardware one. Today I can confidently say I found the necessary
+I've been searching for universality, too, on the software side,
+not the hardware one. Today I can confidently say I found the necessary
 combination: Git and JavaScript.
 
 As you know, I have already described the benefits of browser applications
@@ -34,9 +34,9 @@ The system uses Git for:
 * talking to the outside world;
 * delivering the application to a device over HTTP.
 
-Thus, Git is currently not used for version control, Git is merely a
+Thus, Git is not used for version control, Git is merely a
 widespread technology to keep data with read (HTTP) and write permissions. This
-might be somewhat counterintuitive, however, this allows everyone to decide
+might be somewhat counterintuitive. However, this allows everyone to decide
 where and how to keep data: paid/free, locally/remotely.
 
 You might argue that FTP/rsync could be used instead of Git if we only
@@ -49,7 +49,7 @@ JS (alongside HTML/CSS) is used for:
 
 * user interface;
 * logic;
-* long-turm data storage **on** device.
+* long-term data storage **on** device.
 
 GitJS consists of the following three mandatory parts (in the order of execution):
 
@@ -57,7 +57,7 @@ GitJS consists of the following three mandatory parts (in the order of execution
     * introduces GitJS rules
     * has a tiny size to work for slow connections
     * is requested/delivered each time the page is completely refreshed
-    * may be hosted locally to work without Internet
+    * may be hosted locally to work without the Internet
 1. [GitJS rules][правила-гитжс]
     * are essentially a chunk of JS code
     * introduce the concept of modules and their loading, saving, execution
@@ -74,12 +74,12 @@ Startup module may introduce absolutely any additional rules to GitJS ones or
 even replace them, so your fantasy here is only limited by what browsers
 permit: e.g., you can't erase all hard drive files of a user.
 
-I'd like to stress that having local HTML page and Git web-service makes GitJS
-independable of Internet.
+I'd like to stress that having an HTML page and Git web service locally
+lets you use GitJS without the Internet.
 
 # GitJS application №1: editor of GitJS modules
 
-Currently the editor has very basic functionality:
+Currently, the editor has very basic functionality:
 
 **1.1. Editing of module's text files**
 
@@ -106,7 +106,7 @@ The first run takes some time, be patient.
 
 # GitJS application №2: Mahjong solitaire
 
-Currently the game has the following functionality:
+Currently, the game has the following functionality:
 
 **2.1. Selection and removal of tiles off the field according to Mahjong solitaire rules**
 
@@ -124,8 +124,8 @@ Currently the game has the following functionality:
 
 Here's the game's last version: [http://gitjs.org/🀄/1.0.14](http://gitjs.org/🀄/1.0.14).
 
-In the end, functionality of this game will match the functionality of the original
-[Mahjong][маджонг1] released several years ago.
+In the end, this game will match the original [Mahjong][маджонг1] (released several
+years ago) in terms of features.
 
 # Limitations
 
@@ -134,26 +134,26 @@ GitJS limitations stem from browser ones.
 **1. CORS**
 
 To be able to publish changes to Git, we have to meet CORS restrictions.
-Currently major services [do not allow to publish Git changes easily][cors],
+Currently, major services [do not allow to publish Git changes easily][cors],
 so one would have to use either a proxy, or a personal Git service.
 
-**2. Full screen surfing on mobile**
+**2. Full-screen surfing on mobile**
 
-Nowadays browsers collapse navigation and other controls when you scroll a
+Nowadays, browsers collapse navigation and other controls when you scroll a
 page that doesn't fit into available space. This leaves the space at the top
-and the bottom of the screen free of controls, but still unusable for touches,
-because these touches bring those controls back. Such a behaviour is very
+and the bottom of the screen free of controls but still unusable for touches
+because these touches bring those controls back. Such behaviour is very
 inconvenient for games.
 
-Mahjong solitaire works around that problem by supporting portrait mode: one
+Mahjong solitaire works around that problem by supporting portrait mode: you
 can shift the field left/right. However, such a solution has its own drawbacks:
-one cannot see the field at a single glance, that makes the game harder to play.
+one cannot see the field at a single glance, which makes the game harder to play.
 
 # Plans
 
-[nCKOB][псков] mentioned earlier will become a GitJS application. This would
-allow anyone to create statically generated sites without leaving a browser.
-We'll see how this goes.
+[nCKOB][псков] mentioned earlier will be rewritten as GitJS application. This
+would allow anyone to create statically generated sites without leaving a
+browser. We'll see how this goes.
 
 PS: The first image is "Bayan" picture created by Viktor Vasnetsov in 1910.
 
