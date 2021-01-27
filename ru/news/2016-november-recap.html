@@ -6,19 +6,22 @@
             #header
             {
                 background: #2BA6E3;
-                padding: 0.7em;
+                padding: 0.7em 0.7em 0 0.7em;
                 text-align: left;
             }
             #header a
             {
                 color: white;
                 text-decoration: none;
-                padding: 0.5em 1em 0.5em 1em;
             }
 
             #lang
             {
                 float: right;
+            }
+            #lang a
+            {
+                padding-left: 1em;
             }
 
             .news_item
@@ -56,13 +59,6 @@
                 font-size: 1em;
                 color: #7f0a0c;
             }
-            /*
-            figure
-            {
-                margin: 0px;
-                padding: 0px;
-            }
-            */
             img
             {
                 width: 720px;
@@ -84,35 +80,55 @@
                 margin-bottom: 0.5em;
             }
 
+            .header2 {
+                position: relative;
+            }
+            .menu
+            {
+                position: absolute;
+                left: 0;
+                bottom: 0.7em;
+            }
+
+            .menu a {
+                padding-right: 1em;
+            }
+
             .discord
             {
-              position: absolute;
-              top: 4em;
-              left: 1em;
+                float: right;
             }
-            .discord > a > img
+            .discord img
             {
-              height: 3em;
-              width: auto;
+                height: 3em;
+                width: auto;
+            }
+            .clear {
+                clear: both;
             }
         </style>
     </head>
     <body>
         <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
-        <div class=discord>
-            <a href="https://discord.gg/3A6THQabNf">
-                <img src="../../images/discord.png"></img>
-            </a>
-        </div>
         <div id="header">
-            <strong id="title">Open Game Studio</strong>
-            <a href="../../ru/news/index.html">Новости</a>
-            <a href="../../ru/game/index.html">Игры</a>
-            <a href="../../ru/tool/index.html">Инструменты</a>
-            <a href="../../ru/page/about.html">О нас</a>
-            <div id="lang">
-                <a href="../../en/news/2016-november-recap.html">EN</a>
-                <a href="../../ru/news/2016-november-recap.html">RU</a>
+            <div>
+                <strong id="title">Open Game Studio</strong>
+                <div id="lang">
+                    <a href="../../en/news/2016-november-recap.html">EN</a>
+                    <a href="../../ru/news/2016-november-recap.html">RU</a>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <a class="discord" href="https://discord.gg/3A6THQabNf">
+                    <img src="../../images/discord.png"></img>
+                </a>
+                <div class="clear"></div>
             </div>
         </div>
         <center>
