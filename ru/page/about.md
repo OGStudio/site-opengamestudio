@@ -28,11 +28,8 @@ Open Game Studio преследует следующие цели:
 * Тимур “Sora” Маликин, Антон “Kif” Чернов – 3D моделлеры
 * Тьерри Делоне, Мигель де Диос, Дирк Первольц, Юрген Раушер – переводчики
 
-**Поддержите нас**
+**Присоединяйтесь**
 
-Если вам нравится то, что мы делаем, присоединяйтесь к нашим группам в
-[VK][vk], [Twitter][tw] или [Facebook][fb].
+Если вам нравится то, что мы делаем, присоединяйтесь к нам в [Discord][discord].
 
-[vk]: https://vk.com/opengamestudo
-[tw]: https://twitter.com/OpenGameStudio
-[fb]: https://www.facebook.com/groups/162611230470183
+[discord]: https://discord.gg/3A6THQabNf

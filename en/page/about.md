@@ -28,11 +28,8 @@ first step in the long path towards full-scale RPG.
 * Timur “Sora” Malikin, Anton “Kif” Chernov- 3D modellers
 * Thierry Delaunay, Miguel de Dios, Dirk Pervolz, Jurgen Rauscher – translators
 
-**Support us**
+**Join us**
 
-If you like what we do, support us by joining our group at
-[VK][vk], [Twitter][tw], or [Facebook][fb].
+If you like what we do, join us at [Discord][discord].
 
-[vk]: https://vk.com/opengamestudo
-[tw]: https://twitter.com/OpenGameStudio
-[fb]: https://www.facebook.com/groups/162611230470183
+[discord]: https://discord.gg/3A6THQabNf
