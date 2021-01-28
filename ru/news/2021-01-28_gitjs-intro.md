@@ -1,5 +1,5 @@
 Title: Как я создаю приложения для браузера прямо в браузере
-Date: 2021-01-30 00:00
+Date: 2021-01-28 00:00
 Category: News
 Slug: gitjs-intro
 Lang: ru
