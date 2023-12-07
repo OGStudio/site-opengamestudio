@@ -3,6 +3,14 @@
         font-size: xx-large;
     }
 }
+#footer
+{
+  padding-top: 2em;
+}
+#disqus_thread
+{
+    width: 720px;
+}
 #header
 {
     background: #2BA6E3;
