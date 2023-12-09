@@ -32,6 +32,14 @@
     padding-left: 1em;
 }
 
+.left_item_title
+{
+    background: #2BA6E3;
+    border: 1px solid #E0E0E0;
+    color: white;
+    float: left;
+    padding: 1em;
+}
 .news_item
 {
     background: #FFFFFF;

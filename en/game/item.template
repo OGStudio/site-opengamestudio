@@ -27,8 +27,8 @@
                 <div class="clear"></div>
             </div>
         </div>
+        <h3 class="left_item_title">In the games...</h3>
         <center>
-            <h1>In the games...</h1>
             <div class="news_item">
                 <h2 class="news_item_title">
                     <a href="PSKOV_ITEM_URL">PSKOV_ITEM_TITLE</a>
