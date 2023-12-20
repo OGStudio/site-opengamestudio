@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div>
+                <strong id="title">Open Game Studio</strong>
+                <div id="lang">
+                    <a href="../../en/news/bus-intro.html">EN</a>
+                    <a href="../../ru/news/bus-intro.html">RU</a>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <a class="discord" href="https://discord.gg/3A6THQabNf">
+                    <img src="../../images/discord.png"></img>
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="bus-intro.html">Переосмысление целей проекта</a>
+                </h2>
+                <p class="news_item_date">
+                    2023-12-25 00:00
+                </p>
+                <div class="news_item_contents">
+<p>Прошла пара лет бездействия. Настало время вернуться в строй, потому что
+без собственных проектов жить заметно печальнее.</p>
+<p><Картинка про "не только лишь все"?></p>
+<p>Начнём с краткого описания текущего состояния проектов, представляющих наибольший
+интерес.</p>
+<h1 id="">Маджонг сейчас</h1>
+<p><Картинка со скачиваниями Маджонга-1></p>
+<p>Оказалось, что игра Маджонг-1 всё ещё подаёт признаки жизни: игру всё ещё качают и,
+хочется верить, в неё играют.
+Недавно я проверял запуск версии под Linux. К сожалению, прямо из распакованного
+архива запустить игру не удалось. Но несколько симлинков к обновлённым версиям
+библиотек исправили дело.</p>
+<p>Т.к. Маджонг-1 был выпущен 10 лет назад, то несколько симлинков - это очень хороший
+результат с точки зрения долговечности.</p>
+<h1 id="-1">ПСКОВ сейчас</h1>
+<p><Видео с генерацией этого сайта при добавлении комментов Disqus></p>
+<p>Генератор статических ПСКОВ:</p>
+<ul>
+<li>интерфейс + логика на JavaScript <дать сылку на ПСКОВ.html></li>
+<li>слой работы с файловой системой (LFSA) <дать ссылку на lfsa></li>
+</ul>
+<p>Интерфейс + логика на JavaScript работают без единого замечания. А вот LFSA, написанной на Питоне, у меня возникли проблемы на текущей последней версии macOS 14.0. Пришлось немного подправить скрипт.</p>
+<p>Выбор JS и браузера себя полностью оправдал: спустя 4 года всё работает ровно так, как и задумывалось.</p>
+<p>Слой ФС ожидаем потребовал незначительных правок.</p>
+<p>В целом результат достижения долговечности в 10 лет выглядит более, чем достижимым с подобным подходом.</p>
+<h1 id="-2">Конец попыток создать крутую РПГ</h1>
+<p>После долгих раздумий и двухгодового бездействия удалось принять действительность:
+у нас нет ресурсов для создания чего-либо крупнее настольной игры вроде Маджонга.</p>
+<p>Однако, есть огромное желание писать не только долговечный код, но и код, без
+существенного труда портируемый на все популярные платформы сегодня: Android, iOS, Linux, macOS, Windows.
+Пока в голове есть лишь смутные представления о портируемом коде. Однако, практика
+показала, что долговечность в 4-10 лет совсем не фантастика. Такая же гипотеза терзает
+меня и в отношении портируемого кода. Что ж, в ближайшие годы мы проверим это путём
+значительной переработки Маджонга-1 и некоторых других проектов.</p>
+<p>PS: А ещё мы добавили комментарии с помощью Disqus.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/bus-intro.html";
+                this.page.identifier = "bus-intro.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
