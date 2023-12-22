@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div>
+                <strong id="title">Open Game Studio</strong>
+                <div id="lang">
+                    <a href="../../en/news/rpg-ends.html">EN</a>
+                    <a href="../../ru/news/rpg-ends.html">RU</a>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <a class="discord" href="https://discord.gg/3A6THQabNf">
+                    <img src="../../images/discord.png"></img>
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="rpg-ends.html">Изменение целей проекта</a>
+                </h2>
+                <p class="news_item_date">
+                    2023-12-25 00:00
+                </p>
+                <div class="news_item_contents">
+<h1 id="">Конец мечты об открытой РПГ</h1>
+<p>В далёком 2005-м году проект Opensource Game Studio
+<a href="https://unixforum.org/viewtopic.php?t=9989">начался под названием Opensource RPG</a>, т.к. целью было
+создание «первой открытой конкуретноспособной бесплатной игры».
+В чуть менее далёком 2011-м после выпуска OGS Mahjong 0.7 я уже считал,
+что для создания РПГ <a href="https://gamedev.ru/community/ogs/articles/?id=6383">в одиночку потребуется 540 лет</a>.</p>
+<p>В том 2011-м у меня теплилась надежда об увеличении команды, что могло
+бы уменьшить этот срок. Однако, сегодня в конце 2023-го очевидно,
+что <strong>создать РПГ в одиночку невозможно</strong>.</p>
+<h1 id="-1">Подтверждение гипотез долговечности ПО</h1>
+<p>В 2013-м году вышел OGS Mahjong 1.1, последний на сегодняшний день готовый
+продукт в рамках проекта Opensource Game Studio. Как ни странно, OGS Mahjong
+до сих пор проявляет признаки к жизни, хотя <a href="https://sourceforge.net/projects/osrpgcreation/files/Mahjong/1.1.0/ogs-mahjong-1.1.0-windows32.exe/stats/timeline?dates=2013-05-05+to+2023-12-01">график скачивания</a> к текущему
+времени уже больше похож на предсмертные судороги:</p>
+<p><img src="../../images/2023_rpg-ends_mjdl.jpg" alt="mjdl" />[Скачивания OGS Mahjong 1.1 за 10 лет]</p>
+<p>Недавно я проверял запуск OGS Mahjong 1.1 под Linux. К сожалению, прямо из
+распакованного архива запустить игру не удалось. Но несколько симлинков к
+обновлённым версиям библиотек исправили дело. Т.е. достаточно было немного
+настроить окружение без пересборки игры, и всё заработало. Это хороший результат
+для ПО возрастом 10 лет.</p>
+<p>В 2019-м году мы создали собственный генератор статических сайтов <a href="https://opengamestudio.org/pskov/ru/pskov_1.0.0+ru.html">ПСКОВ</a>,
+чтобы иметь возможность как оформлять статьи в удобном формате Markdown, так
+и проверить гипотезу долговечности веб-приложений. Сегодня спустя 4 года ясно,
+что гипотеза полностью подтвердилась. Уверен, через 10 лет ПСКОВ образца 2019-го
+года по-прежнему будет работать без единого изменения. Но про это мы узнаем
+через 6 лет - в 2029-м.</p>
+<p>Примеры OGS Mahjong 1.1 и ПСКОВа показывают, что долговечность в 4-10 лет не
+фантастика. Долговечность критически важна для хобби-проектов, т.к. у
+любителя нет возможности поспевать за меняющимися требованиями в Операционных
+Системах. Шаг долговечности в проекте Opensource Game Studio достигнут.</p>
+<h1 id="-2">Новые гипотезы портируемого кода</h1>
+<p>Следующий шаг - это портируемый код. Под этим термином я подразумеваю такой код,
+который на ~80% является технически идентичным на любой популярной ныне
+платформе: Android, iOS, Linux, macOS, Web, Windows.</p>
+<p>Портируемость критически важна для хобби-проектов, т.к. у любителя нет возможности
+проверять каждое изменение на всех платформах регулярно. Именно портируемостью кода
+мы и займёмся в ближайшие годы. Оттачивать её будем и на OGS Mahjong, и на ПСКОВе.</p>
+<p>Будет интересно и познавательно.</p>
+<p>PS: А ещё мы добавили комментарии на сайте с помощью Disqus. Ставьте лайки ;)</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/rpg-ends.html";
+                this.page.identifier = "rpg-ends.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
