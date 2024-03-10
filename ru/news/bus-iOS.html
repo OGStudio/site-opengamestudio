@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div>
+                <strong id="title">Open Game Studio</strong>
+                <div id="lang">
+                    <a href="../../en/news/bus-iOS.html">EN</a>
+                    <a href="../../ru/news/bus-iOS.html">RU</a>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <a class="discord" href="https://discord.gg/3A6THQabNf">
+                    <img src="../../images/discord.png"></img>
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="bus-iOS.html">Шина-iOS</a>
+                </h2>
+                <p class="news_item_date">
+                    2024-03-10 00:00
+                </p>
+                <div class="news_item_contents">
+<h1 id="ios">Первая реализация Шины для iOS</h1>
+<p>За январь и февраль довёл реализацию шаблона Шина на Swift до хорошего состояния
+для iOS.</p>
+<p>Провёл нагрузочное тестирование. Оказалось, что общение элементов
+приложения через Шину примерно в 92 раза медленнее обычного вызова функции.
+И это говорит не о том, что Шина плоха. Наоборот, это говорит о том, что
+Шина должна использоваться в архитектурных склейках кода, что позволяет
+сократить такой код примерно на 30%.</p>
+<p>Так выглядит пример с использованием нескольких состояний, отображаемых
+одним экземпляром:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xviaEbSd54o?si=7oZRU4Sjp3Hc5mX3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h1 id="">Планы на март</h1>
+<p>В марте попробую получить заготовку портируемого кода на C++ для OpenWrt 12.09 (Atheros AR9331).</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/bus-iOS.html";
+                this.page.identifier = "bus-iOS.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
