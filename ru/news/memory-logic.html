@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div>
+                <strong id="title">Open Game Studio</strong>
+                <div id="lang">
+                    <a href="../../en/news/memory-logic.html">EN</a>
+                    <a href="../../ru/news/memory-logic.html">RU</a>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <a class="discord" href="https://discord.gg/3A6THQabNf">
+                    <img src="../../images/discord.png"></img>
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="memory-logic.html">Игровая логика «Памяти»</a>
+                </h2>
+                <p class="news_item_date">
+                    2024-05-03 00:00
+                </p>
+                <div class="news_item_contents">
+<h1 id="">Игровая логика «Памяти»</h1>
+<p>В апреле реализовал игровую логику игры «Память» на Python в виде модели ограниченного языка и успешно перевёл её инструментом в C++.</p>
+<p>Модель ограниченного языка предполагает следующую архитектуру из двух частей:</p>
+<ol>
+<li>контекст состояния</li>
+<li>чистые функции без побочных эффектов, работающие лишь с контекстом</li>
+</ol>
+<p>Контекст состояния игровой логики на Python получился следующим (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory_Context.h">C++</a>):</p>
+<pre><code class="python language-python">class memory_Context:
+  def __init__(self):
+    self.hiddenItems = []
+    self.mismatchedItems = []
+    self.playfieldItems = {}
+    self.playfieldSize = 0
+    self.recentField = "none"
+    self.selectedId = -1
+    self.selectedItems = []
+    self.victory = False
+</code></pre>
+<p>Т.к. инструмент на текущий момент работает лишь с функциями, то контекст для Python и С++ пока пишем руками.</p>
+<p>Функции получились примерно такими (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory.cpp#L29">C++</a>):</p>
+<pre><code class="python language-python"># Select item
+@llm_by_value
+def memory_selectItem(
+  c: memory_Context
+) -&gt; memory_Context:
+  if (
+    len(c.selectedItems) == 2
+  ):
+    c.selectedItems.clear()
+  #}
+  c.selectedItems.append(c.selectedId)
+  c.recentField = "selectedItems"
+  return c
+#}
+</code></pre>
+<p>Особенности функций для модели ограниченного языка:</p>
+<ul>
+<li>декоратор <code>@llm_by_value</code> в Python нужен для передачи аргументов по значению, а не по ссылке (по умолчанию - по ссылке)</li>
+<li>передача по значению обязательна для ограничения сферы действия функции ровно одним исходящим полем контекста, т.е. это реализация Принципа Единственной Ответственности (Single Responsibility Principle)</li>
+<li>контекст содержит поле <code>recentField</code>, представляющее собой хранимое «событие»; это поле позволяет функциям среагировать лишь в момент изменения значения интересующего поля</li>
+<li>функция обязана в поле <code>recentField</code> указать изменённое поле контекста либо <code>none</code> в случае отсутствия изменений</li>
+<li>функция принимает на вход контекст и выдаёт (изменённый) контекст на выход</li>
+</ul>
+<p>Полный список фукций игровой логики «Памяти»:</p>
+<table>
+<thead>
+<tr>
+<th>№</th>
+<th>Функция</th>
+<th>Инициатор вызова</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>memory_generateConstPlayfield</code></td>
+<td>Пользователь</td>
+<td>Генерируем упрощённое игровое поле, в котором последовательно парами идут элементы одной группы</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>memory_selectItem</code></td>
+<td>Пользователь</td>
+<td>Выбор элемента игрового поля</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>memory_shouldDeselectMismatchedItems</code></td>
+<td>Система</td>
+<td>Реакция снятия выделения с пары выбранных фишек различающихся групп</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>memory_shouldDetectVictory</code></td>
+<td>Система</td>
+<td>Реакция определения победы после скрытия всех фишек</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>memory_shouldHideMatchingItems</code></td>
+<td>Система</td>
+<td>Реакция скрытия пары выбранных фишек одной группы</td>
+</tr>
+</tbody>
+</table>
+<p>Для удостоверения работоспособности и идентичности работы этих функций как в Python, так и в C++, на каждую функцию ввёл минимум по одной функции проверки:</p>
+<ul>
+<li><code>memory_test_generateConstPlayfield</code></li>
+<li><code>memory_test_selectItem_1x</code></li>
+<li><code>memory_test_selectItem_2x</code></li>
+<li><code>memory_test_selectItem_3x</code></li>
+<li><code>memory_test_shouldDeselectMismatchedItems</code></li>
+<li><code>memory_test_shouldDeselectMismatchedItems_itemTwice</code></li>
+<li><code>memory_test_shouldDetectVictory</code></li>
+<li><code>memory_test_shouldHideMatchingItems</code></li>
+</ul>
+<h1 id="-1">Планы на май</h1>
+<p>Сделаю возможность сыграть одну партию игры «Память» в текстовом интерфейсе.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/memory-logic.html";
+                this.page.identifier = "memory-logic.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div>
+                <strong id="title">Open Game Studio</strong>
+                <div id="lang">
+                    <a href="../../en/news/memory-logic.html">EN</a>
+                    <a href="../../ru/news/memory-logic.html">RU</a>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../en/news/index.html">News</a>
+                    <a href="../../en/game/index.html">Games</a>
+                    <a href="../../en/tool/index.html">Tools</a>
+                    <a href="../../en/page/about.html">About</a>
+                </div>
+                <a class="discord" href="https://discord.gg/3A6THQabNf">
+                    <img src="../../images/discord.png"></img>
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">In the news...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="memory-logic.html">"Memory" game logic</a>
+                </h2>
+                <p class="news_item_date">
+                    2024-05-03 00:00
+                </p>
+                <div class="news_item_contents">
+<h1 id="memorygamelogic">"Memory" game logic</h1>
+<p>In April I implemented "Memory" game logic in Python as limited language model and successfully converted the code to C++ by the instrument under development.</p>
+<p>Limited language model assumes the following architecture of two parts:</p>
+<ol>
+<li>state context</li>
+<li>pure functions without side effects working only with the context</li>
+</ol>
+<p>Game logic state context in Python currently looks like this (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory_Context.h">C++</a>):</p>
+<pre><code class="python language-python">class memory_Context:
+  def __init__(self):
+    self.hiddenItems = []
+    self.mismatchedItems = []
+    self.playfieldItems = {}
+    self.playfieldSize = 0
+    self.recentField = "none"
+    self.selectedId = -1
+    self.selectedItems = []
+    self.victory = False
+</code></pre>
+<p>Since the instrument only works with functions at the moment, I had to write C++ context code manually.</p>
+<p>Functions look like this (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory.cpp#L29">C++</a>):</p>
+<pre><code class="python language-python"># Select item
+@llm_by_value
+def memory_selectItem(
+  c: memory_Context
+) -&gt; memory_Context:
+  if (
+    len(c.selectedItems) == 2
+  ):
+    c.selectedItems.clear()
+  #}
+  c.selectedItems.append(c.selectedId)
+  c.recentField = "selectedItems"
+  return c
+#}
+</code></pre>
+<p>Limited language model functions have the following features:</p>
+<ul>
+<li><code>@llm_by_value</code> Python decorator is used to pass arguments by value instead of by reference (which is default in Python)</li>
+<li>passing arguments by value is mandatory to limit function scope to only single context field, it's formalized Single Responsibility Principle</li>
+<li>context contains <code>recentField</code> representing a stored "event"; this allows functions to run only when necessary field changes</li>
+<li>function must use <code>recentField</code> to specify which field it changed or provide <code>none</code> if no action was performed</li>
+<li>function takes only context as an input and only returns (an updated) context as an output</li>
+</ul>
+<p>"Memory" game logic has the following functions:</p>
+<table>
+<thead>
+<tr>
+<th>№</th>
+<th>Function</th>
+<th>Caller</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>memory_generateConstPlayfield</code></td>
+<td>User</td>
+<td>Generate simplified playfield with items of the same group following each other sequentially</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>memory_selectItem</code></td>
+<td>User</td>
+<td>Select playfield item</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>memory_shouldDeselectMismatchedItems</code></td>
+<td>System</td>
+<td>Reaction to deselect a pair of the selected items of different groups</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>memory_shouldDetectVictory</code></td>
+<td>System</td>
+<td>Reaction to detect victory when all items got hidden</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>memory_shouldHideMatchingItems</code></td>
+<td>System</td>
+<td>Reaction to hide a pair of the selected items of the same group</td>
+</tr>
+</tbody>
+</table>
+<p>To verify functions work identically in both Python and C++, I cover each function with at least one test:</p>
+<ul>
+<li><code>memory_test_generateConstPlayfield</code></li>
+<li><code>memory_test_selectItem_1x</code></li>
+<li><code>memory_test_selectItem_2x</code></li>
+<li><code>memory_test_selectItem_3x</code></li>
+<li><code>memory_test_shouldDeselectMismatchedItems</code></li>
+<li><code>memory_test_shouldDeselectMismatchedItems_itemTwice</code></li>
+<li><code>memory_test_shouldDetectVictory</code></li>
+<li><code>memory_test_shouldHideMatchingItems</code></li>
+</ul>
+<h1 id="mayplans">May plans</h1>
+<p>I'll make a text UI for "Memory" game.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/en/news/memory-logic.html";
+                this.page.identifier = "memory-logic.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+            </div>
+        </center>
+    </body>
+</html>

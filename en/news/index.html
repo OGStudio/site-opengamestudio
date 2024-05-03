@@ -32,6 +32,31 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="memory-logic.html">"Memory" game logic</a>
+    </h2>
+    <p class="news_item_date">
+        2024-05-03 00:00
+    </p>
+    <div class="news_item_contents">
+<h1 id="memorygamelogic">"Memory" game logic</h1>
+<p>In April I implemented "Memory" game logic in Python as limited language model and successfully converted the code to C++ by the instrument under development.</p>
+<p>Limited language model assumes the following architecture of two parts:</p>
+<ol>
+<li>state context</li>
+<li>pure functions without side effects working only with the context</li>
+</ol>
+<p>Game logic state context in Python currently looks like this (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory_Context.h">C++</a>):</p>
+<p>```python
+class memory_Context:
+  def <strong>init</strong>(self):
+    self.hiddenItems = []. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="memory-logic.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
         <a href="llm-first-py-cxx.html">The first example of a portable code</a>
     </h2>
     <p class="news_item_date">
@@ -202,23 +227,6 @@ It seems that right now we have less completed features than before the release 
     </div>
     <div class="news_item_more">
         <a href="the-pros-and-cons-of-restarting-from-scratch.html">Continue reading</a>
-    </div>
-</div>
-<div class="news_item">
-    <h2 class="news_item_title">
-        <a href="on-the-way-to-durable-applications.html">On the way to durable applications</a>
-    </h2>
-    <p class="news_item_date">
-        2019-08-05 00:00
-    </p>
-    <div class="news_item_contents">
-<p><img src="../../images/2019-08-05_on-the-way-to-durable-applications.jpg" alt="Pskov's veche" /></p>
-<p>This article describes our first durable application for desktop PCs: PSKOV static site generator.</p>
-<p><strong>Durability</strong></p>
-<p>A durable application is an application that functions without a single change on operating systems released in years 2010-2030. In other words, a durable application has backward compatibility of 10 years and has the stability to run for 10 years. Actually, <a href="http://opengamestudio.org/pskov">PSKOV</a> runs even under Windows 2000, so PSKOV has backward compatibility of 19 years.. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="on-the-way-to-durable-applications.html">Continue reading</a>
     </div>
 </div>
 
