@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div>
+                <strong id="title">Open Game Studio</strong>
+                <div id="lang">
+                    <a href="../../en/news/memory-text-ui.html">EN</a>
+                    <a href="../../ru/news/memory-text-ui.html">RU</a>
+                </div>
+            </div>
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <a class="discord" href="https://discord.gg/3A6THQabNf">
+                    <img src="../../images/discord.png"></img>
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="memory-text-ui.html">Текствый интерфейс «Памяти»</a>
+                </h2>
+                <p class="news_item_date">
+                    2024-06-12 00:00
+                </p>
+                <div class="news_item_contents">
+<h1 id="">Текстовый интерфейс «Памяти»</h1>
+<p>В мае реализовал текстовый интерфейс игры «Память» на Python и перевёл её в C++ инструментом.</p>
+<p>Реализация логического игрового цикла привела к появлению контроллера, управляющего
+контекстом. Создание контроллера на Python прошло без происшествий, а вот с версией
+для C++ пришлось помучиться. Мучения были вызваны тем, что контроллер использует
+<a href="https://en.cppreference.com/w/cpp/utility/any">std::any</a> из C++17, а инструмент ограничен C++11 с целью поддержки OpenWrt.</p>
+<p>Что касается объёма кода, то картина получилась следующей (в строках):</p>
+<ul>
+<li>(Python) Портируемый код логики: 360</li>
+<li>(Python) Портируемый код тестов: 565</li>
+<li>(Python) Непортируемый код контроллера, ввода-вывода и т.п.: 350</li>
+<li>(C++) Портированный код логики: 360</li>
+<li>(C++) Портированный код тестов: 586</li>
+<li>(C++) Непортируемый код контроллера, ввода-вывода и т.п.: 565</li>
+</ul>
+<p>В процентах выглядит это так:</p>
+<table>
+<thead>
+<tr>
+<th>Язык</th>
+<th>Всего строк кода</th>
+<th>Портируемого</th>
+<th>Непортируемого</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>1275 (<strong>100%</strong>)</td>
+<td>925 (<strong>72%</strong>)</td>
+<td>350 (<strong>28%</strong>)</td>
+</tr>
+<tr>
+<td>C++</td>
+<td>1511 (<strong>100%</strong>)</td>
+<td>946 (<strong>62%</strong>)</td>
+<td>565 (<strong>38%</strong>)</td>
+</tr>
+</tbody>
+</table>
+<p>Выходит, что разработка версии игры «Память» на языке С++ оказалась на
+62% строк кода дешевле, чем была бы без использования инструмента. Цифры
+приятные.</p>
+<p>Сам текстовый интерфейс игры «Память» на текущий момент выглядит следующим образом:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tChSjw5W8KQ?si=WO5MYLCBhgstVshl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h1 id="-1">Планы на июнь</h1>
+<p>В июне сделаю простейший графический UI для версии Python.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/memory-text-ui.html";
+                this.page.identifier = "memory-text-ui.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
