@@ -11,41 +11,37 @@ JavaScript code translation. However, this did not happen because tasks with
 higher priority emerged.
 
 Which task is more important than develpment of the instrument?
-Development of a game, of course? Now, let's go back to the beginning of
+Development of a game, of course! Now, let's go back to the beginning of
 July 2024...
 
 # Gamejam
 
-В начале июля 2024-го года участвовал в трёхдневном геймджеме от
-[«Начни игру»][jam]. Целью участия в геймджеме было как проверить свои
-игровые наработки в условиях, приближенных к боевым, так и познакомиться
-с другими игроделами-любителями. Знакомство с одним из таких любителей -
-Женей - и привело к созданию проекта [«Хвост и тень»][tail], в котором
-мы разрабатываем двумерную приключенческую игру.
+["Start the game"][jam] 3-day gamejam finished in the beginning of July 2024.
+I participated in the jam to validate the instrument under development and
+to get along with other gamedev hobbysts. Getting to know one of the hobbysts -
+Eugene - lead to the creation of ["Tail and shadow"][tail] project,
+a 2D adventure.
 
-# Июль
+# July
 
-Июль у меня ушёл на то, чтобы создать прототип игры с основной механикой -
-кликом мышью.
+As a result, I spent July to create a prototype with the single core mechanics -
+mouse click.
 
-На сегодняшний день технические характеристики прототипа следующие:
+Current technical details of the prototype look like this:
 
-* настройка игры происходит в INI-подобном формате
-* логика игры написана на Python с элементами межъязыкового диалекта
-* для графики используется библиотека Python Arcade
-* работает на macOS, Linux, Windows
-* единственным способом управления является клик мыши
-* всё отрисовано сначала от руки, а затем оцифровано с помощью GIMP и ImageMagick
-* можно задавать статичные элементы для отображения пола, стен и прочего окружения
-* можно задавать активные элементы вроде дверей для взаимодействия с ними кликом мыши
-* можно задавать комментарий при клике по активному элементу для отображения подсказок
+* INI-like format is used to configure the game prototype
+* Python is used for game logic with elements of cross-language dialect
+* Python Arcade is used for rendering
+* the prototype runs on macOS, Linux, Windows
+* the prototype is controlled only by mouse clicks
+* every asset is first drawn by hand and then brought into digital world by GIMP + ImageMagick
+* one can specify static elements to display floor, walls and similar environment
+* one can specify active items like doors to have interaction with by mouse clicks
+* one can specify comments when clicking on an active item to display hints
 
-# Август
+# August
 
-В августе планирую добавить следующее:
-
-* сбор активных элементов вроде ключа в невидимый рюкзак
-* мгновенное перемещение игрока на другой этаж через дверь при наличии ключа
+I plan to implement scene switching in August.
 
 [game]: ../../images/2024_rethinking.jpg
 [jam]: https://dtf.ru/games/2783053-nachni-igru-ocenka-videorolikov
