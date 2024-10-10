@@ -1,10 +1,10 @@
-Title: Sound support and search for a new direction
+Title: Sound support and the search for a new direction
 Date: 2024-10-11 00:00
 Category: News
 Slug: ht-sound
 Lang: en
 
-# Sound
+# Sound support
 
 <video controls width="700">
     <source src="../../images/2024_sound.mp4" type="video/mp4"/>
@@ -14,7 +14,7 @@ In September I implemented sound support. However, this was the last
 work for "Tail and Shadow" project, because the project's story writer -
 Eugene - left.
 
-# Searching for a new direction
+# The search for a new direction
 
 In September I also noticed the loss of interest in the project by the
 audience. I linked this to the fact that the project's functional and
