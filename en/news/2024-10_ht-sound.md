@@ -47,8 +47,8 @@ not using existing instruments to create a game.
 
 # October
 
-That's why I decided to return to PSKOV static site generator to make
-it more convenient, accessible, and durable.
+I return to PSKOV static site generator to make it more convenient,
+accessible, and durable.
 
 [goxel]: https://goxel.xyz
 [rpg-maker]: https://www.rpgmakerweb.com
