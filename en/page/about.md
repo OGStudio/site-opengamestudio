@@ -27,9 +27,3 @@ first step in the long path towards full-scale RPG.
 * devALEX – software engineer
 * Timur “Sora” Malikin, Anton “Kif” Chernov- 3D modellers
 * Thierry Delaunay, Miguel de Dios, Dirk Pervolz, Jurgen Rauscher – translators
-
-**Join us**
-
-If you like what we do, join us at [Discord][discord].
-
-[discord]: https://discord.gg/3A6THQabNf

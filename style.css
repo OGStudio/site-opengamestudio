@@ -14,7 +14,7 @@
 #header
 {
     background: #2BA6E3;
-    padding: 0.7em 0.7em 0 0.7em;
+    padding: 0.7em 0.7em 0.7em 0.7em;
     text-align: left;
 }
 #header a
@@ -103,7 +103,6 @@ table, th, td
 {
     position: absolute;
     left: 0;
-    bottom: 0.7em;
 }
 
 .menu a {
