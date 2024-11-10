@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/pskov-again.html">EN</a>
+                    <a href="../../ru/news/pskov-again.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="pskov-again.html">Возвращение «ПСКОВа»</a>
+                </h2>
+                <p class="news_item_date">
+                    2024-11-15 00:00
+                </p>
+                <div class="news_item_contents">
+<h1 id="">Возврат к разработке «ПСКОВа»</h1>
+<p>Итак, у нас есть старая версия «ПСКОВа», а нам нужна новая с улучшенными
+характеристиками.</p>
+<p>Старая версия «ПСКОВа» фактически состоит из двух частей:</p>
+<ol>
+<li>Сам <a href="https://opengamestudio.org/pskov/ru/pskov_1.0.0+ru.html">генератор «ПСКОВа»</a> в виде одного файла HTML с кодом на JavaScript</li>
+<li><a href="https://opengamestudio.org/lfsa/ru/index.html">Скрипт Python</a> для предоставления доступа к локальной файловой системы с целью сохранения генерируемых файлов на диске</li>
+</ol>
+<p>Эта комбинация технологий прекрасно зарекомендовала себя с самого момента выпуска
+в 2019-м году, ибо работает до сих пор. Но я всё же решил поменять языки
+программирования JavaScript и Python.</p>
+<h1 id="javascriptpythonkotlin">Смена языков JavaScript и Python на Kotlin</h1>
+<p>Зачем менять языки, если всё и так работает? Потому что использование Kotlin
+позволяет охватить сразу и веб-браузер, и локальный доступ к файловой системе.
+Команда JetBrains - авторы Kotlin - вкладывают кучу усилий в то, чтобы код
+на Kotlin работал на всех популярных платформах. Так почему бы не воспользоваться
+человекочасами авторов Kotlin, чтобы написать всё-таки код один раз, а затем
+собрать его под нужную платформу? Вот поэтому.</p>
+<p>В итоге комбинация технологий будет следующая:</p>
+<ol>
+<li>Новая версия генератора «ПСКОВ» на JavaScript, полученного из Kotlin</li>
+<li>Родное крошечное приложение на Linux, macOS, Windows для предоставления доступа к локальной файловой системе </li>
+</ol>
+<h1 id="-1">Ноябрь</h1>
+<p>В ноябре я планирую получить приложение для доступа к локальной файловой системе для замены скрипта Python.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/pskov-again.html";
+                this.page.identifier = "pskov-again.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
