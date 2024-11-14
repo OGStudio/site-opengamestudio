@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/pskov-again.html">EN</a>
+                    <a href="../../ru/news/pskov-again.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="pskov-again.html">Возвращение к разработке «ПСКОВа»</a>
+                </h2>
+                <p class="news_item_date">
+                    2024-11-14 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2024_lha-path.gif" alt="lha" /></p>
+<h1 id="">«ПСКОВ» сегодня</h1>
+<p>Итак, у нас есть старая версия «ПСКОВа», а нам нужна новая с улучшенными
+характеристиками.</p>
+<p>Первым делом стоит вспомнить, из чего состоит «ПСКОВ»:</p>
+<ol>
+<li>Непосредственно <a href="https://opengamestudio.org/pskov/ru/pskov_1.0.0+ru.html">генератор</a> в виде веб-страницы на HTML + JavaScript</li>
+<li>Вспомогательный <a href="https://opengamestudio.org/lfsa/ru/index.html">скрипт Python</a> для сохранения генерируемых файлов на диске</li>
+</ol>
+<p>Вспомогательный скрипт нужен по одной причине: веб-страницам запрещено общаться
+с локальной файловой системой по соображениям безопасности.</p>
+<p>Скрипт представляет из себя крошечный веб-сервер со следующими командами:</p>
+<table>
+<thead>
+<tr>
+<th>№</th>
+<th>Команда</th>
+<th>Детали</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>GET /path</code></td>
+<td>Получение пути к текущей рабочей директории</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>POST /list</code></td>
+<td>Получение списка файлов переданного в теле запроса пути</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>POST /read</code></td>
+<td>Получение содержимого файла</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>POST /write</code></td>
+<td>Запись содержимого файла</td>
+</tr>
+</tbody>
+</table>
+<h1 id="-1">«ПСКОВ» завтра</h1>
+<p>Самым простым способ вернуться к разработке «ПСКОВа», таким образом, является
+перераработка вспомогательного скрипта. На замену Python я выбрал Kotlin
+по двум причинам:</p>
+<ol>
+<li>Kotlin можно скомпилировать под десктоп, мобилки и веб</li>
+<li>Kotlin имеет строгую типизацию</li>
+</ol>
+<p>Оба этих фактора упрощают в будущем работу c портируемым кодом.</p>
+<p>Что касается переработки, то на текущий момент готова команда <code>GET /path</code>
+на платформах JVM, macOS и Windows (изображение в начале).</p>
+<h1 id="-2">Ноябрь</h1>
+<p>В ноябре я планирую реализовать две команды:</p>
+<ul>
+<li><code>POST /list</code></li>
+<li><code>POST /read</code></li>
+</ul>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/pskov-again.html";
+                this.page.identifier = "pskov-again.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
