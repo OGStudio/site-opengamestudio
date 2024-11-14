@@ -1,5 +1,5 @@
-Title: Back to "PSKOV"
-Date: 2024-11-15 00:00
+Title: Back to the development of "PSKOV"
+Date: 2024-11-14 00:00
 Category: News
 Slug: pskov-again
 Lang: en
