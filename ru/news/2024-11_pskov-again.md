@@ -4,6 +4,8 @@ Category: News
 Slug: pskov-again
 Lang: ru
 
+![lha][lha]
+
 # «ПСКОВ» сегодня
 
 Итак, у нас есть старая версия «ПСКОВа», а нам нужна новая с улучшенными
@@ -38,7 +40,7 @@ Lang: ru
 Оба этих фактора упрощают в будущем работу c портируемым кодом.
 
 Что касается переработки, то на текущий момент готова команда `GET /path`
-на платформах JVM, macOS и Windows.
+на платформах JVM, macOS и Windows (изображение в начале).
 
 # Ноябрь
 
@@ -46,5 +48,6 @@ Lang: ru
 * `POST /list`
 * `POST /read`
 
+[lha]: ../../images/2024_lha-path.gif
 [pskov-ru]: https://opengamestudio.org/pskov/ru/pskov_1.0.0+ru.html
 [lfsa-ru]: https://opengamestudio.org/lfsa/ru/index.html

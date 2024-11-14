@@ -4,6 +4,8 @@ Category: News
 Slug: pskov-again
 Lang: en
 
+![lha][lha]
+
 # "PSKOV" today
 
 Now, we have an old "PSKOV" version and we need an improved one.
@@ -35,7 +37,8 @@ helper script. I decided to replace Python with Kotlin because:
 
 These two factors simplify future work with portable code.
 
-As of now, I have `GET /path` implemented for JVM, macOS, and Windows.
+As of now, I have `GET /path` implemented for JVM, macOS, and Windows (image
+in the beginning).
 
 # November
 
@@ -43,5 +46,6 @@ I plan to implement the following commands in November:
 * `POST /list`
 * `POST /read`
 
+[lha]: ../../images/2024_lha-path.gif
 [pskov-en]: https://opengamestudio.org/pskov/en/pskov_1.0.0.html
 [lfsa-en]: https://opengamestudio.org/lfsa/en/index.html
