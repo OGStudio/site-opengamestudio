@@ -26,6 +26,29 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="lha-jvm-macos.html">Первая рабочая версия Local Host Access</a>
+    </h2>
+    <p class="news_item_date">
+        2024-12-10 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2024_web-test.jpg" alt="web-test" /></p>
+<h1 id="localhostaccess">Local Host Access</h1>
+<p>На текущий момент мне удалось поддержать всю функциональность
+Local File System Access в рамках крошечного веб-сервера Local Host Access
+на платформах JVM и macOS. К примеру, вот эту самую статью я уже
+генерировал с помощью Local Host Access на macOS.</p>
+<p>Выбор Kotlin себя вполне оправдал, хотя вскрылись и недостатки:</p>
+<ol>
+<li>Kotlin чаще всего используется для JVM, поэтому найти информацию по Kotlin Native (Linux, macOS, Windows) крайне сложно из-за малой растространённости Kotlin на перечисленных платформах. . .</li>
+</ol>
+    </div>
+    <div class="news_item_more">
+        <a href="lha-jvm-macos.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
         <a href="pskov-again.html">Возвращение к разработке «ПСКОВа»</a>
     </h2>
     <p class="news_item_date">
@@ -212,28 +235,6 @@ class memory_Context:
     </div>
     <div class="news_item_more">
         <a href="llm-first-py-cxx.html">Читать далее</a>
-    </div>
-</div>
-<div class="news_item">
-    <h2 class="news_item_title">
-        <a href="bus-iOS.html">Шина-iOS</a>
-    </h2>
-    <p class="news_item_date">
-        2024-03-10 00:00
-    </p>
-    <div class="news_item_contents">
-<h1 id="ios">Первая реализация Шины для iOS</h1>
-<p>За январь и февраль довёл реализацию шаблона Шина на Swift до хорошего состояния
-для iOS.</p>
-<p>Провёл нагрузочное тестирование. Оказалось, что общение элементов
-приложения через Шину примерно в 92 раза медленнее обычного вызова функции.
-И это говорит не о том, что Шина плоха. Наоборот, это говорит о том, что
-Шина должна использоваться в архитектурных склейках кода, что позволяет
-сократить такой код примерно на 30%.</p>
-<p>Так выглядит пример с использованием нескольких состояний, отображаемых. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="bus-iOS.html">Читать далее</a>
     </div>
 </div>
 
