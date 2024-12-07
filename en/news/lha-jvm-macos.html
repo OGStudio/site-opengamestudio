@@ -15,8 +15,8 @@
                     <a href="../../en/page/about.html">About</a>
                 </div>
                 <div id="lang">
-                    <a href="../../en/news/soon-game-creation-editor-07.html">EN</a>
-                    <a href="../../ru/news/soon-game-creation-editor-07.html">RU</a>
+                    <a href="../../en/news/lha-jvm-macos.html">EN</a>
+                    <a href="../../ru/news/lha-jvm-macos.html">RU</a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -25,26 +25,40 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="soon-game-creation-editor-07.html">SOON: Creating a simple game live (Editor 0.7)</a>
+                    <a href="lha-jvm-macos.html">The first Local Host Access working version</a>
                 </h2>
                 <p class="news_item_date">
-                    2015-11-02 00:00
+                    2024-12-10 00:00
                 </p>
                 <div class="news_item_contents">
-<p>As we have promised, we are ready to give you Editor 0.7 which is capable of creating the complete test chamber. However, after recreating the test chamber ourselves, it became clear that:</p>
-<ol>
-<li>it takes more than 8 hours to recreate it (too long)</li>
-<li>it's inappropriate to be presented in the form of an article (too boring)</li>
-</ol>
-<p>Therefore we decided to hold a live session at <a title="LiveCoding" href="https://www.livecoding.tv/kornerr">LiveCoding</a> SOON to show you how to create a simple <a title="Whac-a-mole" href="http://google.com/search?q=whac+a+mole">whac-a-mole like game</a> from scratch.</p>
-<p>Currently we are busy making final preparations, so we'll tell you the exact time and date this week. Stay tuned!</p>
+<p><img src="../../images/2024_web-test.jpg" alt="web-test" /></p>
+<h1 id="localhostaccess">Local Host Access</h1>
+<p>I implemented Local Fle System Access' functionality in
+Local Host Access for JVM and macOS platforms. For example, this
+very article has been generated with the help of Local Host Access.
+Thus, Kotlin turned out to be a good choice.</p>
+<p>The biggest downside of Kotlin is that it's primarily used for JVM.
+That means that 99% of Kotlin code and articles on the Internet are
+dedicated to JVM. Thus, Kotlin Native (Linux, macOS, Windows) examples
+are absurdly hard to find and as absurdly hard to translate from plain C.</p>
+<p>Take, for example, one specific function: <code>POST /list</code>. It is used
+to list files and directories of the requested path. I managed to find
+a <a href="https://gist.github.com/kesslern/743d5a3c07b8cfbd52e78ec5268a1dc8">dedicated example</a> on how to call C's <code>opendir()</code>/<code>readdir()</code> and
+traverse the directory.</p>
+<p>However, since there are symlinks an additional call to C's <code>stat()</code> is necessary
+to see what's behind the symlink. I couldn't find an example on using <code>stat()</code>
+on the Internet. My attempts to write anything meaningul failed, too.
+<a href="https://discuss.kotlinlang.org/t/how-to-call-stat-c-function-to-get-file-type/29541">My question</a> of how to do it is still waiting for an answer since
+November 18. I'm not sure it will ever get answered. </p>
+<h1 id="december">December</h1>
+<p>I plan to support Linux and Windows platforms for Local Host Access.</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
-                this.page.url = "https://opengamestudio.org/en/news/soon-game-creation-editor-07.html";
-                this.page.identifier = "soon-game-creation-editor-07.html";
+                this.page.url = "https://opengamestudio.org/en/news/lha-jvm-macos.html";
+                this.page.identifier = "lha-jvm-macos.html";
                 };
                 (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
