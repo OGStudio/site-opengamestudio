@@ -33,23 +33,19 @@
                 <div class="news_item_contents">
 <p><img src="../../images/2024_web-test.jpg" alt="web-test" /></p>
 <h1 id="localhostaccess">Local Host Access</h1>
-<p>I implemented Local Fle System Access' functionality in
-Local Host Access for JVM and macOS platforms. For example, this
-very article has been generated with the help of Local Host Access.
-Thus, Kotlin turned out to be a good choice.</p>
-<p>The biggest downside of Kotlin is that it's primarily used for JVM.
-That means that 99% of Kotlin code and articles on the Internet are
-dedicated to JVM. Thus, Kotlin Native (Linux, macOS, Windows) examples
-are absurdly hard to find and as absurdly hard to translate from plain C.</p>
-<p>Take, for example, one specific function: <code>POST /list</code>. It is used
-to list files and directories of the requested path. I managed to find
-a <a href="https://gist.github.com/kesslern/743d5a3c07b8cfbd52e78ec5268a1dc8">dedicated example</a> on how to call C's <code>opendir()</code>/<code>readdir()</code> and
-traverse the directory.</p>
-<p>However, since there are symlinks an additional call to C's <code>stat()</code> is necessary
-to see what's behind the symlink. I couldn't find an example on using <code>stat()</code>
-on the Internet. My attempts to write anything meaningul failed, too.
-<a href="https://discuss.kotlinlang.org/t/how-to-call-stat-c-function-to-get-file-type/29541">My question</a> of how to do it is still waiting for an answer since
-November 18. I'm not sure it will ever get answered. </p>
+<p>Local Host Access (<strong>LHA</strong>) is ready to replace Local File System Access (<strong>LFSA</strong>)
+on JVM and macOS: I've generated this very article with LHA on macOS. Thus,
+Kotlin prooved to be a good choice for cross-platform development with minor
+limitation.</p>
+<p>The minor limitation is the fact that 99% of Kotlin is used on JVM. The
+remaining 1% is so-called Kotlin Native for iOS, Linux, macOS, and Windows.
+Thus, when one needs something as simple as to find out if a symlink
+points to a file or directory, that's a dead end, there's no article for
+that on the Internet. For C, there are numerous articles telling to call <code>stat()</code>
+function. For Kotlin Native, it's unclear how to properly make such a simple call.</p>
+<p>I've actually asked <a href="https://discuss.kotlinlang.org/t/how-to-call-stat-c-function-to-get-file-type/29541">this specific question</a> in November,
+and still wait for an answer.
+In the meantime, I had to resort to calling <code>stat</code> in the shell (aka <code>system()</code>).</p>
 <h1 id="december">December</h1>
 <p>I plan to support Linux and Windows platforms for Local Host Access.</p>
                 </div>
