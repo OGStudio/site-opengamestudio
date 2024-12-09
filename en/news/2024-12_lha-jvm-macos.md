@@ -1,5 +1,5 @@
 Title: The first Local Host Access working version
-Date: 2024-12-10 00:00
+Date: 2024-12-09 00:00
 Category: News
 Slug: lha-jvm-macos
 Lang: en
@@ -26,8 +26,8 @@ In the meantime, I had to resort to calling `stat` in the shell (aka `system()`)
 
 # December
 
-I will see into the first attempt of translating Kotlin code to Python one to
-reach to the point of the same coverage as LFSA does, since it's Python.
+I plan to implement the first Kotlin -> Python translator to let LHA
+cover as many platforms as the original LFSA in Python.
 
 [web-test]: ../../images/2024_web-test.jpg
 [question]: https://discuss.kotlinlang.org/t/how-to-call-stat-c-function-to-get-file-type/29541
