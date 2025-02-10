@@ -6,15 +6,14 @@ Lang: ru
 
 ![pks-jvm-item][pks-jvm-item]
 
-# Генерация одной страницы
+# Генерация отдельных страниц
 
-В январе сделал часть функциональности ПСКОВа на Kotlin для JVM, а именно:
-сделал генерацию отдельных страницы из Markdown в HTML.
-Сгенерированные файлы HTML в веб-браузере отображаются идентично тому,
-что генерирует ПСКОВ 1. А вот непосредственное содержимое генерированных
-файлов HTML заметно отличается.
-Причина в том, что ПСКОВ 1 использует [Showdown][showdown] для перевода
-Markdown в HTML. А вот ПСКОВ 2 использует [intellij-markdown][intellij-markdown].
+В январе сделал половину функциональности оригинального ПСКОВа на Kotlin для JVM,
+а именно: генерацию отдельных страницы HTML из Markdown.
+И ПСКОВ 1, и ПСКОВ 2 генерируют файлы HTML, которые отображаются идентично
+в веб-браузерах. Тем не менее, содержимое этих сгенерированных файлов отличается,
+т.к. ПСКОВ 1 использует [Showdown][showdown] для конвертации Markdown в HTML,
+а ПСКОВ 2 - [intellij-markdown][intellij-markdown].
 
 Взглянем на описываемую разницу. Допустим, у нас есть следующая страница Markdown:
 
@@ -58,7 +57,7 @@ Simple page in **Markdown** to convert to **HTML**.
 ```
 
 
-ПСКОВ 2 (JVM) генерирует следующий файл HTML:
+ПСКОВ 2:
 
 ```
 <body><p>Simple page in <strong>Markdown</strong> to convert to <strong>HTML</strong>.</p><table><thead><tr><th>№</th><th>Parser</th><th>Language</th></tr></thead><tbody><tr><td>1</td><td><a href="https://github.com/showdownjs/showdown">Showdown</a></td><td>JavaScript</td></tr><tr class="intellij-row-even"><td>2</td><td><a href="https://github.com/JetBrains/markdown">intellij-markdown</a></td><td>Kotlin</td></tr></tbody></table></body>
@@ -68,14 +67,13 @@ Simple page in **Markdown** to convert to **HTML**.
 
 ![result][result]
 
-Т.е. отображение идентичное, а файлы разные, ибо парсеры
-по-разному работают с переносом строк.
-Мой внутренний перфекционист, конечно, возмущён несоответствием, но мой внутренний практик считает эту разницу содержимого файлов несущественной.
+Таким обрбазом, у нас идентичное отображение двух различающихся файлов.
+Мой внутренний перфекционист, конечно, возмущён несоответствием, но мой
+внутренний прагматик считает эту разницу несущественной.
 
 # Февраль
 
-В феврале доведу конвертер YML -> Kotlin до возможности генерировать Context,
-после чего подключу Context к Local Host Access и ПСКОВу.
+В феврале доведу конвертер межъязыкового диалекта до генерации Context.
 
 [intellij-markdown]: https://github.com/JetBrains/markdown
 [result]: ../../images/2025_psk-jvm-item_result.png

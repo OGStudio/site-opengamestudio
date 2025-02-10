@@ -33,14 +33,14 @@
     </p>
     <div class="news_item_contents">
 <p>![pks-jvm-item][pks-jvm-item]</p>
-<h1 id="">Генерация одной страницы</h1>
-<p>В январе сделал часть функциональности ПСКОВа на Kotlin для JVM, а именно:
-сделал генерацию отдельных страницы из Markdown в HTML.
-Сгенерированные файлы HTML в веб-браузере отображаются идентично тому,
-что генерирует ПСКОВ 1. А вот непосредственное содержимое генерированных
-файлов HTML заметно отличается.
-Причина в том, что ПСКОВ 1 использует <a href="https://github.com/showdownjs/showdown">Showdown</a> для перевода
-Markdown в HTML. А вот ПСКОВ 2 использует <a href="https://github.com/JetBrains/markdown">intellij-markdown</a>.. . .</p>
+<h1 id="">Генерация отдельных страниц</h1>
+<p>В январе сделал половину функциональности оригинального ПСКОВа на Kotlin для JVM,
+а именно: генерацию отдельных страницы HTML из Markdown.
+И ПСКОВ 1, и ПСКОВ 2 генерируют файлы HTML, которые отображаются идентично
+в веб-браузерах. Тем не менее, содержимое этих сгенерированных файлов отличается,
+т.к. ПСКОВ 1 использует <a href="https://github.com/showdownjs/showdown">Showdown</a> для конвертации Markdown в HTML,
+а ПСКОВ 2 - <a href="https://github.com/JetBrains/markdown">intellij-markdown</a>.</p>
+<p>Взглянем на описываемую разницу. Допустим, у нас есть следующая страница Markdown:. . .</p>
     </div>
     <div class="news_item_more">
         <a href="psk-jvm-item.html">Читать далее</a>
