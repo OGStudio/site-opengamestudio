@@ -4,7 +4,7 @@ Category: News
 Slug: psk-jvm-item
 Lang: en
 
-![pks-jvm-item][pks-jvm-item]
+![splash][splash]
 
 # Seperate pages' generation
 
@@ -73,8 +73,9 @@ pragmatist thinks this hardly deserves such an attention.
 
 # February
 
-In February I'm going to finish the cross-language dialect's translator to produce Context.
+In February I'm going to update the cross-language dialect's translator to produce Context.
 
 [intellij-markdown]: https://github.com/JetBrains/markdown
 [result]: ../../images/2025_psk-jvm-item_result.png
 [showdown]: https://github.com/showdownjs/showdown
+[splash]: ../../images/2025_psk-jvm-item.png

@@ -4,7 +4,7 @@ Category: News
 Slug: psk-jvm-item
 Lang: ru
 
-![pks-jvm-item][pks-jvm-item]
+![splash][splash]
 
 # Генерация отдельных страниц
 
@@ -78,3 +78,4 @@ Simple page in **Markdown** to convert to **HTML**.
 [intellij-markdown]: https://github.com/JetBrains/markdown
 [result]: ../../images/2025_psk-jvm-item_result.png
 [showdown]: https://github.com/showdownjs/showdown
+[splash]: ../../images/2025_psk-jvm-item.png
