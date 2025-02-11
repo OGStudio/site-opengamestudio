@@ -68,7 +68,7 @@ Here's how both HTML files are rendered in web browsers:
 
 ![result][result]
 
-Thus, we have identical rendering of different files. My internal
+Identical rendering of different files. My internal
 perfectionist is outraged by such a disrepancy. However, my internal 
 pragmatist thinks this hardly deserves such an attention.
 
