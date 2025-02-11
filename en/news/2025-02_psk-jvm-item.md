@@ -10,6 +10,7 @@ Lang: en
 
 In January I implemented half of the functionality of original
 PSKOV: generation of separate HTML pages from Markdown.
+
 Both PSKOV 1 and PSKOV 2 produce HTML files that look the same in web browsers.
 However, the contents of the generated HTML files differ because PSKOV 1 uses
 [Showdown][showdown] to convert Markdown to HTML, whereas PSKOV 2 uses
