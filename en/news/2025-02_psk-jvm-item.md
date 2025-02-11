@@ -1,5 +1,5 @@
 Title: PSKOV 2 for JVM
-Date: 2025-02-12 00:00
+Date: 2025-02-11 00:00
 Category: News
 Slug: psk-jvm-item
 Lang: en

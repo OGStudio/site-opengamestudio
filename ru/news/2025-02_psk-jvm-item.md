@@ -1,5 +1,5 @@
 Title: ПСКОВ 2 на JVM
-Date: 2025-02-12 00:00
+Date: 2025-02-11 00:00
 Category: News
 Slug: psk-jvm-item
 Lang: ru
