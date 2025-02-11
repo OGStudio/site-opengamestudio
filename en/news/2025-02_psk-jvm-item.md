@@ -69,7 +69,7 @@ Here's how both HTML files are rendered in web browsers:
 ![result][result]
 
 Identical rendering of different files. My internal
-perfectionist is outraged by such a disrepancy. While my internal 
+perfectionist is outraged by such a disrepancy. And my internal 
 pragmatist thinks this hardly deserves such an attention.
 
 # February
