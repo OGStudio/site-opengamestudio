@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../en/news/index.html">News</a>
+                    <a href="../../en/game/index.html">Games</a>
+                    <a href="../../en/tool/index.html">Tools</a>
+                    <a href="../../en/page/about.html">About</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/psk-jvm-item.html">EN</a>
+                    <a href="../../ru/news/psk-jvm-item.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">In the news...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="psk-jvm-item.html">PSKOV 2 for JVM</a>
+                </h2>
+                <p class="news_item_date">
+                    2025-02-11 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2025_psk-jvm-item.png" alt="splash" /></p>
+<h1 id="seperatepagesgeneration">Seperate pages' generation</h1>
+<p>In January I implemented half of the functionality of original
+PSKOV: generation of separate HTML pages from Markdown.</p>
+<p>Both PSKOV 1 and PSKOV 2 produce HTML files that look the same in web browsers.
+However, the contents of the generated HTML files differ because PSKOV 1 uses
+<a href="https://github.com/showdownjs/showdown">Showdown</a> to convert Markdown to HTML, whereas PSKOV 2 uses
+<a href="https://github.com/JetBrains/markdown">intellij-markdown</a>.</p>
+<p>Let's see how the generated HTML files compare. Suppose we have the following
+page in Markdown:</p>
+<pre><code>Simple page in **Markdown** to convert to **HTML**.
+
+| № | Parser | Language |
+|---|---     |---       |
+| 1 | [Showdown][showdown] | JavaScript |
+| 2 | [intellij-markdown][intellij-markdown] | Kotlin |
+
+[intellij-markdown]: https://github.com/JetBrains/markdown
+[showdown]: https://github.com/showdownjs/showdown
+</code></pre>
+<p>PSKOV 1 converts the aforementioned Markdown to the following HTML:</p>
+<pre><code>&lt;p&gt;Simple page in &lt;strong&gt;Markdown&lt;/strong&gt; to convert to &lt;strong&gt;HTML&lt;/strong&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;№&lt;/th&gt;
+&lt;th&gt;Parser&lt;/th&gt;
+&lt;th&gt;Language&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/showdownjs/showdown"&gt;Showdown&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;JavaScript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/JetBrains/markdown"&gt;intellij-markdown&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Kotlin&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p>PSKOV 2:</p>
+<pre><code>&lt;body&gt;&lt;p&gt;Simple page in &lt;strong&gt;Markdown&lt;/strong&gt; to convert to &lt;strong&gt;HTML&lt;/strong&gt;.&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;№&lt;/th&gt;&lt;th&gt;Parser&lt;/th&gt;&lt;th&gt;Language&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;a href="https://github.com/showdownjs/showdown"&gt;Showdown&lt;/a&gt;&lt;/td&gt;&lt;td&gt;JavaScript&lt;/td&gt;&lt;/tr&gt;&lt;tr class="intellij-row-even"&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&lt;a href="https://github.com/JetBrains/markdown"&gt;intellij-markdown&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kotlin&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/body&gt;
+</code></pre>
+<p>Here's how both HTML files are rendered in web browsers:</p>
+<p><img src="../../images/2025_psk-jvm-item_result.png" alt="result" /></p>
+<p>Identical rendering of different files. My internal
+perfectionist is outraged by such a disrepancy. And my internal 
+pragmatist thinks this hardly deserves such an attention.</p>
+<h1 id="february">February</h1>
+<p>In February I'm going to update the cross-language dialect's translator to produce Context.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/en/news/psk-jvm-item.html";
+                this.page.identifier = "psk-jvm-item.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+            </div>
+        </center>
+    </body>
+</html>

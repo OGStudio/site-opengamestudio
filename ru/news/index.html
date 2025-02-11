@@ -26,6 +26,27 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="psk-jvm-item.html">ПСКОВ 2 на JVM</a>
+    </h2>
+    <p class="news_item_date">
+        2025-02-11 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2025_psk-jvm-item.png" alt="splash" /></p>
+<h1 id="">Генерация отдельных страниц</h1>
+<p>В январе сделал половину функциональности оригинального ПСКОВа на Kotlin для JVM,
+а именно: генерацию отдельных страниц HTML из Markdown.</p>
+<p>И ПСКОВ 1, и ПСКОВ 2 генерируют файлы HTML, которые отображаются идентично
+в веб-браузерах. Тем не менее, содержимое этих сгенерированных файлов отличается,
+т.к. ПСКОВ 1 использует <a href="https://github.com/showdownjs/showdown">Showdown</a> для конвертации Markdown в HTML,
+а ПСКОВ 2 - <a href="https://github.com/JetBrains/markdown">intellij-markdown</a>.</p>
+<p>Взглянем на описываемую разницу. Допустим, у нас есть следующая страница Markdown:. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="psk-jvm-item.html">Читать далее</a>
+    </div>
+</div><div class="news_item">
+    <h2 class="news_item_title">
         <a href="year24.html">Итоги 2024-го года</a>
     </h2>
     <p class="news_item_date">
@@ -201,31 +222,6 @@ Python в JavaScript. Этого не произошло, потому что п
     </div>
     <div class="news_item_more">
         <a href="memory-text-ui.html">Читать далее</a>
-    </div>
-</div><div class="news_item">
-    <h2 class="news_item_title">
-        <a href="memory-logic.html">Игровая логика «Памяти»</a>
-    </h2>
-    <p class="news_item_date">
-        2024-05-03 00:00
-    </p>
-    <div class="news_item_contents">
-<h1 id="">Игровая логика «Памяти»</h1>
-<p>В апреле реализовал игровую логику игры «Память» на Python в виде модели ограниченного языка и успешно перевёл её инструментом в C++.</p>
-<p>Модель ограниченного языка предполагает следующую архитектуру из двух частей:</p>
-<ol>
-<li>контекст состояния</li>
-<li>чистые функции без побочных эффектов, работающие лишь с контекстом</li>
-</ol>
-<p>Контекст состояния игровой логики на Python получился следующим (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory_Context.h">C++</a>):</p>
-<p>```python
-class memory_Context:
-  def <strong>init</strong>(self):
-    self.hiddenItems = []
-    self.mismatchedItems = []. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="memory-logic.html">Читать далее</a>
     </div>
 </div>
 <p class="pagination_title">Страница 1 из 8</p>

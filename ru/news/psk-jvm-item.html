@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/psk-jvm-item.html">EN</a>
+                    <a href="../../ru/news/psk-jvm-item.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="psk-jvm-item.html">ПСКОВ 2 на JVM</a>
+                </h2>
+                <p class="news_item_date">
+                    2025-02-11 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2025_psk-jvm-item.png" alt="splash" /></p>
+<h1 id="">Генерация отдельных страниц</h1>
+<p>В январе сделал половину функциональности оригинального ПСКОВа на Kotlin для JVM,
+а именно: генерацию отдельных страниц HTML из Markdown.</p>
+<p>И ПСКОВ 1, и ПСКОВ 2 генерируют файлы HTML, которые отображаются идентично
+в веб-браузерах. Тем не менее, содержимое этих сгенерированных файлов отличается,
+т.к. ПСКОВ 1 использует <a href="https://github.com/showdownjs/showdown">Showdown</a> для конвертации Markdown в HTML,
+а ПСКОВ 2 - <a href="https://github.com/JetBrains/markdown">intellij-markdown</a>.</p>
+<p>Взглянем на описываемую разницу. Допустим, у нас есть следующая страница Markdown:</p>
+<pre><code>Simple page in **Markdown** to convert to **HTML**.
+
+| № | Parser | Language |
+|---|---     |---       |
+| 1 | [Showdown][showdown] | JavaScript |
+| 2 | [intellij-markdown][intellij-markdown] | Kotlin |
+
+[intellij-markdown]: https://github.com/JetBrains/markdown
+[showdown]: https://github.com/showdownjs/showdown
+</code></pre>
+<p>ПСКОВ 1 генерирует следующий файл HTML:</p>
+<pre><code>&lt;p&gt;Simple page in &lt;strong&gt;Markdown&lt;/strong&gt; to convert to &lt;strong&gt;HTML&lt;/strong&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;№&lt;/th&gt;
+&lt;th&gt;Parser&lt;/th&gt;
+&lt;th&gt;Language&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/showdownjs/showdown"&gt;Showdown&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;JavaScript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;a href="https://github.com/JetBrains/markdown"&gt;intellij-markdown&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Kotlin&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p>ПСКОВ 2:</p>
+<pre><code>&lt;body&gt;&lt;p&gt;Simple page in &lt;strong&gt;Markdown&lt;/strong&gt; to convert to &lt;strong&gt;HTML&lt;/strong&gt;.&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;№&lt;/th&gt;&lt;th&gt;Parser&lt;/th&gt;&lt;th&gt;Language&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;a href="https://github.com/showdownjs/showdown"&gt;Showdown&lt;/a&gt;&lt;/td&gt;&lt;td&gt;JavaScript&lt;/td&gt;&lt;/tr&gt;&lt;tr class="intellij-row-even"&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;&lt;a href="https://github.com/JetBrains/markdown"&gt;intellij-markdown&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kotlin&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/body&gt;
+</code></pre>
+<p>А вот как оба файла отображаются в веб-браузере:</p>
+<p><img src="../../images/2025_psk-jvm-item_result.png" alt="result" /></p>
+<p>Идентичное отображение двух различающихся файлов.
+Мой внутренний перфекционист, конечно, возмущён несоответствием, но мой
+внутренний прагматик считает эту разницу несущественной.</p>
+<h1 id="-1">Февраль</h1>
+<p>В феврале доведу конвертер межъязыкового диалекта до генерации Context.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/psk-jvm-item.html";
+                this.page.identifier = "psk-jvm-item.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
