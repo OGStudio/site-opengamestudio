@@ -26,6 +26,32 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="ctx-gen.html">Генерация Контекста из YML</a>
+    </h2>
+    <p class="news_item_date">
+        2025-03-11 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/??.png" alt="splash" /></p>
+<h1 id="">Генерация Контекста</h1>
+<p>В феврале доработал конвертер межъязыкового диалекта для генерации
+Контекста на основе описания в YML и уже применил его для проектов
+Local Host Access, самого конвертера, ПСКОВа.</p>
+<p>Если очень кратко, то Контекст представляет из себя полное состояние
+приложения, по сути аналог <a href="https://redux.js.org/introduction/getting-started#basic-example">store в Redux</a>.</p>
+<p>Для примера возьмём описание Контекста из Local Host Access
+(<a href="https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml">entities.yml</a>):</p>
+<p>```</p>
+<h1 id="applicationstatecontext">Application state context</h1>
+<p>Context:
+    type: context
+    fields:. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="ctx-gen.html">Читать далее</a>
+    </div>
+</div><div class="news_item">
+    <h2 class="news_item_title">
         <a href="psk-jvm-item.html">ПСКОВ 2 на JVM</a>
     </h2>
     <p class="news_item_date">
@@ -204,27 +230,8 @@ Python в JavaScript. Этого не произошло, потому что п
     <div class="news_item_more">
         <a href="memory-gui.html">Читать далее</a>
     </div>
-</div><div class="news_item">
-    <h2 class="news_item_title">
-        <a href="memory-text-ui.html">Текстовый интерфейс «Памяти»</a>
-    </h2>
-    <p class="news_item_date">
-        2024-06-14 00:00
-    </p>
-    <div class="news_item_contents">
-<h1 id="">Текстовый интерфейс «Памяти»</h1>
-<p>В мае реализовал текстовый интерфейс игры «Память» на Python. В C++ перевёл инструментом.</p>
-<p>Реализация логического игрового цикла привела к появлению контроллера, управляющего
-контекстом. Создание контроллера на Python прошло без происшествий, а вот с версией
-для C++ пришлось помучиться. Мучения были вызваны тем, что контроллер использует
-<a href="https://en.cppreference.com/w/cpp/utility/any">std::any</a> из C++17, а инструмент ограничен C++11 с целью поддержки OpenWrt.</p>
-<p>Что касается объёма кода, то картина получилась следующей (в строках):. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="memory-text-ui.html">Читать далее</a>
-    </div>
 </div>
-<p class="pagination_title">Страница 1 из 8</p>
+<p class="pagination_title">Страница 1 из 9</p>
 <p>
     <a href="index2.html">Старее »</a>
 </p>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/ctx-gen.html">EN</a>
+                    <a href="../../ru/news/ctx-gen.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="ctx-gen.html">Генерация Контекста из YML</a>
+                </h2>
+                <p class="news_item_date">
+                    2025-03-11 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/??.png" alt="splash" /></p>
+<h1 id="">Генерация Контекста</h1>
+<p>В феврале доработал конвертер межъязыкового диалекта для генерации
+Контекста на основе описания в YML и уже применил его для проектов
+Local Host Access, самого конвертера, ПСКОВа.</p>
+<p>Если очень кратко, то Контекст представляет из себя полное состояние
+приложения, по сути аналог <a href="https://redux.js.org/introduction/getting-started#basic-example">store в Redux</a>.</p>
+<p>Для примера возьмём описание Контекста из Local Host Access
+(<a href="https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml">entities.yml</a>):</p>
+<pre><code># Application state context
+Context:
+    type: context
+    fields:
+        # Command line arguments
+        arguments: [String]
+        consoleOutput: String
+        defaultDir: String
+        didLaunch: Bool
+        dir: String
+        httpDefaultPort: Int
+        httpLaunch: Bool
+        httpPort: Int
+        httpReply: String
+        httpRequest: NetRequest
+</code></pre>
+<p>Конвертер преобразует его в следующий код на Kotlin (<a href="https://github.com/OGStudio/local-host-access/blob/main/src/entities.kt#L3">entities.kt</a>):</p>
+<pre><code>// Application state context
+data class Context(
+    // Command line arguments
+    var arguments: Array&lt;String&gt; = arrayOf(),
+    var consoleOutput: String = "",
+    var defaultDir: String = "",
+    var didLaunch: Boolean = false,
+    var dir: String = "",
+    var httpDefaultPort: Int = 0,
+    var httpLaunch: Boolean = false,
+    var httpPort: Int = 0,
+    var httpReply: String = "",
+    var httpRequest: NetRequest = NetRequest(),
+    override var recentField: String = "",
+): CLDContext {
+    override fun &lt;T&gt; field(name: String): T {
+        if (name == "arguments") {
+            return arguments as T
+        } else if (name == "consoleOutput") {
+            return consoleOutput as T
+        } else if (name == "defaultDir") {
+            return defaultDir as T
+        } else if (name == "didLaunch") {
+            return didLaunch as T
+        } else if (name == "dir") {
+            return dir as T
+        } else if (name == "httpDefaultPort") {
+            return httpDefaultPort as T
+        } else if (name == "httpLaunch") {
+            return httpLaunch as T
+        } else if (name == "httpPort") {
+            return httpPort as T
+        } else if (name == "httpReply") {
+            return httpReply as T
+        } else if (name == "httpRequest") {
+            return httpRequest as T
+        }
+        return "unknown-field-name" as T
+    }
+
+    override fun selfCopy(): CLDContext {
+        return this.copy()
+    }
+
+    override fun setField(
+        name: String,
+        value: Any?
+    ) {
+        if (name == "arguments") {
+            arguments = value as Array&lt;String&gt;
+        } else if (name == "consoleOutput") {
+            consoleOutput = value as String
+        } else if (name == "defaultDir") {
+            defaultDir = value as String
+        } else if (name == "didLaunch") {
+            didLaunch = value as Boolean
+        } else if (name == "dir") {
+            dir = value as String
+        } else if (name == "httpDefaultPort") {
+            httpDefaultPort = value as Int
+        } else if (name == "httpLaunch") {
+            httpLaunch = value as Boolean
+        } else if (name == "httpPort") {
+            httpPort = value as Int
+        } else if (name == "httpReply") {
+            httpReply = value as String
+        } else if (name == "httpRequest") {
+            httpRequest = value as NetRequest
+        }
+    }
+}
+</code></pre>
+<h1 id="-1">Проблемы</h1>
+<p>Тем не менее, на текущий момент ощутил огромный минус Котлина для
+проекта CLD - необходимость оригинального компилятора Котлин, т.к.
+без него я не могу валидировать код. Могу транслировать, но не валидировать.
+Выходит, я не смогу написать чисто браузерный транслятор, чтобы в браузере
+писать Котлин, а он чтобы мне выдавал, скажем, Питон, т.к. в этом случае
+я в браузере не могу проверить ни Котлин, ни Питон.</p>
+<p>Поэтому в марте я рассмотрю возможность использования всё-таки чистого
+JavaScript в качестве якорного языка для CLD, хоть в JS и не строгой типизации,
+зато браузер уже содержит компилятор JS.
+А типы можно комментом ведь написать!</p>
+<h1 id="-2">Март</h1>
+<p>В марте начну создание нового инструмента для решения своих
+хобби-задач на основе Isomorphic-Git.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/ctx-gen.html";
+                this.page.identifier = "ctx-gen.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
