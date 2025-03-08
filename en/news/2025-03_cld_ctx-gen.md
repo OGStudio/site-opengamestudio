@@ -1,22 +1,31 @@
-Title: Генерация Контекста из YML
+Title: CLD: Context generation
 Date: 2025-03-11 00:00
 Category: News
-Slug: ctx-gen
-Lang: ru
+Slug: cld_ctx-gen
+Lang: en
 
 ![splash][splash]
 
-# Генерация Контекста
+# Context generation
 
-В феврале доработал конвертер межъязыкового диалекта для генерации
-Контекста на основе описания в YML и уже применил его для проектов
-Local Host Access, самого конвертера, ПСКОВа.
+In February I've updated the **C**ross-**l**anguage **d**ialect (CLD) translator to
+generate Context out of YML. The generated Contexts have already been
+applied to all three currently active projects:
 
-Если очень кратко, то Контекст представляет из себя полное состояние
-приложения, по сути аналог [store в Redux][store].
+* CLD (the CLD translator generated its own Context)
+* LHA
+* PSKOV
 
-Для примера возьмём описание Контекста из Local Host Access
-([entities.yml][entities]):
+I never really took time to explain what Context is, so here's
+a very short explanation: Context is very close to the concept
+of [a store in Redux][store]. I'm afraid this is not yet the time
+to explain Context in details because I have not yet achieved anything
+to showcase why one would need to use Context. Once that time comes
+I do it.
+
+
+
+Now back to the Context generation. Let's take the Context of LHA ([entities.yml][entities]):
 
 ```
 # Application state context
@@ -36,7 +45,7 @@ Context:
         httpRequest: NetRequest
 ```
 
-Конвертер преобразует его в следующий код на Kotlin ([entities.kt][entities-result]):
+The translator converts it to the following Kotin code ([entities.kt][entities-result]):
 
 ```
 // Application state context
@@ -112,24 +121,24 @@ data class Context(
 }
 ```
 
-# Проблемы
+# Kotlin problems
 
-Тем не менее, на текущий момент ощутил огромный минус Котлина для
-проекта CLD - необходимость оригинального компилятора Котлин, т.к.
-без него я не могу валидировать код. Могу транслировать, но не валидировать.
-Выходит, я не смогу написать чисто браузерный транслятор, чтобы в браузере
-писать Котлин, а он чтобы мне выдавал, скажем, Питон, т.к. в этом случае
-я в браузере не могу проверить ни Котлин, ни Питон.
+Here comes the second part why Context concept has not yet been covered.
+That's because the strong dependency of Kotlin requires the tools to
+require tool users to have Kotlin compiler because I don't have one.
+And I don't want to have one, it's just too many dependencies.
+And what I want is just a JavaScript tool that runs in a Web Browser
+and, when necessary, can produce Kotlin code which in turn would
+require those lots of Kotlin dependencies.
 
-Поэтому в марте я рассмотрю возможность использования всё-таки чистого
-JavaScript в качестве якорного языка для CLD, хоть в JS и не строгой типизации,
-зато браузер уже содержит компилятор JS.
-А типы можно комментом ведь написать!
 
-# Март
+# March
 
-В марте начну создание нового инструмента для решения своих
-хобби-задач на основе Isomorphic-Git.
+That's why in March I'm going to rething the usage of Kotlin as the
+primary language of all the curently active projects.
+I'll try to create a web browser tool that is useful to me
+and see if Kotlin, Context, CLD are good for it. May be I'll
+come with something better and easier? Let's see!
 
 [entities]: https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml
 [entities-result]: https://github.com/OGStudio/local-host-access/blob/main/src/entities.kt#L3

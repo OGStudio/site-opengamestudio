@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../en/news/index.html">News</a>
+                    <a href="../../en/game/index.html">Games</a>
+                    <a href="../../en/tool/index.html">Tools</a>
+                    <a href="../../en/page/about.html">About</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/cld_ctx-gen.html">EN</a>
+                    <a href="../../ru/news/cld_ctx-gen.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">In the news...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="cld_ctx-gen.html">CLD: Context generation</a>
+                </h2>
+                <p class="news_item_date">
+                    2025-03-11 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/??.png" alt="splash" /></p>
+<h1 id="contextgeneration">Context generation</h1>
+<p>In February I've updated the <strong>C</strong>ross-<strong>l</strong>anguage <strong>d</strong>ialect translator to
+generate Context out of YML. The generated Contexts have already been
+applied to all three currently active projects:</p>
+<ul>
+<li>CLD (the CLD translator generated its own Context)</li>
+<li>LHA</li>
+<li>PSKOV</li>
+</ul>
+<p>I never really took time to explain what Context is, so here's
+a very short explanation: Context is very close to the concept
+of <a href="https://redux.js.org/introduction/getting-started#basic-example">a store in Redux</a>. I'm afraid this is not yet the time
+to explain Context in details because I have not yet achieved anything
+to showcase why one would need to use Context. Once that time comes
+I do it.</p>
+<p>Now back to the Context generation. Let's take the Context of LHA (<a href="https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml">entities.yml</a>):</p>
+<pre><code># Application state context
+Context:
+    type: context
+    fields:
+        # Command line arguments
+        arguments: [String]
+        consoleOutput: String
+        defaultDir: String
+        didLaunch: Bool
+        dir: String
+        httpDefaultPort: Int
+        httpLaunch: Bool
+        httpPort: Int
+        httpReply: String
+        httpRequest: NetRequest
+</code></pre>
+<p>The translator converts it to the following Kotin code (<a href="https://github.com/OGStudio/local-host-access/blob/main/src/entities.kt#L3">entities.kt</a>):</p>
+<pre><code>// Application state context
+data class Context(
+    // Command line arguments
+    var arguments: Array&lt;String&gt; = arrayOf(),
+    var consoleOutput: String = "",
+    var defaultDir: String = "",
+    var didLaunch: Boolean = false,
+    var dir: String = "",
+    var httpDefaultPort: Int = 0,
+    var httpLaunch: Boolean = false,
+    var httpPort: Int = 0,
+    var httpReply: String = "",
+    var httpRequest: NetRequest = NetRequest(),
+    override var recentField: String = "",
+): CLDContext {
+    override fun &lt;T&gt; field(name: String): T {
+        if (name == "arguments") {
+            return arguments as T
+        } else if (name == "consoleOutput") {
+            return consoleOutput as T
+        } else if (name == "defaultDir") {
+            return defaultDir as T
+        } else if (name == "didLaunch") {
+            return didLaunch as T
+        } else if (name == "dir") {
+            return dir as T
+        } else if (name == "httpDefaultPort") {
+            return httpDefaultPort as T
+        } else if (name == "httpLaunch") {
+            return httpLaunch as T
+        } else if (name == "httpPort") {
+            return httpPort as T
+        } else if (name == "httpReply") {
+            return httpReply as T
+        } else if (name == "httpRequest") {
+            return httpRequest as T
+        }
+        return "unknown-field-name" as T
+    }
+
+    override fun selfCopy(): CLDContext {
+        return this.copy()
+    }
+
+    override fun setField(
+        name: String,
+        value: Any?
+    ) {
+        if (name == "arguments") {
+            arguments = value as Array&lt;String&gt;
+        } else if (name == "consoleOutput") {
+            consoleOutput = value as String
+        } else if (name == "defaultDir") {
+            defaultDir = value as String
+        } else if (name == "didLaunch") {
+            didLaunch = value as Boolean
+        } else if (name == "dir") {
+            dir = value as String
+        } else if (name == "httpDefaultPort") {
+            httpDefaultPort = value as Int
+        } else if (name == "httpLaunch") {
+            httpLaunch = value as Boolean
+        } else if (name == "httpPort") {
+            httpPort = value as Int
+        } else if (name == "httpReply") {
+            httpReply = value as String
+        } else if (name == "httpRequest") {
+            httpRequest = value as NetRequest
+        }
+    }
+}
+</code></pre>
+<h1 id="kotlinproblems">Kotlin problems</h1>
+<p>Here comes the second part why Context concept has not yet been covered.
+That's because the strong dependency of Kotlin requires the tools to
+require tool users to have Kotlin compiler because I don't have one.
+And I don't want to have one, it's just too many dependencies.
+And what I want is just a JavaScript tool that runs in a Web Browser
+and, when necessary, can produce Kotlin code which in turn would
+require those lots of Kotlin dependencies.</p>
+<h1 id="march">March</h1>
+<p>That's why in March I'm going to rething the usage of Kotlin as the
+primary language of all the curently active projects.
+I'll try to create a web browser tool that is useful to me
+and see if Kotlin, Context, CLD are good for it. May be I'll
+come with something better and easier? Let's see!</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/en/news/cld_ctx-gen.html";
+                this.page.identifier = "cld_ctx-gen.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <div id="footer">
+                The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
+                from <a href="http://github.com/ogstudio/site-opengamestudio">this source code</a>.
+            </div>
+        </center>
+    </body>
+</html>
