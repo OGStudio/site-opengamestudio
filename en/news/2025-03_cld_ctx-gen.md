@@ -126,7 +126,7 @@ Such a requirement makes it impossible to have a web browser only development
 tool. And being able to code in a web browser is something that I consider
 obligatory.
 
-That's why in March I'm plan to create the draft of a tool that runs in a web browser.
+That's why in March I plan to create the draft of a tool that runs in a web browser.
 
 [entities]: https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml
 [entities-result]: https://github.com/OGStudio/local-host-access/blob/main/src/entities.kt#L3
