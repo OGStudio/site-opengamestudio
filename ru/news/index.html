@@ -34,16 +34,18 @@
     <div class="news_item_contents">
 <p><img src="../../images/??.png" alt="splash" /></p>
 <h1 id="">Генерация контекста</h1>
-<p>В феврале доработал конвертер Межъязыкового диалекта
-(<strong>C</strong>ross-<strong>l</strong>anguage <strong>d</strong>ialect) (CLD) для генерации
-Контекста на основе описания в YML и уже применил его для проектов
-Local Host Access, самого конвертера, ПСКОВа.</p>
-<p>Если очень кратко, то Контекст представляет из себя полное состояние
-приложения, по сути аналог <a href="https://redux.js.org/introduction/getting-started#basic-example">store в Redux</a>.</p>
-<p>Для примера возьмём описание Контекста из Local Host Access
-(<a href="https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml">entities.yml</a>):</p>
-<p>```</p>
-<h1 id="applicationstatecontext">Application state context. . .</h1>
+<p>В феврале доработал транслятор Межъязыкового диалекта
+(<strong>C</strong>ross-<strong>l</strong>anguage <strong>d</strong>ialect) (CLD) до генерации
+Контекста на основе описания в YML. Сгенерированные Контексты уже использованы
+в следующих проектах:</p>
+<ul>
+<li>CLD (транслятор CLD генерирует свой собственный Контекст)</li>
+<li>LHA</li>
+<li>PSKOV</li>
+</ul>
+<p>Доселе я никогда прежде не тратил время на объяснение сути Контекста, поэтому
+сейчас самое время для очень краткого описания: Контекст очень близок
+к <a href="https://redux.js.org/introduction/getting-started#basic-example">stor'у в Redux</a>. К сожалению, на этом месте пояснение заканчиваю,. . .</p>
     </div>
     <div class="news_item_more">
         <a href="cld_ctx-gen.html">Читать далее</a>

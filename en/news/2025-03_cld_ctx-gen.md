@@ -123,7 +123,7 @@ data class Context(
 Kotlin is currently the anchor programming language of CLD. Thus, to use Kotlin,
 one would have to install related Java tools (Gradle, Android Studio or JVM itself).
 Such a requirement makes it impossible to have a web browser only development
-tool. And being able to code in a web browser is something that I treat
+tool. And being able to code in a web browser is something that I consider
 obligatory.
 
 That's why in March I'm plan to create the draft of a tool that runs in a web browser.
