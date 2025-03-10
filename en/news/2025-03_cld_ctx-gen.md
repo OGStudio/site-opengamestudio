@@ -18,8 +18,8 @@ used for the following projects:
 
 I never really took time to explain what Context is, so here's
 a very short explanation: Context is very close to
-[a store in Redux][store]. I'm afraid this is not yet the time
-to explain Context in details because I don't yet have a good
+[Store in Redux][store]. I'm afraid this is not yet the time
+to explain Context in detail because I don't yet have a good
 argument why you need Context. Once that time comes I do it.
 
 Now let's get back to the Context generation. Here's how LHA's YML for Context looks like: ([entities.yml][entities]):
@@ -130,5 +130,5 @@ That's why in March I plan to create the draft of a tool that runs in a web brow
 
 [entities]: https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml
 [entities-result]: https://github.com/OGStudio/local-host-access/blob/main/src/entities.kt#L3
-[splash]: ../../images/??.png
+[splash]: ../../images/2025-03_redux-data-flow.jpg
 [store]: https://redux.js.org/introduction/getting-started#basic-example
