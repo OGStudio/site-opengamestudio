@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/cld_ctx-gen.html">EN</a>
+                    <a href="../../ru/news/cld_ctx-gen.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="cld_ctx-gen.html">CLD: Генерация контекста</a>
+                </h2>
+                <p class="news_item_date">
+                    2025-03-11 00:00
+                </p>
+                <div class="news_item_contents">
+<p><img src="../../images/2025-03_redux-data-flow.jpg" alt="splash" /></p>
+<h1 id="">Генерация контекста</h1>
+<p>В феврале доработал транслятор Межъязыкового диалекта
+(<strong>C</strong>ross-<strong>l</strong>anguage <strong>d</strong>ialect) (CLD) до генерации
+Контекста на основе описания в YML. Сгенерированные Контексты уже использованы
+в следующих проектах:</p>
+<ul>
+<li>CLD (транслятор CLD генерирует свой собственный Контекст)</li>
+<li>LHA</li>
+<li>PSKOV</li>
+</ul>
+<p>Доселе я никогда прежде не тратил время на объяснение сути Контекста, поэтому
+сейчас самое время для очень краткого описания: Контекст очень близок
+к понятию <a href="https://redux.js.org/introduction/getting-started#basic-example">Store в Redux</a>. К сожалению, на этом месте пояснение заканчиваю,
+т.к. без каких-либо весомых доказательств пользы Контекста не готов
+обосновывать его применимость. Как только придёт таковое время, так я сразу
+расскажу детали.</p>
+<p>Теперь вернёмся к генерации Контекста. Вот как выглядит YML Контекста в проекте LHA
+(<a href="https://github.com/OGStudio/local-host-access/blob/main/cld/entities.yml">entities.yml</a>):</p>
+<pre><code># Application state context
+Context:
+    type: context
+    fields:
+        # Command line arguments
+        arguments: [String]
+        consoleOutput: String
+        defaultDir: String
+        didLaunch: Bool
+        dir: String
+        httpDefaultPort: Int
+        httpLaunch: Bool
+        httpPort: Int
+        httpReply: String
+        httpRequest: NetRequest
+</code></pre>
+<p>Транслятор CLD преобразует его в следующий код на Kotlin (<a href="https://github.com/OGStudio/local-host-access/blob/main/src/entities.kt#L3">entities.kt</a>):</p>
+<pre><code>// Application state context
+data class Context(
+    // Command line arguments
+    var arguments: Array&lt;String&gt; = arrayOf(),
+    var consoleOutput: String = "",
+    var defaultDir: String = "",
+    var didLaunch: Boolean = false,
+    var dir: String = "",
+    var httpDefaultPort: Int = 0,
+    var httpLaunch: Boolean = false,
+    var httpPort: Int = 0,
+    var httpReply: String = "",
+    var httpRequest: NetRequest = NetRequest(),
+    override var recentField: String = "",
+): CLDContext {
+    override fun &lt;T&gt; field(name: String): T {
+        if (name == "arguments") {
+            return arguments as T
+        } else if (name == "consoleOutput") {
+            return consoleOutput as T
+        } else if (name == "defaultDir") {
+            return defaultDir as T
+        } else if (name == "didLaunch") {
+            return didLaunch as T
+        } else if (name == "dir") {
+            return dir as T
+        } else if (name == "httpDefaultPort") {
+            return httpDefaultPort as T
+        } else if (name == "httpLaunch") {
+            return httpLaunch as T
+        } else if (name == "httpPort") {
+            return httpPort as T
+        } else if (name == "httpReply") {
+            return httpReply as T
+        } else if (name == "httpRequest") {
+            return httpRequest as T
+        }
+        return "unknown-field-name" as T
+    }
+
+    override fun selfCopy(): CLDContext {
+        return this.copy()
+    }
+
+    override fun setField(
+        name: String,
+        value: Any?
+    ) {
+        if (name == "arguments") {
+            arguments = value as Array&lt;String&gt;
+        } else if (name == "consoleOutput") {
+            consoleOutput = value as String
+        } else if (name == "defaultDir") {
+            defaultDir = value as String
+        } else if (name == "didLaunch") {
+            didLaunch = value as Boolean
+        } else if (name == "dir") {
+            dir = value as String
+        } else if (name == "httpDefaultPort") {
+            httpDefaultPort = value as Int
+        } else if (name == "httpLaunch") {
+            httpLaunch = value as Boolean
+        } else if (name == "httpPort") {
+            httpPort = value as Int
+        } else if (name == "httpReply") {
+            httpReply = value as String
+        } else if (name == "httpRequest") {
+            httpRequest = value as NetRequest
+        }
+    }
+}
+</code></pre>
+<h1 id="-1">Март</h1>
+<p>На текущий момент Kotlin является якорным языком CLD. Для использования
+Kotlin необходимо установить соответствующие инструменты Java (Gradle,
+Android Studio либо сама JVM). Такое требование делает создание инструмента
+разработки чисто для браузера невозможным. Однако, я считаю работу инструмента
+разработки в браузере ключевой особенностью для достижения портируемости кода.</p>
+<p>Поэтому в марте я планирую создать заготовку инструмента, работающего в браузере.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/cld_ctx-gen.html";
+                this.page.identifier = "cld_ctx-gen.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
