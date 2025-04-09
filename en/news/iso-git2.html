@@ -25,16 +25,30 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="iso-git2.html">Isomorphic Git</a>
+                    <a href="iso-git2.html">PSKOV 2 without LHA?</a>
                 </h2>
                 <p class="news_item_date">
-                    2025-03-11 00:00
+                    2025-04-11 00:00
                 </p>
                 <div class="news_item_contents">
 <p><img src="../../images/2025-04_???.jpg" alt="splash" /></p>
-<h1 id="corsprppprorororxy">CORS prppprorororxy</h1>
+<h1 id="assessingthefeasibilityofpskov2withoutlocalhostaccess">Assessing the feasibility of PSKOV 2 without Local Host Access</h1>
+<p>PSKOV 2 and original PSKOV assume there is Local Host Access running
+in order to access PC's local filesystem to read Markdown files and
+write HTML ones.</p>
+<p>In March I assessed if Isomorphic-Git is able to read and write to Git
+repositories from a web browser. The assessment succeeded. Actually,
+this was the second assessment of Isomorphic-Git. The first one happened in
+2021, however, it ended as a failure because Isomorphic-Git cannot work without CORS
+proxy with, say, GitHub due to web browser limitations.</p>
+<p>Isomoprhic-Git's dependency on CORS proxy is still there, though.
+However this time I've discovered <a href="https://vercel.com">Vercel</a> service with a free plan
+that allows anyone to [run his own copy of CORS proxy (here's the
+[guide][guide]). This solves the problem of accessing GitHub, at least until
+Vercel goes bankrupt ~~or GitHub~~.</p>
 <h1 id="april">April</h1>
-<p>In April I plan to create ?..</p>
+<p>In April I plan to further the research of Git by creating a tiny notes
+application. This will help me understand how to use Git in PSKOV 2.</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
