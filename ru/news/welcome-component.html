@@ -40,12 +40,29 @@
 <li>показывать два пункта в левом меню</li>
 <li>отображать содержимое пункта меню после его выбора</li>
 </ol>
-<p>Функционально тут никого ничем не удивишь. Но под капотом и пункты меню,
-и отображение содержимого при нажатии, - это компонент Welcome.
-Следовательно, прочие секции редактора можно будет так же
-независимо добавлять в будущем.</p>
+<p>Функционально в этом сложно увидеть что-либо занимательно. Но
+таковое есть: и левое меню, и содержимое управляется так компонентом,
+в данном случае он называется <a href="https://github.com/kornerr/pskov2/blob/main/welcome.js">WelcomeComponent</a>. Функциональность
+как Git, так и Markdown по задуме тоже будет будет представлена компонентами.</p>
+<p>Структура компонента ещё не устоялась, но для примерного понимания приведу
+текущий вид конструктора <code>WelcomeComponent</code>:</p>
+<pre><code class="javascript language-javascript">function WelcomeComponent() {
+    this._construct = function() {
+        this.ctrl = new CLDController(new WelcomeContext());
+        // Dbg.
+        this.ctrl.registerCallback((c) =&gt; {
+            console.log(`ИГР WelcomeC._construct ctrl key/value: '${c.recentField}'/'${c.field(c.recentField)}'`);
+        });
+        this.setupHTML();
+        this.setupEffects();
+        this.setupEvents();
+        this.setupShoulds();
+    };
+    - - - -
+</code></pre>
 <h1 id="">Июнь</h1>
-<p>В июне планирую …</p>
+<p>В июне планирую сделать заготовку компонента Git со своей частью
+левого меню и содержимого справа.</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
