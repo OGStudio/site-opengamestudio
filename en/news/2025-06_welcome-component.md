@@ -16,7 +16,7 @@ In May I created PSKOV 2 editor draft which is only capable of:
 2. display contents in the right for the selected menu item
 
 You probably can't see anything substantial in this, however, the mentioned
-functionality is run by a component. In this it's called [WelcomeComponent][wcmp].
+functionality is run by a component. In this case it's called [WelcomeComponent][wcmp].
 Both Git and Markdown functionality is expected to follow the same pattern of
 components.
 
@@ -41,7 +41,7 @@ function WelcomeComponent() {
 
 # June
 
-In June I plan to create a draft version of Git components with its own
-left menu and contents in the right
+In June I plan to create a draft version of Git component with its own
+left menu and contents in the right.
 
 [wcmp]: https://github.com/kornerr/pskov2/blob/main/welcome.js

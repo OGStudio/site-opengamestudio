@@ -25,7 +25,7 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="welcome-component.html">PSKOV 2 editor and component</a>
+                    <a href="welcome-component.html">PSKOV 2 editor and components</a>
                 </h2>
                 <p class="news_item_date">
                     2025-06-10 00:00
@@ -35,9 +35,34 @@
     <source src="../../images/2025-06_welcome-component.mp4" type="video/mp4"/>
 </video>
 <h1 id="pskov2editordraft">PSKOV 2 editor draft</h1>
-<p>In May I created …</p>
+<p>In May I created PSKOV 2 editor draft which is only capable of:</p>
+<ol>
+<li>display two left menu items</li>
+<li>display contents in the right for the selected menu item</li>
+</ol>
+<p>You probably can't see anything substantial in this, however, the mentioned
+functionality is run by a component. In this case it's called <a href="https://github.com/kornerr/pskov2/blob/main/welcome.js">WelcomeComponent</a>.
+Both Git and Markdown functionality is expected to follow the same pattern of
+components.</p>
+<p>The structure of components is not yet stable, but here's a short excerpt of
+the constructor of <code>WelcomeComponent</code> just so you can feel the mood:</p>
+<pre><code class="javascript language-javascript">function WelcomeComponent() {
+    this._construct = function() {
+        this.ctrl = new CLDController(new WelcomeContext());
+        // Dbg.
+        this.ctrl.registerCallback((c) =&gt; {
+            console.log(`ИГР WelcomeC._construct ctrl key/value: '${c.recentField}'/'${c.field(c.recentField)}'`);
+        });
+        this.setupHTML();
+        this.setupEffects();
+        this.setupEvents();
+        this.setupShoulds();
+    };
+    - - - -
+</code></pre>
 <h1 id="june">June</h1>
-<p>In June I plan to …</p>
+<p>In June I plan to create a draft version of Git components with its own
+left menu and contents in the right</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
