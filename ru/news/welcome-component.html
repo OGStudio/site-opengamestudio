@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/welcome-component.html">EN</a>
+                    <a href="../../ru/news/welcome-component.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="welcome-component.html">Редактор ПСКОВ 2 и компоненты</a>
+                </h2>
+                <p class="news_item_date">
+                    2025-06-03
+                </p>
+                <div class="news_item_contents">
+<video controls width="700">
+    <source src="../../images/2025-06_welcome-component.mp4" type="video/mp4"/>
+</video>
+<h1 id="2">Заготовка редактора ПСКОВ 2</h1>
+<p>В мае сделал заготовку редактора ПСКОВ 2, которая умеет лишь:</p>
+<ol>
+<li>показывать два пункта в левом меню</li>
+<li>отображать содержимое выбранного пункта меню</li>
+</ol>
+<p>Функционально в этом сложно увидеть что-либо занимательное. Но
+таковое есть: и левое меню, и содержимое управляются компонентом,
+в данном случае <a href="https://github.com/kornerr/pskov2/blob/main/welcome.js">WelcomeComponent</a>. Будущая функциональность вроде Git
+и Markdown тоже будет представлена компонентами.</p>
+<p>Структура компонента ещё не устоялась, но для примерного понимания приведу
+текущий вид конструктора <code>WelcomeComponent</code>:</p>
+<pre><code class="javascript language-javascript">function WelcomeComponent() {
+    this._construct = function() {
+        this.ctrl = new CLDController(new WelcomeContext());
+        // Dbg.
+        this.ctrl.registerCallback((c) =&gt; {
+            console.log(`ИГР WelcomeC._construct ctrl key/value: '${c.recentField}'/'${c.field(c.recentField)}'`);
+        });
+        this.setupHTML();
+        this.setupEffects();
+        this.setupEvents();
+        this.setupShoulds();
+    };
+    - - - -
+</code></pre>
+<h1 id="">Июнь</h1>
+<p>В июне планирую сделать заготовку компонента Git.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/welcome-component.html";
+                this.page.identifier = "welcome-component.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
