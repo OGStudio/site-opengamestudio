@@ -17,7 +17,7 @@ In May I created PSKOV 2 editor draft which is only capable of:
 
 You probably can't see anything substantial in this, however, the listed
 functionality is run by a component. In this case it's called [WelcomeComponent][wcmp].
-Future Git and Markdown functionality are expected to follow the same pattern of
+Future functionality like Git and Markdown is expected to follow the same pattern of
 components.
 
 The structure of components is not yet stable, but here's a short excerpt of
