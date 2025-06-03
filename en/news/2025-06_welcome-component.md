@@ -1,5 +1,5 @@
 Title: PSKOV 2 editor and components
-Date: 2025-06-03 00:00
+Date: 2025-06-03
 Category: News
 Slug: welcome-component
 Lang: en

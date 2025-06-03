@@ -1,5 +1,5 @@
 Title: Редактор ПСКОВ 2 и компоненты
-Date: 2025-06-03 00:00
+Date: 2025-06-03
 Category: News
 Slug: welcome-component
 Lang: ru
