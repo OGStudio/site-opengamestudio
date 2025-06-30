@@ -25,5 +25,5 @@ Currently one can do the following in PSKOV 2:
 
 In July I plan to add the following:
 
-* display files for currently selected directory only instead of showing them all
-* view and edit Repository file contents
+* instead of showing all files of a repository, display files for currently selected directory only
+* view and edit repository file contents
