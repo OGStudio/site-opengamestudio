@@ -1,0 +1,29 @@
+Title: FS and Git components' draft
+Date: 2025-07-01
+Category: News
+Slug: git-fs-components
+Lang: en
+
+<video controls width="700">
+    <source src="../../images/2025-07_git-fs-components.mp4" type="video/mp4"/>
+</video>
+
+# Components' draft
+
+In June I've created drafts of the following PSKOV 2 components:
+
+* FS: virtual file system based on LightningFS
+* Git: Git support based on Isomorphic-Git
+
+Currently one can do the following in PSKOV 2:
+
+* clone Git repository
+* inspect the list of Git repository files
+* clean up file system and start anew
+
+# July
+
+In July I plan to add the following:
+
+* instead of showing all files of a repository, display files for currently selected directory only
+* view and edit files
