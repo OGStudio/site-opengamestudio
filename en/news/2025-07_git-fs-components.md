@@ -1,5 +1,5 @@
 Title: FS and Git components' draft
-Date: 2025-07-03
+Date: 2025-07-01
 Category: News
 Slug: git-fs-components
 Lang: en
@@ -26,4 +26,4 @@ Currently one can do the following in PSKOV 2:
 In July I plan to add the following:
 
 * instead of showing all files of a repository, display files for currently selected directory only
-* view and edit repository file contents
+* view and edit files
