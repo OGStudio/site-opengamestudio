@@ -1,5 +1,5 @@
 Title: Добавление, редактирование, сохранение, удаление файлов
-Date: 2025-08-09
+Date: 2025-08-08
 Category: News
 Slug: add-edit-save-remove
 Lang: ru
