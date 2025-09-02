@@ -26,6 +26,28 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="kotlin-cross.html">The turn to cross-platform solutions</a>
+    </h2>
+    <p class="news_item_date">
+        2025-09-09
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2025-09_push-error.jpg" alt="" /></p>
+<h1 id="theclashwithgitpushlimitations">The clash with git push limitations</h1>
+<p>In August I've added <code>git commit</code> and <code>git push</code> commands to PSKOV.
+However, it became clear that Vercel (we use the service to host CORS
+proxy) does not allow <code>git push</code> requests for a moderately sized
+repository (50M) of this very site.</p>
+<p>Thus, to support <code>git push</code> for moderately sized repositories, I would
+need to run my own server with CORS proxy. I have neither money, nor
+time to do that at the moment, unfortunately.</p>
+<p>That's why, having stumpled upon the wall of reality once again, I have to. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="kotlin-cross.html">Continue reading</a>
+    </div>
+</div><div class="news_item">
+    <h2 class="news_item_title">
         <a href="add-edit-save-remove.html">Add, edit, save, and remove files</a>
     </h2>
     <p class="news_item_date">
@@ -236,27 +258,6 @@ However, the contents of the generated HTML files differ because PSKOV 1 uses
     </div>
     <div class="news_item_more">
         <a href="year24.html">Continue reading</a>
-    </div>
-</div><div class="news_item">
-    <h2 class="news_item_title">
-        <a href="lha-jvm-macos.html">The first Local Host Access working version</a>
-    </h2>
-    <p class="news_item_date">
-        2024-12-09 00:00
-    </p>
-    <div class="news_item_contents">
-<p><img src="../../images/2024_web-test.jpg" alt="web-test" /></p>
-<h1 id="localhostaccess">Local Host Access</h1>
-<p>Tiny web server called Local Host Access (<strong>LHA</strong>) is ready to replace
-Local File System Access (<strong>LFSA</strong>) on JVM and macOS: I've generated this
-very article with LHA on macOS. Thus, Kotlin prooved to be a good choice for
-cross-platform development with a minor limitation.</p>
-<p>The minor limitation is the fact that 99% of Kotlin is used on JVM. The
-remaining 1% is so-called Kotlin Native for iOS, Linux, macOS, and Windows.
-Thus, when one needs something as simple as to find out if a symlink. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="lha-jvm-macos.html">Continue reading</a>
     </div>
 </div>
 <p class="pagination_title">Page 1 of 9</p>

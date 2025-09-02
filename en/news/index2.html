@@ -26,6 +26,27 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="lha-jvm-macos.html">The first Local Host Access working version</a>
+    </h2>
+    <p class="news_item_date">
+        2024-12-09 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2024_web-test.jpg" alt="web-test" /></p>
+<h1 id="localhostaccess">Local Host Access</h1>
+<p>Tiny web server called Local Host Access (<strong>LHA</strong>) is ready to replace
+Local File System Access (<strong>LFSA</strong>) on JVM and macOS: I've generated this
+very article with LHA on macOS. Thus, Kotlin prooved to be a good choice for
+cross-platform development with a minor limitation.</p>
+<p>The minor limitation is the fact that 99% of Kotlin is used on JVM. The
+remaining 1% is so-called Kotlin Native for iOS, Linux, macOS, and Windows.
+Thus, when one needs something as simple as to find out if a symlink. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="lha-jvm-macos.html">Continue reading</a>
+    </div>
+</div><div class="news_item">
+    <h2 class="news_item_title">
         <a href="pskov-again.html">Back to the development of "PSKOV"</a>
     </h2>
     <p class="news_item_date">
@@ -219,26 +240,6 @@ class memory_Context:
     </div>
     <div class="news_item_more">
         <a href="llm-first-py-cxx.html">Continue reading</a>
-    </div>
-</div><div class="news_item">
-    <h2 class="news_item_title">
-        <a href="bus-iOS.html">Шина-iOS</a>
-    </h2>
-    <p class="news_item_date">
-        2024-03-10 00:00
-    </p>
-    <div class="news_item_contents">
-<h1 id="thefirstbuspatternimplementationforios">The first Bus pattern implementation for iOS</h1>
-<p>I spent January and February making Bus pattern implementation in Swift for iOS.
-The end result looks nice to me.</p>
-<p>I have also done load testing. Turns out, the Bus is 92 times more expensive
-than a function call. Nonetheless, this doesn't mean the Bus is bad. On the
-contrary, the numbers highlight the Bus should be used in architectural
-glue code where it can save up to 30% of code</p>
-<p>This example demonstrates several states rendered through a single instance:. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="bus-iOS.html">Continue reading</a>
     </div>
 </div>
 <p class="pagination_title">Page 2 of 9</p>
