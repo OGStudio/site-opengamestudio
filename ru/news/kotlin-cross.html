@@ -25,64 +25,28 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="kotlin-cross.html">Возврат к межплатформенному решению с Kotlin</a>
+                    <a href="kotlin-cross.html">Возврат к межплатформенным решениям</a>
                 </h2>
                 <p class="news_item_date">
                     2025-09-09
                 </p>
                 <div class="news_item_contents">
 <p><img src="../../images/2025-09_push-error.jpg" alt="" /></p>
-<h1 id="gitpush">Ограничения для git push</h1>
-<p>В Августе я добавил команды <code>git commit</code> и <code>git push'
-в редактор. Однако, выяснилось, что Vercel (на этом сервисе мы держим CORS proxy) не пропускает запросы</code>git push` с новой веткой не самого большого репозитория (50M).</p>
-<p>В частности, я не смог запушить новую ветку в репозиторий
-site-opengamestuio (50M) из веб-редактора, т.к. Vercel простот не
-пропускает (см.заголовок). </p>
-<p>В июле я добавил в ПСКОВ 2 следующее:</p>
-<table>
-<thead>
-<tr>
-<th>№</th>
-<th>Описание</th>
-<th>Демонстрация</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Выбор ветки Git</td>
-<td><video controls width="500"><source src="../../images/2025-08_01.select-branch.mp4" type="video/mp4"/></video></td>
-</tr>
-<tr>
-<td>2</td>
-<td>Подтягивание изменений в ветке Git</td>
-<td><video controls width="500"><source src="../../images/2025-08_02.pull.mp4" type="video/mp4"/></video></td>
-</tr>
-<tr>
-<td>3</td>
-<td>Создание нового файла</td>
-<td><video controls width="500"><source src="../../images/2025-08_03.add.mp4" type="video/mp4"/></video></td>
-</tr>
-<tr>
-<td>4</td>
-<td>Редактирование файла и список недавних файлов</td>
-<td><video controls width="500"><source src="../../images/2025-08_04.edit-recent.mp4" type="video/mp4"/></video></td>
-</tr>
-<tr>
-<td>5</td>
-<td>Сохранение изменений</td>
-<td><video controls width="500"><source src="../../images/2025-08_05.save.mp4" type="video/mp4"/></video></td>
-</tr>
-<tr>
-<td>6</td>
-<td>Удаление</td>
-<td><video controls width="500"><source src="../../images/2025-08_06.delete.mp4" type="video/mp4"/></video></td>
-</tr>
-</tbody>
-</table>
-<h1 id="">Август</h1>
-<p>В августе планирую добавить команды <code>git commit</code> и <code>git push</code>, чтобы
-следующую статью написать в ПСКОВе.</p>
+<h1 id="gitpush">Столкновение с ограничениями git push</h1>
+<p>В Августе я добавил команды <code>git commit</code> и <code>git push</code> к ПСКОВу.
+Однако, выяснилось, что Vercel (на этом сервисе мы держим CORS proxy)
+не пропускает запросы <code>git push</code> для довольного скромного по размерам
+репозитория (50M) этого самого сайта.</p>
+<p>Таким образом, поддержка git push для репозиториев нормального размера
+требует от нас настройки и поддержки собственного сервера. На это
+у нас сейчас нет ни средств, ни времени.</p>
+<p>Поэтому, столкнувшися в очередной раз со стеной действительности, приходится
+отойти на следующую позицию: создать сначала ПСКОВ в виде приложения Node.js,
+чтобы генерить сайт локально на десктопе. Гитом пока пусть сам пользователь
+занимается.</p>
+<h1 id="">Сентябрь</h1>
+<p>В сентябре планирую создать заготовку ПСКОВа на Node.js с использованием
+Kotlin Multiplatform.</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
