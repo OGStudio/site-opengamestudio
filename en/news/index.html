@@ -29,19 +29,19 @@
         <a href="kotlin-cross.html">The turn to cross-platform solutions</a>
     </h2>
     <p class="news_item_date">
-        2025-09-09
+        2025-09-03
     </p>
     <div class="news_item_contents">
 <p><img src="../../images/2025-09_push-error.jpg" alt="" /></p>
-<h1 id="theclashwithgitpushlimitations">The clash with git push limitations</h1>
+<h1 id="theclashwithgitpushlimits">The clash with git push limits</h1>
 <p>In August I've added <code>git commit</code> and <code>git push</code> commands to PSKOV.
 However, it became clear that Vercel (we use the service to host CORS
 proxy) does not allow <code>git push</code> requests for a moderately sized
-repository (50M) of this very site.</p>
+repository (50M) of this very site. Vercel returns <code>413 Content
+too large</code> error.</p>
 <p>Thus, to support <code>git push</code> for moderately sized repositories, I would
 need to run my own server with CORS proxy. I have neither money, nor
-time to do that at the moment, unfortunately.</p>
-<p>That's why, having stumpled upon the wall of reality once again, I have to. . .</p>
+time to do that at the moment, unfortunately.. . .</p>
     </div>
     <div class="news_item_more">
         <a href="kotlin-cross.html">Continue reading</a>
