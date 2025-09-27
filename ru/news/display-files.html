@@ -15,8 +15,8 @@
                     <a href="../../ru/page/about.html">О нас</a>
                 </div>
                 <div id="lang">
-                    <a href="../../en/news/kotlin-cross.html">EN</a>
-                    <a href="../../ru/news/kotlin-cross.html">RU</a>
+                    <a href="../../en/news/display-files.html">EN</a>
+                    <a href="../../ru/news/display-files.html">RU</a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -25,36 +25,33 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="kotlin-cross.html">Возврат к межплатформенным решениям</a>
+                    <a href="display-files.html">Список файлов проекта</a>
                 </h2>
                 <p class="news_item_date">
-                    2025-09-03
+                    2025-10-01
                 </p>
                 <div class="news_item_contents">
-<p><img src="../../images/2025-09_push-error.jpg" alt="" /></p>
-<h1 id="gitpush">Столкновение с ограничениями git push</h1>
-<p>В Августе я добавил команды <code>git commit</code> и <code>git push</code> к ПСКОВу.
-Однако, выяснилось, что Vercel (на этом сервисе мы держим CORS proxy)
-не пропускает запросы <code>git push</code> для довольного скромного по размерам
-репозитория (50M) этого самого сайта. Vercel выдаёт ошибку <code>413 Content
-too large</code>.</p>
-<p>Таким образом, поддержка <code>git push</code> для репозиториев нормального размера
-требует от меня настройки и поддержки собственного сервера. На это
-у меня сейчас нет ни средств, ни времени, к сожалению.</p>
-<p>Поэтому, столкнувшись в очередной раз со стеной действительности, приходится
-отойти на следующую позицию: ПСКОВ теперь будет приложением Node.js,
-генерирующим сайт локально. Гитом пусть сам пользователь
-занимается.</p>
-<h1 id="">Сентябрь</h1>
-<p>В сентябре создам заготовку ПСКОВа на Node.js с использованием
-Kotlin Multiplatform.</p>
+<video controls width="700">
+    <source src="../../images/2025-10_display-files.mp4" type="video/mp4"/>
+</video>
+<h1 id="">Отображение файлов проекта</h1>
+<p>В сентябре сделал заготовку ПСКОВ 2 из двух частей: веб-клиент + веб-сервер:</p>
+<ul>
+<li>веб-сервер предоставляет доступ веб-клиенту к файлам на диске в формате <a href="lha-jvm-macos.html">Local Host Access</a></li>
+<li>веб-клиент предоставляет интерфейс человеку для работы с содержимым сайта</li>
+</ul>
+<p>Логику написал на Kotlin. Из Kotlin получаю для Node.js и браузера код на
+JavaScript. Работа с Kotlin в качестве <a href="year24.html">якорного языка</a>
+наконец приобрела прикладной характер.</p>
+<h1 id="-1">Октябре</h1>
+<p>В октябре планирую сделать возможность просматривать файлы Markdown.</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
-                this.page.url = "https://opengamestudio.org/ru/news/kotlin-cross.html";
-                this.page.identifier = "kotlin-cross.html";
+                this.page.url = "https://opengamestudio.org/ru/news/display-files.html";
+                this.page.identifier = "display-files.html";
                 };
                 (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
