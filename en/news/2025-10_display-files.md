@@ -1,5 +1,5 @@
-Title: Project's list of files
-Date: 2025-10-01
+Title: List of project files
+Date: 2025-10-02
 Category: News
 Slug: display-files
 Lang: en
@@ -8,7 +8,7 @@ Lang: en
     <source src="../../images/2025-10_display-files.mp4" type="video/mp4"/>
 </video>
 
-# Displaying project's files
+# Displaying project files
 
 In September I created the new draft version of PSKOV 2, which now consists of two parts: web client + web server:
 

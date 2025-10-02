@@ -1,5 +1,5 @@
 Title: Список файлов проекта
-Date: 2025-10-01
+Date: 2025-10-02
 Category: News
 Slug: display-files
 Lang: ru
