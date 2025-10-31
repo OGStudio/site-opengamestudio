@@ -15,8 +15,8 @@
                     <a href="../../ru/page/about.html">О нас</a>
                 </div>
                 <div id="lang">
-                    <a href="../../en/news/january-live-session-decision.html">EN</a>
-                    <a href="../../ru/news/january-live-session-decision.html">RU</a>
+                    <a href="../../en/news/edit-files.html">EN</a>
+                    <a href="../../ru/news/edit-files.html">RU</a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -25,21 +25,35 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="january-live-session-decision.html">СКОРО: Создание простой игры в прямом эфире (Редактор 0.8)</a>
+                    <a href="edit-files.html">Редактирование файлов проекта</a>
                 </h2>
                 <p class="news_item_date">
-                    2016-01-21 00:00
+                    2025-11-02
                 </p>
                 <div class="news_item_contents">
-<p>Мы готовы предоставить вам Редактор 0.8 с Проигрывателем. Прямая трансляция будет проведена на <a title="LiveCoding" href="https://www.livecoding.tv/kornerr">LiveCoding</a> СКОРО. Мы покажем вам, как создать простую игру со звуком с нуля. И на этот раз она не будет требовать Редактора для работы.</p>
-<p>Точную дату и время мы объявим в ближайшие дни. Оставайтесь на связи!</p>
+<video controls width="700">
+    <source src="../../images/2025-11_edit-files.mp4" type="video/mp4"/>
+</video>
+<h1 id="">Новое</h1>
+<p>В октябре ПСКОВ получил следующие новые функциональные возможности:</p>
+<h2 id="1npm">1. NPM</h2>
+<p>ПСКОВ теперь доступен в NPM. Удобнее всего запускать ПСКОВ с помощью команды <code>npx</code>:</p>
+<p><code>npx pskov --projectDir=/path/to/project</code></p>
+<p>где <code>/path/to/project</code> надо заменить на путь до проекта (~ не поддерживается)</p>
+<h2 id="2fileseditrender">2. Вкладки <code>Files</code>, <code>Edit</code>, <code>Render</code></h2>
+<p>Вкладки разграничивают выбор файла, его редактирование и просмотр результата (просмотр ещё не реализован)</p>
+<h2 id="3">3. Редактирование и сохранение выбранного файла</h2>
+<p>Для редактирования используется Ace.js</p>
+<p>Сохранить все отредактированные файлы можно нажатием по кнопке с дискетой</p>
+<h1 id="-1">Ноябрь</h1>
+<p>В ноябре планирую сделать просмотр результата конвертации единичного файла Markdown в HTML во вкладке <code>Render</code></p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
-                this.page.url = "https://opengamestudio.org/ru/news/january-live-session-decision.html";
-                this.page.identifier = "january-live-session-decision.html";
+                this.page.url = "https://opengamestudio.org/ru/news/edit-files.html";
+                this.page.identifier = "edit-files.html";
                 };
                 (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');

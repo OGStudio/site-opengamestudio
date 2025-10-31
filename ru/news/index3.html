@@ -26,6 +26,32 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="memory-logic.html">Игровая логика «Памяти»</a>
+    </h2>
+    <p class="news_item_date">
+        2024-05-03 00:00
+    </p>
+    <div class="news_item_contents">
+<h1 id="">Игровая логика «Памяти»</h1>
+<p>В апреле реализовал игровую логику игры «Память» на Python в виде модели ограниченного языка и успешно перевёл её инструментом в C++.</p>
+<p>Модель ограниченного языка предполагает следующую архитектуру из двух частей:</p>
+<ol>
+<li>контекст состояния</li>
+<li>чистые функции без побочных эффектов, работающие лишь с контекстом</li>
+</ol>
+<p>Контекст состояния игровой логики на Python получился следующим (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory_Context.h">C++</a>):</p>
+<p>```python
+class memory_Context:
+  def <strong>init</strong>(self):
+    self.hiddenItems = []
+    self.mismatchedItems = []. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="memory-logic.html">Читать далее</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
         <a href="llm-first-py-cxx.html">Первый пример портируемого кода</a>
     </h2>
     <p class="news_item_date">
@@ -47,7 +73,8 @@
     <div class="news_item_more">
         <a href="llm-first-py-cxx.html">Читать далее</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="bus-iOS.html">Шина-iOS</a>
     </h2>
@@ -68,7 +95,8 @@
     <div class="news_item_more">
         <a href="bus-iOS.html">Читать далее</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="bus-01.html">Шина-01</a>
     </h2>
@@ -92,7 +120,8 @@
     <div class="news_item_more">
         <a href="bus-01.html">Читать далее</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="rpg-ends.html">Изменение целей проекта</a>
     </h2>
@@ -113,7 +142,8 @@
     <div class="news_item_more">
         <a href="rpg-ends.html">Читать далее</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="gitjs-intro.html">Как я создаю приложения для браузера прямо в браузере</a>
     </h2>
@@ -133,7 +163,8 @@ Ubuntu Edge</a>. Особенностью продукта должна была
     <div class="news_item_more">
         <a href="gitjs-intro.html">Читать далее</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="git-budget.html">Почему я сделал личный проект учёта трат на Git+JS</a>
     </h2>
@@ -155,7 +186,8 @@ Ubuntu Edge</a>. Особенностью продукта должна была
     <div class="news_item_more">
         <a href="git-budget.html">Читать далее</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="teaching-to-program-2019.html">Обучение программированию 2019, или в поисках идеальной программы: Последовательность</a>
     </h2>
@@ -172,7 +204,8 @@ Ubuntu Edge</a>. Особенностью продукта должна была
     <div class="news_item_more">
         <a href="teaching-to-program-2019.html">Читать далее</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="the-pros-and-cons-of-restarting-from-scratch.html">Минусы и плюсы начинания с начала</a>
     </h2>
@@ -189,28 +222,14 @@ Ubuntu Edge</a>. Особенностью продукта должна была
     <div class="news_item_more">
         <a href="the-pros-and-cons-of-restarting-from-scratch.html">Читать далее</a>
     </div>
-</div><div class="news_item">
-    <h2 class="news_item_title">
-        <a href="on-the-way-to-durable-applications.html">На пути к долговечным приложениям</a>
-    </h2>
-    <p class="news_item_date">
-        2019-08-05 00:00
-    </p>
-    <div class="news_item_contents">
-<p><img src="../../images/2019-08-05_on-the-way-to-durable-applications.jpg" alt="Псковское вече" /></p>
-<p>В этой статье мы расскажем о нашем первом долговечном приложении для настольных ПК - генераторе статических сайтов ПСКОВ.</p>
-<p><strong>Долговечность</strong></p>
-<p>Под долговечным приложением мы понимаем такое приложение, которое работает без единого изменения на операционных системах, выпущенных в период 2010-2030 годов. Иными словами, долговечное приложение обладает 10-летней обратной совместимостью и 10-летней прочностью. Впрочем, <a href="http://opengamestudio.org/pskov/ru">ПСКОВ</a> работает даже на Windows 2000, так что у него 19-летняя обратная совместимость.. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="on-the-way-to-durable-applications.html">Читать далее</a>
-    </div>
 </div>
+
 <p class="pagination_title">Страница 3 из 9</p>
 <p>
     <a href="index2.html">« Новее</a>
     <a href="index4.html">Старее »</a>
 </p>
+
 
             <div id="footer">
                 Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
