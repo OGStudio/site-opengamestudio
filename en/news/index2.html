@@ -26,6 +26,28 @@
 
 <div class="news_item">
     <h2 class="news_item_title">
+        <a href="psk-jvm-item.html">PSKOV 2 for JVM</a>
+    </h2>
+    <p class="news_item_date">
+        2025-02-11 00:00
+    </p>
+    <div class="news_item_contents">
+<p><img src="../../images/2025_psk-jvm-item.png" alt="splash" /></p>
+<h1 id="seperatepagesgeneration">Seperate pages' generation</h1>
+<p>In January I implemented half of the functionality of original
+PSKOV: generation of separate HTML pages from Markdown.</p>
+<p>Both PSKOV 1 and PSKOV 2 produce HTML files that look the same in web browsers.
+However, the contents of the generated HTML files differ because PSKOV 1 uses
+<a href="https://github.com/showdownjs/showdown">Showdown</a> to convert Markdown to HTML, whereas PSKOV 2 uses
+<a href="https://github.com/JetBrains/markdown">intellij-markdown</a>.</p>
+<p>Let's see how the generated HTML files compare. Suppose we have the following. . .</p>
+    </div>
+    <div class="news_item_more">
+        <a href="psk-jvm-item.html">Continue reading</a>
+    </div>
+</div>
+<div class="news_item">
+    <h2 class="news_item_title">
         <a href="year24.html">Results of the year 2024</a>
     </h2>
     <p class="news_item_date">
@@ -47,7 +69,8 @@
     <div class="news_item_more">
         <a href="year24.html">Continue reading</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="lha-jvm-macos.html">The first Local Host Access working version</a>
     </h2>
@@ -68,7 +91,8 @@ Thus, when one needs something as simple as to find out if a symlink. . .</p>
     <div class="news_item_more">
         <a href="lha-jvm-macos.html">Continue reading</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="pskov-again.html">Back to the development of "PSKOV"</a>
     </h2>
@@ -107,7 +131,8 @@ local file system.</p>
     <div class="news_item_more">
         <a href="pskov-again.html">Continue reading</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="ht-sound.html">Sound support and the search for a new direction</a>
     </h2>
@@ -130,7 +155,8 @@ graphical results did not match that of the audience.. . .</p>
     <div class="news_item_more">
         <a href="ht-sound.html">Continue reading</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="ht-scenes.html">Switching scenes</a>
     </h2>
@@ -154,7 +180,8 @@ graphical results did not match that of the audience.. . .</p>
     <div class="news_item_more">
         <a href="ht-scenes.html">Continue reading</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="rethinking.html">Rethinking</a>
     </h2>
@@ -176,7 +203,8 @@ I participated in the jam to validate the instrument under development and. . .<
     <div class="news_item_more">
         <a href="rethinking.html">Continue reading</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="memory-gui.html">"Memory" GUI</a>
     </h2>
@@ -197,7 +225,8 @@ gamejam of <a href="https://dtf.ru/games/2783053-nachni-igru-ocenka-videorolikov
     <div class="news_item_more">
         <a href="memory-gui.html">Continue reading</a>
     </div>
-</div><div class="news_item">
+</div>
+<div class="news_item">
     <h2 class="news_item_title">
         <a href="memory-text-ui.html">"Memory" text UI</a>
     </h2>
@@ -217,36 +246,14 @@ The instrument under development is limited to C++11 in order to support OpenWrt
     <div class="news_item_more">
         <a href="memory-text-ui.html">Continue reading</a>
     </div>
-</div><div class="news_item">
-    <h2 class="news_item_title">
-        <a href="memory-logic.html">"Memory" game logic</a>
-    </h2>
-    <p class="news_item_date">
-        2024-05-03 00:00
-    </p>
-    <div class="news_item_contents">
-<h1 id="memorygamelogic">"Memory" game logic</h1>
-<p>In April I implemented "Memory" game logic in Python as limited language model and successfully converted the code to C++ by the instrument under development.</p>
-<p>Limited language model assumes the following architecture of two parts:</p>
-<ol>
-<li>state context</li>
-<li>pure functions without side effects working only with the context</li>
-</ol>
-<p>Game logic state context in Python currently looks like this (<a href="https://git.opengamestudio.org/kornerr/research-portable-memory/src/commit/6fcd542daa6242c8c23dddb88d04cda74a730328/v3/memory_Context.h">C++</a>):</p>
-<p>```python
-class memory_Context:
-  def <strong>init</strong>(self):
-    self.hiddenItems = []. . .</p>
-    </div>
-    <div class="news_item_more">
-        <a href="memory-logic.html">Continue reading</a>
-    </div>
 </div>
+
 <p class="pagination_title">Page 2 of 9</p>
 <p>
     <a href="index.html">« Newer</a>
     <a href="index3.html">Older »</a>
 </p>
+
 
             <div id="footer">
                 The site has been generated by <a href="http://opengamestudio.org/pskov">PSKOV</a>
