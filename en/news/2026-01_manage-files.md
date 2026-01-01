@@ -1,5 +1,5 @@
 Title: Manage files
-Date: 2026-01-04
+Date: 2026-01-01
 Category: VideoNews
 Slug: manage-files
 Lang: en
@@ -11,8 +11,8 @@ Lang: en
 # December
 
 In December I reworked file management: now it's an accordion with tables
-instead of cards before. Also, I added the ability to preview a page in a
-separate browser tab.
+instead of cards used before. Also, I added the ability to preview a page
+in a separate browser tab.
 
 The video shows how this functionality works and highlights the following:
 
