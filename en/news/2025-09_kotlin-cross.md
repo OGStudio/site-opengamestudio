@@ -18,8 +18,8 @@ Thus, to support `git push` for moderately sized repositories, I would
 need to run my own server with CORS proxy. I have neither money, nor
 time to do that at the moment, unfortunately.
 
-That's why, having stumpled upon the wall of reality once again, I have to
-retreat: PSKOV will now be a Node.js application that generate sites
+That's why, having stumbled upon the wall of reality once again, I have to
+retreat: PSKOV will now be a Node.js application that generates sites
 locally. A user can manager Git himself.
 
 # September
