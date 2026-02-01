@@ -15,8 +15,8 @@
                     <a href="../../en/page/about.html">About</a>
                 </div>
                 <div id="lang">
-                    <a href="../../en/news/kotlin-cross.html">EN</a>
-                    <a href="../../ru/news/kotlin-cross.html">RU</a>
+                    <a href="../../en/news/git-budget-draft-for-android-ios.html">EN</a>
+                    <a href="../../ru/news/git-budget-draft-for-android-ios.html">RU</a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -25,35 +25,32 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="kotlin-cross.html">The turn to cross-platform solutions</a>
+                    <a href="git-budget-draft-for-android-ios.html">GitBudget draft for Android and iOS</a>
                 </h2>
                 <p class="news_item_date">
-                    2025-09-03
+                    2026-02-01
                 </p>
                 <div class="news_item_contents">
-<p><img src="../../images/2025-09_push-error.jpg" alt="" /></p>
-<h1 id="theclashwithgitpushlimits">The clash with git push limits</h1>
-<p>In August I've added <code>git commit</code> and <code>git push</code> commands to PSKOV.
-However, it became clear that Vercel (we use the service to host CORS
-proxy) does not allow <code>git push</code> requests for a moderately sized
-repository (50M) of this very site. Vercel returns <code>413 Content
-too large</code> error.</p>
-<p>Thus, to support <code>git push</code> for moderately sized repositories, I would
-need to run my own server with CORS proxy. I have neither money, nor
-time to do that at the moment, unfortunately.</p>
-<p>That's why, having stumbled upon the wall of reality once again, I have to
-retreat: PSKOV will now be a Node.js application that generates sites
-locally. A user can manager Git himself.</p>
-<h1 id="september">September</h1>
-<p>In September I will create the first version of PSKOV for Node.js
-using Kotlin Multiplatform.</p>
+<p><img src="../../images/2026-01_git-budget-android-ios.jpg" alt="" /></p>
+<h1 id="january">January</h1>
+<p>In January I've resurrected GitBudget project for two reasons:</p>
+<ol>
+<li>Combine job goals and hobby ones because they overlap through Kotlin Multiplatform</li>
+<li>Evaluate Kotlin Multiplatform in decreasing code duplication among platforms (the positive results are described in <a href="https://habr.com/ru/articles/989286/">Хабр article</a>).</li>
+</ol>
+<p><a href="git-budget.html">In the distant 2020</a> when I approached GitBudget the first time my
+main idea was to track history of spendings, not analysis. This time my
+priority was to calculate the available balance left to be spent a day, i.e.,
+analysis.</p>
+<h1 id="february">February</h1>
+<p>In February I plan to port GitBudget to Desktop with the help of Qt.</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
-                this.page.url = "https://opengamestudio.org/en/news/kotlin-cross.html";
-                this.page.identifier = "kotlin-cross.html";
+                this.page.url = "https://opengamestudio.org/en/news/git-budget-draft-for-android-ios.html";
+                this.page.identifier = "git-budget-draft-for-android-ios.html";
                 };
                 (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
