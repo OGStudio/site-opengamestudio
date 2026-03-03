@@ -1,4 +1,4 @@
-Title: Рождение Диалекта Котлина
+Title: Диалект Котлина
 Date: 2026-03-07
 Category: News
 Slug: cld-to-kd
