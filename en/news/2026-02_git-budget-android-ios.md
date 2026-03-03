@@ -11,7 +11,7 @@ Lang: en
 In January I've resurrected GitBudget project for two reasons:
 
 1. Combine job goals and hobby ones because they overlap through Kotlin Multiplatform
-2. Evaluate Kotlin Multiplatform in decreasing code duplication among platforms (the positive results are described in [Хабр article][habr]).
+2. Evaluate Kotlin Multiplatform in decreasing code duplication among platforms (the positive results are described in [Reddit article][reddit]).
 
 [In the distant 2020][gb-old] when I approached GitBudget the first time my
 main idea was to track history of spendings, not analysis. This time my
@@ -23,5 +23,5 @@ analysis.
 In February I plan to port GitBudget to Desktop with the help of Qt.
 
 [gb-old]: git-budget.html
-[habr]: https://habr.com/ru/articles/989286/
+[reddit]: https://www.reddit.com/r/KotlinMultiplatform/comments/1rgtn1z/is_kotlin_multiplatform_able_to_cut_development/
 [splash]: ../../images/2026-01_git-budget-android-ios.jpg
