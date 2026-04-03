@@ -1,4 +1,4 @@
-Title: Kotlin Dialect became closer to C++
+Title: Kotlin Dialect came closer to C++
 Date: 2026-04-03
 Category: News
 Slug: kd-cpp-is-close
