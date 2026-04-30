@@ -25,18 +25,52 @@
         <center>
             <div class="news_item">
                 <h2 class="news_item_title">
-                    <a href="git-budget-qt.html">Git Budget добрался до Qt</a>
+                    <a href="git-budget-qt.html">Git Budget теперь и в виде приложения Qt</a>
                 </h2>
                 <p class="news_item_date">
-                    2026-05-02
+                    2026-05-01
                 </p>
                 <div class="news_item_contents">
 <p><img src="../../images/2026-04_git-budget-qt.jpg" alt="" /></p>
 <h1 id="">Апрель</h1>
 <p>В апреле я наконец доработал инструмент Klin для генерации кода обвязки на C++,
-так что теперь у Git Budget есть функционально идентичная версия на Qt для macOS.</p>
+после чего с помощью Kotlin Dialect удалось получить Git Budget на Qt для macOS.</p>
+<p>Отдельного внимания заслуживает экономия строк кода при поддержке нескольких платформ:</p>
+<table>
+<thead>
+<tr>
+<th>Платформа</th>
+<th>Экономия в строках кода</th>
+<th>Экономия в %</th>
+<th>Общее количество строк кода</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>0 (Первичный код на Kotlin)</td>
+<td>0%</td>
+<td>652</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>333</td>
+<td>58%</td>
+<td>569</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>340</td>
+<td>44%</td>
+<td>761</td>
+</tr>
+</tbody>
+</table>
+<p>Выходит, благодаря тому, что логику не надо писать повторно, начиная со второй
+платформы экономия составляет 44-58% строк кода, т.е. после Android каждая
+следующая платформа обходится лишь в половину стоимости.</p>
 <h1 id="-1">Май</h1>
-<p>В мае планирую сделать хранение записей о тратах в Git.</p>
+<p>В мае планирую добавить историю трат в Git Budget.</p>
                 </div>
             </div>
             <div id="disqus_thread"></div>
