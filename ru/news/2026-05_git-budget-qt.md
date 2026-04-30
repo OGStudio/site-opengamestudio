@@ -4,7 +4,9 @@ Category: News
 Slug: git-budget-qt
 Lang: ru
 
-![][splash]
+<video controls width="700">
+    <source src="../../vid/2026-04_git-budget-qt.mp4" type="video/mp4"/>
+</video>
 
 # Апрель
 
@@ -15,7 +17,7 @@ Lang: ru
 
 | Платформа |  Экономия в строках кода | Экономия в % | Общее количество строк кода |
 | --- | --- | --- | --- |
-| Android | 0 (Первичный код на Kotlin) | 0% | 652 |
+| Android | 0 (Первичный код) | 0% | 652 |
 | iOS | 333 | 58% | 569 |
 | macOS | 340 | 44% | 761 |
 
@@ -26,5 +28,3 @@ Lang: ru
 # Май
 
 В мае планирую добавить историю трат в Git Budget.
-
-[splash]: ../../images/2026-04_git-budget-qt.jpg
