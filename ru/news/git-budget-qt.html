@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script data-goatcounter="https://services.opengamestudio.org:443/count" async src="//services.opengamestudio.org:443/count.js"></script>
+        <div id="header">
+            <div class="header2">
+                <div class="menu">
+                    <a href="../../ru/news/index.html">Новости</a>
+                    <a href="../../ru/game/index.html">Игры</a>
+                    <a href="../../ru/tool/index.html">Инструменты</a>
+                    <a href="../../ru/page/about.html">О нас</a>
+                </div>
+                <div id="lang">
+                    <a href="../../en/news/git-budget-qt.html">EN</a>
+                    <a href="../../ru/news/git-budget-qt.html">RU</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <h3 class="left_item_title">В новостях...</h3>
+        <center>
+            <div class="news_item">
+                <h2 class="news_item_title">
+                    <a href="git-budget-qt.html">Git Budget теперь и в виде приложения Qt</a>
+                </h2>
+                <p class="news_item_date">
+                    2026-05-01
+                </p>
+                <div class="news_item_contents">
+<video controls width="700">
+    <source src="../../vid/2026-04_git-budget-qt.mp4" type="video/mp4"/>
+</video>
+<h1 id="">Апрель</h1>
+<p>В апреле я наконец доработал инструмент Klin для генерации кода обвязки на C++,
+после чего с помощью Kotlin Dialect удалось получить Git Budget на Qt для macOS.</p>
+<p>Отдельного внимания заслуживает экономия строк кода при поддержке нескольких платформ:</p>
+<table>
+<thead>
+<tr>
+<th>Платформа</th>
+<th>Экономия в строках кода</th>
+<th>Экономия в %</th>
+<th>Общее количество строк кода</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android</td>
+<td>0 (Первичный код)</td>
+<td>0%</td>
+<td>652</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td>333</td>
+<td>58%</td>
+<td>569</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>340</td>
+<td>44%</td>
+<td>761</td>
+</tr>
+</tbody>
+</table>
+<p>Выходит, благодаря тому, что логику не надо писать повторно, начиная со второй
+платформы экономия составляет 44-58% строк кода, т.е. после Android каждая
+следующая платформа обходится лишь в половину стоимости.</p>
+<h1 id="-1">Май</h1>
+<p>В мае планирую добавить историю трат в Git Budget.</p>
+                </div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = "https://opengamestudio.org/ru/news/git-budget-qt.html";
+                this.page.identifier = "git-budget-qt.html";
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://opengamestudio.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Пожалуйста, включите JavaScript для просмотра <a href="https://disqus.com/?ref_noscript">комментариев на платформе Disqus.</a></noscript>
+            <div id="footer">
+                Сайт сгенерирован <a href="http://opengamestudio.org/pskov/ru">ПСКОВОМ</a>
+                из <a href="http://github.com/ogstudio/site-opengamestudio">этого исходного кода</a>.
+            </div>
+        </center>
+    </body>
+</html>
