@@ -1,7 +1,7 @@
 Title: Завершение разработки прототипа голосового приложения для Android
 Date: 2026-09-03
 Category: News
-Slug: ai-speech-done
+Slug: ai-proto-done
 Lang: ru
 
 <video controls width="700">
